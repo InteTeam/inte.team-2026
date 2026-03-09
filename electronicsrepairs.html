@@ -3,172 +3,130 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Electronics Repairs | PS5, Xbox, TV, Laptop Repair Livingston | Inte.Team</title>
-    <meta name="description" content="Professional electronics repairs in Livingston: PlayStation 5, Xbox, Nintendo Switch, TVs, laptops, MacBooks & Hi-Fi equipment. HDMI port repairs, screen replacements, liquid damage recovery. Book now!">
-    <meta name="keywords" content="PS5 repair Livingston, Xbox repair Scotland, Nintendo Switch Joy-Con drift fix, TV repair Livingston, laptop repair, MacBook screen replacement, HDMI port repair">
-    <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://inte.team/electronicsrepairs.html">
-
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://inte.team/electronicsrepairs.html">
-    <meta property="og:title" content="Electronics Repairs | Inte.Team Livingston">
-    <meta property="og:description" content="Professional repairs for game consoles, TVs, laptops & Apple devices. HDMI ports, screens, liquid damage recovery.">
-    <meta property="og:locale" content="en_GB">
-
-    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <title>Electronics Repairs | PS5, Xbox, TV, Apple, Laptop Repair Livingston | Inte.Team</title>
+    <meta name="description" content="Professional electronics repairs in Livingston. 30+ years experience in consoles, TVs, and microsoldering. Guided by the Intecracy philosophy.">
     <link rel="stylesheet" href="styles.css">
-
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Service",
-        "serviceType": "Electronics Repair",
-        "provider": {
-            "@type": "LocalBusiness",
-            "name": "Inte.Team",
-            "telephone": "+44-1506-532-247"
-        },
-        "areaServed": {
-            "@type": "City",
-            "name": "Livingston"
-        },
-        "description": "Professional electronics repairs including game consoles, TVs, laptops, and Apple devices"
-    }
-    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        .repairs-grid {
-            padding: 120px 2rem 60px;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
+        :root { 
+            --text-main: #0f172a; 
+            --text-muted: #64748b; 
+            --repair-accent: #3b82f6;
         }
-
         .repair-card {
-            background: var(--glass);
-            backdrop-filter: blur(15px);
-            border: 1px solid var(--glass-border);
-            border-radius: 28px;
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 24px;
             padding: 2.5rem;
-            transition: transform 0.3s ease;
+            transition: all 0.3s ease;
         }
-
-        .repair-card:hover {
-            transform: translateY(-10px);
-            border-color: var(--repair-accent);
-        }
-
-        .icon-header {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .service-list {
-            text-align: left;
-            margin: 1.5rem 0;
-            color: var(--text-dim);
-            line-height: 1.8;
-        }
-
-        .promo-banner {
-            grid-column: 1 / -1;
-            background: linear-gradient(135deg, rgba(14, 165, 233, 0.2), rgba(99, 102, 241, 0.2));
-            border-radius: 28px;
-            padding: 3rem;
-            text-align: center;
-            border: 1px solid var(--repair-accent);
-        }
+        .repair-card:hover { transform: translateY(-5px); border-color: var(--repair-accent); }
+        .story-section { line-height: 1.8; }
     </style>
 </head>
-<body>
+<body class="bg-[#0f172a] text-slate-200 font-sans">
 
-    <nav>
-        <div class="nav-left">
-            <a href="index.html" class="logo">I N T E . T E A M</a>
-            <a href="index.html" class="nav-link">HOME</a>
-            <a href="membership.html" class="nav-link">MEMBERSHIP</a>
-        </div>
-        <div class="nav-controls">
-            <div class="contact-info"><strong>01506 532 247</strong></div>
+    <nav class="p-6 flex justify-between items-center sticky top-0 z-50 bg-[#0f172a]/80 backdrop-blur-md">
+        <a href="index.html" class="text-xl font-bold tracking-tighter text-blue-500">I N T E . T E A M</a>
+        <div class="flex gap-6 items-center">
+            <a href="index.html" class="text-xs font-bold uppercase tracking-widest hover:text-blue-400">Home</a>
+            <a href="bookvisit.html" class="text-xs font-bold uppercase tracking-widest hover:text-blue-400">Book Visit Now</a>
+            <div class="text-sm font-mono text-blue-400">01506 532 247</div>
         </div>
     </nav>
 
-    <main class="repairs-grid">
+    <main class="max-w-6xl mx-auto px-6 py-12">
         
-        <section class="promo-banner">
-            <div class="stats-badge">🔥 Recommended Defense</div>
-            <h2>Don't Break it Twice!</h2>
-            <p>Many of the TVs we repair could have been saved by a physical barrier or redesign. Contact us to learn how to protect your TVs from most common faults.</p>
-            <a href="bookvisit.html" class="btn btn-repair">Book Visit Now</a>
+        <header class="text-center mb-16">
+            <div class="inline-block bg-blue-500/10 text-blue-400 px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest mb-4">
+                Started in the 1990s | Livingston HQ
+            </div>
+            <h1 class="text-4xl md:text-5xl font-black mb-6 text-white">Mastery Over Replacement.</h1>
+            <p class="text-lg text-slate-400 max-w-2xl mx-auto">
+                We don't just swap parts. We diagnose circuits, restore vintage soul, and keep tech out of landfills.
+            </p>
+        </header>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-20">
+            <div class="repair-card">
+                <div class="text-3xl mb-4">🎮</div>
+                <h3 class="text-xl font-bold mb-2 text-white">Game Consoles</h3>
+                <p class="text-sm text-slate-400 mb-4">PS5 HDMI ports, Xbox Series X disc drives, and Nintendo Switch Joy-Con drift repairs.</p>
+                <ul class="text-xs space-y-2 text-blue-400 font-bold">
+                    <li>• Liquid Metal & Thermal Re-pasting</li>
+                    <li>• Port & Component Microsoldering</li>
+                </ul>
+            </div>
+
+            <div class="repair-card">
+                <div class="text-3xl mb-4">📺</div>
+                <h3 class="text-xl font-bold mb-2 text-white">TV & Hi-Fi Audio</h3>
+                <p class="text-sm text-slate-400 mb-4">Component-level repair for 4K/OLED screens and restoration for vintage Hi-Fi amplifiers.</p>
+                <ul class="text-xs space-y-2 text-blue-400 font-bold">
+                    <li>• Backlight & Power Board Repair</li>
+                    <li>• Vintage Hi-Fi Recap & Alignment</li>
+                </ul>
+            </div>
+
+            <div class="repair-card">
+                <div class="text-3xl mb-4">💻</div>
+                <h3 class="text-xl font-bold mb-2 text-white">Laptops, PCs & Apple</h3>
+                <p class="text-sm text-slate-400 mb-4">MacBook logic board repair, screen replacements, and high-speed SSD upgrades.</p>
+                <ul class="text-xs space-y-2 text-blue-400 font-bold">
+                    <li>• Liquid Damage Recovery</li>
+                    <li>• Logic Board Logic Repair</li>
+                </ul>
+            </div>
+
+            <div class="repair-card border-blue-500/30 bg-blue-500/5">
+                <div class="text-3xl mb-4">🔬</div>
+                <h3 class="text-xl font-bold mb-2 text-white">Industrial B2B</h3>
+                <p class="text-sm text-slate-400 mb-4">Advanced PCB redesign and repair for complex commercial systems.</p>
+                <ul class="text-xs space-y-2 text-blue-400 font-bold">
+                    <li>• Custom Firmware Programming</li>
+                    <li>• Proxmox-backed Stress Testing</li>
+                </ul>
+            </div>
+        </div>
+
+        <section class="bg-white/5 rounded-[3rem] p-8 md:p-16 border border-white/10 mb-20">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-3xl font-black mb-6 text-white">Why We Do It.</h2>
+                    <div class="story-section space-y-4 text-slate-400 text-sm md:text-base">
+                        <p>
+                            Facts tell, but our stories sell the truth: <strong>We exist for our customers.</strong> There have been nights where we’ve spent 10 hours hunched over a single logic board, tracing a microscopic fault that others said was "unfixable." We only charged for three. 
+                        </p>
+                        <p>
+                            Why? Because we follow <strong>Intecracy</strong>—a philosophy that teaches us to give back to Livingston. Every device we save is a victory against e-waste and a win for the local family who doesn't have to spend £500 on a new machine.
+                        </p>
+                        <p>
+                            We are proud to teach the next generation that "broken" is just a temporary state. With over <strong>600 videos on YouTube</strong>, you can watch our process and see the integrity we put into every solder joint.
+                        </p>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <div class="inline-block p-8 bg-blue-600 rounded-3xl shadow-2xl rotate-3">
+                        <div class="text-4xl font-black text-white mb-2">300+</div>
+                        <div class="text-[10px] uppercase tracking-widest font-bold text-blue-200">5-Star Google Reviews</div>
+                    </div>
+                    <p class="mt-8 text-xs text-slate-500 italic">"Integrity is doing the right thing, even when the customer isn't looking at the circuit board."</p>
+                </div>
+            </div>
         </section>
 
-        <div class="repair-card">
-            <div class="icon-header">🎮</div>
-            <h3>Game Consoles</h3>
-            <p>Specialist repairs for HDMI ports, disc drives, and overheating issues.</p>
-            <ul class="service-list">
-                <li>• PlayStation 5, 4 & Xbox Series X/S, One</li>
-                <li>• Nintendo Switch Joy-Con Drift</li>
-                <li>• Thermal Paste Replacement</li>
-            </ul>
-        </div>
-
-        <div class="repair-card">
-            <div class="icon-header">📺</div>
-            <h3>TV & Audio Hi-Fi</h3>
-            <p>From vintage amps to modern 4K OLED screen component repairs.</p>
-            <ul class="service-list">
-                <li>• Backlight LED Replacement</li>
-                <li>• Power Supply Board Repair</li>
-                <li>• Vintage Hi-Fi Restoration</li>
-            </ul>
-        </div>
-
-        <div class="repair-card">
-            <div class="icon-header">💻</div>
-            <h3>Laptops, PCs & Apple</h3>
-            <p>Advanced logic board repair and screen replacements for all major brands.</p>
-            <ul class="service-list">
-                <li>• MacBook Screen & Battery</li>
-                <li>• Liquid Damage Recovery</li>
-                <li>• SSD & RAM Performance Upgrades</li>
-            </ul>
-        </div>
-        
-                <div class="repair-card">
-            <div class="icon-header">🔬</div>
-            <h3>Commercial Electronics Repairs</h3>
-            <p>Advanced logic board repair and redesign of complex industrial systems.</p>
-            <ul class="service-list">
-                <li>• PCB repairs/redesign</li>
-                <li>• Microsoldering</li>
-                <li>• Programming</li>
-            </ul>
-        </div>
-
-        <div style="grid-column: 1 / -1; text-align: center; margin-top: 2rem;">
-            <a href="bookvisit.html" class="btn btn-repair" style="padding: 1.5rem 4rem; font-size: 1.2rem;">Book Your Repair Now</a>
-        </div>
-
-        <section class="membership-teaser" style="grid-column: 1 / -1; margin-top: 3rem; background: linear-gradient(135deg, rgba(245, 158, 11, 0.15), rgba(251, 191, 36, 0.1)); border-radius: 28px; padding: 3rem; text-align: center; border: 1px solid rgba(245, 158, 11, 0.3);">
-            <div class="stats-badge" style="background: rgba(245, 158, 11, 0.2); border-color: rgba(245, 158, 11, 0.4);">Membership</div>
-            <h2 style="margin: 1rem 0; color: #fbbf24;">Grow With Us - £10/month</h2>
-            <p style="color: var(--text-dim); max-width: 600px; margin: 0 auto 1.5rem; line-height: 1.7;">Build your savings in our e-wallet. Get spare devices when yours is in for repair. Enjoy lower prices as a member. Your investment helps us grow, and we grow together.</p>
-            <ul style="list-style: none; padding: 0; margin: 1.5rem 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem;">
-                <li style="color: var(--text-dim);">💰 E-wallet savings</li>
-                <li style="color: var(--text-dim);">📱 Spare devices access</li>
-                <li style="color: var(--text-dim);">🔧 Lower member rates</li>
-            </ul>
-            <a href="membership.html" class="btn" style="background: linear-gradient(135deg, #f59e0b, #fbbf24); box-shadow: 0 4px 15px rgba(245, 158, 11, 0.3);">Learn More</a>
+        <section class="text-center py-12 border-t border-white/10">
+            <h2 class="text-2xl font-bold mb-4">Want to run your own Inte.Team bench?</h2>
+            <p class="text-slate-400 mb-8 max-w-xl mx-auto text-sm">Whether you want to be your own boss or want the safety net of a team, we have a custom partnership model for you.</p>
+            <a href="partnership-info.html" class="inline-block bg-white text-slate-900 px-8 py-4 rounded-xl font-bold hover:bg-blue-400 transition-all">View Partnership Benefits →</a>
         </section>
 
     </main>
 
-    <footer>
-        (Private Home) at 43 Norman Rise, EH546LY Livingston | © 2026 Inte.Team
+    <footer class="p-12 text-center opacity-40 text-[10px] tracking-[0.3em] font-bold">
+        INTE.TEAM // TECHNOLOGY WITH INTEGRITY // EH54 6LY
     </footer>
 
-    <script src="script.js"></script>
 </body>
 </html>
