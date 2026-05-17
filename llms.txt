@@ -9,7 +9,9 @@ Inte.Team is a family-run electronics repair and web development business based 
 - International: +44 1506 532 247
 - Website: https://inte.team
 - Location: Livingston, West Lothian, Scotland, UK
-- Booking: https://inte.team/bookvisit.html
+- Booking: https://inte.team/repair-bookings.html
+- Repair journey: https://inte.team/electronicsrepairs.html
+- Repair estimates: https://inte.team/repairs-estimates.html
 
 ## Electronics Repair Services
 We repair:
@@ -52,7 +54,8 @@ Pricing model: Affordable rental/subscription model, not expensive upfront costs
 - Proven CRM system used across 500+ branch roadmap
 
 ## Operating Hours
-Monday to Saturday: 9:00 AM - 6:00 PM (GMT/BST)
+Monday to Friday: 10:00 AM - 6:00 PM (GMT/BST), break 3:00–4:00 PM
+Most Saturdays: 10:00 AM - 2:00 PM (GMT/BST)
 Sunday: Closed
 Emergency repairs: Call during opening hours - we try to accommodate urgent needs
 

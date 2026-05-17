@@ -1,3 +1,5 @@
+document.querySelectorAll('.yr').forEach(el => el.textContent = new Date().getFullYear());
+
 const motionToggle = document.getElementById('motionToggle');
 
 if (localStorage.getItem('no-motion') === 'true') {

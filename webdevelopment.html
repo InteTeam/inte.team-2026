@@ -87,15 +87,29 @@
             border-top: 1px solid var(--glass-border);
         }
 
-        .pill { 
-            display: inline-block; background: #1e293b; padding: 5px 12px; 
+        .pill {
+            display: inline-block; background: #1e293b; padding: 5px 12px;
             border-radius: 6px; font-size: 0.75rem; margin: 3px; color: var(--text-dim);
+        }
+
+        .service-list {
+            list-style: none;
+            padding: 0;
+            margin: 1rem 0 0;
+            display: flex;
+            flex-direction: column;
+            gap: 0.6rem;
+        }
+        .service-list li {
+            font-size: 0.875rem;
+            color: var(--text-dim);
+            line-height: 1.5;
         }
     </style>
 </head>
 <body>
 
-    <nav>
+    <nav aria-label="Main navigation">
         <div class="nav-left">
             <a href="index.html" class="logo">I N T E . T E A M</a>
             <a href="index.html" class="nav-link">HOME</a>
@@ -171,7 +185,7 @@
         </div>
     </section>
 
-<section class="process-flow" style="margin-top: 0; border-top: none; border-radius: 0 0 32px 32px;">
+<section class="process-flow">
         <div class="stats-badge" style="background: rgba(14, 165, 233, 0.1);">Live Ecosystem</div>
         <h2>Experience the BRO CRM</h2>
         <p style="max-width: 800px; margin: 1rem auto; color: var(--text-dim);">
@@ -190,7 +204,7 @@
             Let’s start with a <strong>15-minute audit</strong>. No hard sales, just a look at your biggest bottleneck and a plan to solve it in "chunks."
         </p>
         <div style="display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap;">
-            <a href="bookvisit.html" class="btn btn-web" style="padding: 1.2rem 3rem;">Book Your 15-Min Audit</a>
+            <a href="repair-bookings.html" class="btn btn-web" style="padding: 1.2rem 3rem;">Book Your 15-Min Audit</a>
             <a href="tel:01506532247" class="btn" style="background: transparent; border: 1px solid var(--glass-border); padding: 1.2rem 3rem;">
                 Call 01506 532 247
             </a>
@@ -207,7 +221,7 @@
     </section>
 
     <footer>
-        (Private Home) at 43 Norman Rise, EH546LY Livingston | © 2026 Inte.Team
+        43 Norman Rise, EH54 6LY Livingston (Private Home — By Appointment Only) | © <span class="yr"></span> Inte.Team
     </footer>
 
     <script src="script.js"></script>

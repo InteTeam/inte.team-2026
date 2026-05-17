@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Repair Estimates | Inte.Team Livingston</title>
+    <meta name="description" content="Indicative repair costs for consoles, TVs, laptops, Apple devices and industrial electronics in Livingston. Final price confirmed after free diagnosis. No work starts without your approval.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://inte.team/repairs-estimates.html">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .accordion-item {
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 20px;
+            overflow: hidden;
+            margin-bottom: 0.75rem;
+            transition: border-color 0.3s ease;
+        }
+        .accordion-item.open { border-color: rgba(14,165,233,0.4); }
+        .accordion-trigger {
+            width: 100%; display: flex; align-items: center; justify-content: space-between;
+            padding: 1.25rem 1.5rem; background: none; border: none; cursor: pointer;
+            color: inherit; font-family: inherit; text-align: left;
+        }
+        .accordion-trigger:hover { background: rgba(255,255,255,0.03); }
+        .accordion-icon {
+            width: 28px; height: 28px; border-radius: 50%;
+            background: rgba(14,165,233,0.1); color: #38bdf8;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 1rem; font-weight: 700; flex-shrink: 0;
+            transition: transform 0.3s ease;
+        }
+        .accordion-item.open .accordion-icon { transform: rotate(45deg); }
+        .accordion-body {
+            display: none;
+            padding: 0 1.5rem 1.5rem;
+        }
+        .accordion-item.open .accordion-body { display: block; }
+        .estimate-row {
+            display: flex; justify-content: space-between; align-items: baseline;
+            padding: 0.6rem 0; border-bottom: 1px solid rgba(255,255,255,0.06);
+            gap: 1rem;
+        }
+        .estimate-row:last-child { border-bottom: none; }
+        .estimate-label { font-size: 0.875rem; color: #cbd5e1; }
+        .estimate-price { font-size: 0.875rem; font-weight: 700; color: #38bdf8; white-space: nowrap; }
+        .estimate-note { font-size: 0.75rem; color: #64748b; }
+    </style>
+</head>
+<body>
+
+    <nav aria-label="Main navigation">
+        <div class="nav-left">
+            <a href="index.html" class="logo">I N T E . T E A M</a>
+            <a href="electronicsrepairs.html" class="nav-link">Repairs</a>
+            <a href="repair-bookings.html" class="nav-link">Book a Slot</a>
+        </div>
+        <div class="nav-controls">
+            <div class="contact-info"><strong>01506 532 247</strong></div>
+        </div>
+    </nav>
+
+    <main style="max-width:720px;margin:0 auto;padding:120px 1.5rem 80px;">
+
+        <header class="text-center mb-12">
+            <div class="inline-block bg-blue-500/10 text-blue-400 px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest mb-4">Indicative Pricing</div>
+            <h1 class="text-4xl font-black text-white mb-4">Repair Estimates</h1>
+            <p class="text-slate-400 max-w-lg mx-auto text-sm leading-relaxed">
+                All prices below are indicative ranges based on common fault types. Every device is diagnosed first — <strong class="text-white">no work starts without your approval</strong>.
+            </p>
+        </header>
+
+        <div class="bg-amber-500/10 border border-amber-500/25 rounded-2xl p-4 mb-8 flex gap-3 items-start">
+            <div class="text-amber-400 text-lg flex-shrink-0">&#9432;</div>
+            <p class="text-sm text-amber-200/80">Final pricing is confirmed after a free visual diagnosis. Complex faults (liquid damage, logic board) may sit toward the upper end. We'll always tell you before we proceed.</p>
+        </div>
+
+        <!-- Game Consoles -->
+        <div class="accordion-item">
+            <button class="accordion-trigger" onclick="toggleAccordion(this)" aria-expanded="false" aria-controls="acc-consoles">
+                <div class="flex items-center gap-3">
+                    <span class="text-2xl" aria-hidden="true">🎮</span>
+                    <span class="font-bold text-white text-base">Game Consoles</span>
+                </div>
+                <div class="accordion-icon" aria-hidden="true">+</div>
+            </button>
+            <div id="acc-consoles" class="accordion-body">
+                <div class="estimate-row">
+                    <span class="estimate-label">PS5 HDMI Port Repair</span>
+                    <span class="estimate-price">£65 – £120</span>
+                </div>
+                <div class="estimate-row">
+                    <span class="estimate-label">Xbox Series X Disc Drive</span>
+                    <span class="estimate-price">£55 – £90</span>
+                </div>
+                <div class="estimate-row">
+                    <span class="estimate-label">Nintendo Switch Joy-Con Drift</span>
+                    <span class="estimate-price">£30 – £55</span>
+                </div>
+                <div class="estimate-row">
+                    <span class="estimate-label">Micro-soldering / Component Replacement</span>
+                    <span class="estimate-price">from £45</span>
+                </div>
+                <div class="estimate-row">
+                    <span class="estimate-label">Liquid Metal & Thermal Re-paste</span>
+                    <span class="estimate-price">£35 – £60</span>
+                </div>
+                <p class="estimate-note mt-3">Consoles are accepted at Livingston HQ or via our partner drop-off points.</p>
+            </div>
+        </div>
+
+        <!-- TV & Hi-Fi -->
+        <div class="accordion-item">
+            <button class="accordion-trigger" onclick="toggleAccordion(this)" aria-expanded="false" aria-controls="acc-tv">
+                <div class="flex items-center gap-3">
+                    <span class="text-2xl" aria-hidden="true">📺</span>
+                    <span class="font-bold text-white text-base">TV & Hi-Fi Audio</span>
+                </div>
+                <div class="accordion-icon" aria-hidden="true">+</div>
+            </button>
+            <div id="acc-tv" class="accordion-body">
+                <div class="estimate-row">
+                    <span class="estimate-label">4K TV Backlight Repair</span>
+                    <span class="estimate-price">£80 – £180</span>
+                </div>
+                <div class="estimate-row">
+                    <span class="estimate-label">TV Power Board Replacement</span>
+                    <span class="estimate-price">£60 – £140</span>
+                </div>
+                <div class="estimate-row">
+                    <span class="estimate-label">OLED TV (panel fault)</span>
+                    <span class="estimate-price">Call for quote</span>
+                </div>
+                <div class="estimate-row">
+                    <span class="estimate-label">Vintage Hi-Fi Recap & Alignment</span>
+                    <span class="estimate-price">£70 – £200</span>
+                </div>
+                <p class="estimate-note mt-3">TVs and Hi-Fi are handled exclusively at Livingston HQ for safety and calibration.</p>
+            </div>
+        </div>
+
+        <!-- Laptops & Apple -->
+        <div class="accordion-item">
+            <button class="accordion-trigger" onclick="toggleAccordion(this)" aria-expanded="false" aria-controls="acc-laptops">
+                <div class="flex items-center gap-3">
+                    <span class="text-2xl" aria-hidden="true">💻</span>
+                    <span class="font-bold text-white text-base">Laptops, PCs & Apple</span>
+                </div>
+                <div class="accordion-icon" aria-hidden="true">+</div>
+            </button>
+            <div id="acc-laptops" class="accordion-body">
+                <div class="estimate-row">
+                    <span class="estimate-label">MacBook Logic Board Repair</span>
+                    <span class="estimate-price">£90 – £250</span>
+                </div>
+                <div class="estimate-row">
+                    <span class="estimate-label">Liquid Damage Recovery</span>
+                    <span class="estimate-price">£80 – £200</span>
+                </div>
+                <div class="estimate-row">
+                    <span class="estimate-label">Screen Replacement (laptop)</span>
+                    <span class="estimate-price">£60 – £150</span>
+                </div>
+                <div class="estimate-row">
+                    <span class="estimate-label">SSD Upgrade</span>
+                    <span class="estimate-price">£40 – £80</span>
+                </div>
+                <div class="estimate-row">
+                    <span class="estimate-label">RAM Upgrade</span>
+                    <span class="estimate-price">£30 – £60</span>
+                </div>
+                <p class="estimate-note mt-3">Parts + labour included. All upgrades stress-tested before return.</p>
+            </div>
+        </div>
+
+        <!-- Industrial B2B -->
+        <div class="accordion-item">
+            <button class="accordion-trigger" onclick="toggleAccordion(this)" aria-expanded="false" aria-controls="acc-b2b">
+                <div class="flex items-center gap-3">
+                    <span class="text-2xl" aria-hidden="true">🔬</span>
+                    <span class="font-bold text-white text-base">Industrial B2B</span>
+                </div>
+                <div class="accordion-icon" aria-hidden="true">+</div>
+            </button>
+            <div id="acc-b2b" class="accordion-body">
+                <div class="estimate-row">
+                    <span class="estimate-label">Commercial PCB Redesign & Repair</span>
+                    <span class="estimate-price">Contact for quote</span>
+                </div>
+                <div class="estimate-row">
+                    <span class="estimate-label">Custom Firmware Programming</span>
+                    <span class="estimate-price">Contact for quote</span>
+                </div>
+                <div class="estimate-row">
+                    <span class="estimate-label">Proxmox Stress Testing</span>
+                    <span class="estimate-price">Contact for quote</span>
+                </div>
+                <p class="estimate-note mt-3">Industrial work is scoped individually. Call us to discuss requirements and turnaround times.</p>
+            </div>
+        </div>
+
+        <div class="text-center mt-12 space-y-4">
+            <p class="text-sm text-slate-500">Ready to proceed?</p>
+            <div class="flex flex-col sm:flex-row gap-3 justify-center">
+                <a href="repair-bookings.html" class="inline-block bg-sky-500 hover:bg-sky-400 text-white font-bold px-8 py-4 rounded-xl transition-colors">Book a Slot</a>
+                <a href="electronicsrepairs.html" class="inline-block bg-white/5 hover:bg-white/10 text-slate-300 font-bold px-8 py-4 rounded-xl transition-colors border border-white/10">Back to Repairs</a>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        (Private Home) at 43 Norman Rise, EH54 6LY Livingston | © <span class="yr"></span> Inte.Team
+    </footer>
+
+    <script>
+        function toggleAccordion(btn) {
+            const item = btn.closest('.accordion-item');
+            const isOpen = item.classList.contains('open');
+            document.querySelectorAll('.accordion-item.open').forEach(el => {
+                el.classList.remove('open');
+                el.querySelector('.accordion-trigger').setAttribute('aria-expanded', 'false');
+            });
+            if (!isOpen) {
+                item.classList.add('open');
+                btn.setAttribute('aria-expanded', 'true');
+            }
+        }
+    </script>
+
+</body>
+</html>

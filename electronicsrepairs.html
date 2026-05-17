@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Electronics Repairs | PS5, Xbox, TV, Apple, Laptop Repair Livingston | Inte.Team</title>
-    <meta name="description" content="Professional electronics repairs in Livingston. 30+ years experience in consoles, TVs, and microsoldering. Guided by the Intecracy philosophy.">
+    <meta name="description" content="Professional electronics repairs in Livingston — consoles, TVs, laptops, Apple and Hi-Fi. Component-level diagnostics, 30+ years experience, 300+ 5-star reviews.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://inte.team/electronicsrepairs.html">
     <link rel="stylesheet" href="styles.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
@@ -23,11 +25,122 @@
         }
         .repair-card:hover { transform: translateY(-5px); border-color: var(--repair-accent); }
         .story-section { line-height: 1.8; }
+
+        /* Engineering workflow bento */
+        .engineering-card {
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 20px;
+            padding: 1.75rem;
+            transition: border-color 0.3s ease;
+        }
+        .engineering-card:hover { border-color: rgba(14,165,233,0.35); }
+        .zoom-btn { transition: all 0.2s; border: none; cursor: pointer; font-family: inherit; }
+
+        /* Journey tiles */
+        .journey-tile {
+            background: rgba(255,255,255,0.03);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 20px;
+            padding: 1.75rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: left;
+            display: block;
+            width: 100%;
+            color: inherit;
+            text-decoration: none;
+            font-family: inherit;
+            font-size: inherit;
+        }
+        .journey-tile:hover {
+            transform: translateY(-4px);
+            border-color: rgba(14,165,233,0.6);
+            background: rgba(14,165,233,0.06);
+        }
+        .journey-tile.dimmed {
+            opacity: 0.42;
+            cursor: not-allowed;
+            pointer-events: none;
+        }
+
+        /* Modals */
+        .modal-overlay {
+            position: fixed; inset: 0; z-index: 200;
+            background: rgba(0,0,0,0.78);
+            backdrop-filter: blur(8px);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 1.5rem;
+        }
+        .modal-overlay.open { display: flex; }
+        .modal-box {
+            background: #0d1e35;
+            border: 1px solid rgba(255,255,255,0.15);
+            border-radius: 28px;
+            padding: 2.5rem;
+            max-width: 440px;
+            width: 100%;
+            position: relative;
+        }
+        .modal-close {
+            position: absolute; top: 1.25rem; right: 1.25rem;
+            background: rgba(255,255,255,0.08); border: none; cursor: pointer;
+            width: 32px; height: 32px; border-radius: 50%;
+            color: #94a3b8; font-size: 1.2rem; line-height: 1;
+            display: flex; align-items: center; justify-content: center;
+            transition: background 0.2s;
+        }
+        .modal-close:hover { background: rgba(255,255,255,0.18); color: #fff; }
+        @media (max-width: 640px) {
+            .modal-overlay { align-items: flex-end; padding: 0; }
+            .modal-box { border-radius: 28px 28px 0 0; padding: 2rem 1.5rem; max-width: 100%; }
+        }
+
+        /* 8-step process carousel */
+        .process-carousel { overflow: hidden; }
+        .carousel-track {
+            display: flex;
+            width: max-content;
+            animation: processScroll 52s linear infinite;
+            gap: 1.25rem;
+            padding: 0.5rem 0 1rem;
+        }
+        .carousel-track:hover { animation-play-state: paused; }
+        @keyframes processScroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        .step-item {
+            flex-shrink: 0;
+            width: 220px;
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 20px;
+            padding: 1.5rem;
+            text-align: center;
+        }
+        .step-item p { font-size: 0.75rem; color: #94a3b8; margin-top: 0.5rem; line-height: 1.45; }
+        .step-member { background: rgba(99,102,241,0.08); border-color: rgba(99,102,241,0.25); }
+        .step-done { background: rgba(16,185,129,0.08); border-color: rgba(16,185,129,0.25); }
+        .step-num {
+            width: 48px; height: 48px; border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            font-weight: 700; font-size: 0.9rem;
+            margin: 0 auto 0.75rem;
+        }
+        @media (max-width: 768px) {
+            .process-carousel { overflow-x: auto; overflow-y: hidden; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
+            .process-carousel::-webkit-scrollbar { display: none; }
+            .carousel-track { animation: none; width: auto; }
+        }
     </style>
 </head>
 <body class="bg-[#0f172a] text-slate-200 font-sans">
 
-    <nav class="p-6 flex justify-between items-center sticky top-0 z-50 bg-[#0f172a]/80 backdrop-blur-md">
+    <nav class="p-6 flex justify-between items-center sticky top-0 z-50 bg-[#0f172a]/80 backdrop-blur-md" aria-label="Main navigation">
         <a href="index.html" class="text-xl font-bold tracking-tighter text-blue-500">I N T E . T E A M</a>
         <div class="flex gap-6 items-center">
             <a href="index.html" class="text-xs font-bold uppercase tracking-widest hover:text-blue-400">Home</a>
@@ -90,16 +203,17 @@
             </div>
         </div>
 
+        <!-- Why We Do It -->
         <section class="bg-white/5 rounded-[3rem] p-8 md:p-16 border border-white/10 mb-20">
             <div class="grid md:grid-cols-2 gap-12 items-center">
                 <div>
                     <h2 class="text-3xl font-black mb-6 text-white">Why We Do It.</h2>
                     <div class="story-section space-y-4 text-slate-400 text-sm md:text-base">
                         <p>
-                            Facts tell, but our stories sell the truth: <strong>We exist for our customers.</strong> There have been nights where we’ve spent 10 hours hunched over a single logic board, tracing a microscopic fault that others said was "unfixable." We only charged for three. 
+                            Facts tell, but our stories sell the truth: <strong>We exist for our customers.</strong> There have been nights where we've spent 10 hours hunched over a single logic board, tracing a microscopic fault that others said was "unfixable." We only charged for three.
                         </p>
                         <p>
-                            Why? Because we follow <strong>Intecracy</strong>—a philosophy that teaches us to give back to Livingston. Every device we save is a victory against e-waste and a win for the local family who doesn't have to spend £500 on a new machine.
+                            Why? Because we follow <strong><a href="intecracy.html" style="color:inherit;text-decoration:underline;text-underline-offset:3px;">Intecracy</a></strong>—a philosophy that teaches us to give back to Livingston. Every device we save is a victory against e-waste and a win for the local family who doesn't have to spend £500 on a new machine.
                         </p>
                         <p>
                             We are proud to teach the next generation that "broken" is just a temporary state. With over <strong>600 videos on YouTube</strong>, you can watch our process and see the integrity we put into every solder joint.
@@ -116,6 +230,233 @@
             </div>
         </section>
 
+        <!-- Engineering Workflow -->
+        <section class="mb-20">
+            <div class="text-center mb-10">
+                <div class="inline-block bg-blue-500/10 text-blue-400 px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest mb-4">Engineering Workflow</div>
+                <h2 class="text-3xl font-black text-white mb-3">Built to Minimise Human Error</h2>
+                <p class="text-slate-400 text-sm max-w-xl mx-auto">Testing and cross-checking are baked into every stage — not an afterthought.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+
+                <!-- Microsoldering Lab + zoom demo -->
+                <div class="engineering-card md:col-span-2">
+                    <div class="flex flex-col md:flex-row gap-6 items-start">
+                        <div class="md:w-1/2">
+                            <h3 class="text-xl font-bold text-white mb-3">Microsoldering Lab</h3>
+                            <p class="text-slate-400 text-sm leading-relaxed">Our technicians work under 40× magnification to repair logic boards — saving you hundreds compared to full replacements.</p>
+                            <div class="flex bg-slate-800/60 rounded-lg p-1 gap-1 mt-4 w-fit">
+                                <button onclick="setZoom(1)" class="zoom-btn px-3 py-1 rounded-md text-xs font-bold bg-blue-600 text-white">1x</button>
+                                <button onclick="setZoom(10)" class="zoom-btn px-3 py-1 rounded-md text-xs font-bold text-slate-400 hover:text-white">10x</button>
+                                <button onclick="setZoom(40)" class="zoom-btn px-3 py-1 rounded-md text-xs font-bold text-slate-400 hover:text-white">40x</button>
+                            </div>
+                        </div>
+                        <div class="md:w-1/2 w-full relative bg-black rounded-xl overflow-hidden border-2 border-slate-700 flex-shrink-0" style="min-height:160px;">
+                            <svg id="microscope-svg" viewBox="0 0 100 100" class="w-full" style="min-height:160px;transition:all 0.7s ease;">
+                                <rect width="100" height="100" fill="#064e3b" />
+                                <path d="M0 20 H100 M0 40 H100 M0 60 H100 M0 80 H100 M20 0 V100 M40 0 V100 M60 0 V100 M80 0 V100" stroke="#065f46" stroke-width="0.5" />
+                                <g id="logic-chip">
+                                    <rect x="45" y="45" width="10" height="10" rx="1" fill="#1e293b" stroke="#64748b" stroke-width="0.5" />
+                                    <circle cx="46" cy="46" r="0.4" fill="#94a3b8" />
+                                    <circle cx="48" cy="46" r="0.4" fill="#94a3b8" />
+                                    <circle cx="50" cy="46" r="0.4" fill="#fbbf24" />
+                                    <circle cx="52" cy="46" r="0.4" fill="#94a3b8" />
+                                    <circle cx="54" cy="46" r="0.4" fill="#94a3b8" />
+                                    <path d="M48 46 Q49 42 52 42" stroke="#fbbf24" stroke-width="0.1" fill="none">
+                                        <animate attributeName="opacity" values="0;1;0" dur="1.5s" repeatCount="indefinite" />
+                                    </path>
+                                </g>
+                            </svg>
+                            <div class="absolute bottom-2 left-2 flex items-center gap-1.5">
+                                <div class="w-1.5 h-1.5 bg-red-500 rounded-full animate-ping"></div>
+                                <span class="text-[9px] font-mono text-white uppercase tracking-tighter">HD Macro Feed</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Success rate stat -->
+                <div class="bg-blue-600 p-6 rounded-2xl text-white flex flex-col justify-between">
+                    <div>
+                        <div class="text-3xl font-black mb-1">98.4%</div>
+                        <p class="text-blue-100 text-sm leading-relaxed">Success rate on advanced liquid damage recovery in 2025.</p>
+                    </div>
+                    <div class="text-xs text-blue-300 mt-4 font-mono">verified by our QC log</div>
+                </div>
+
+                <!-- Express Turnaround -->
+                <div class="engineering-card">
+                    <div class="w-10 h-10 bg-blue-500/20 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-5 h-5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                    </div>
+                    <h3 class="text-base font-bold text-white mb-2">Express Turnaround</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">HDMI port replacements and most laptop &amp; PC repairs are prioritised for same-day or next-day completion.</p>
+                </div>
+
+                <!-- Parts & Transparency -->
+                <div class="engineering-card">
+                    <div class="w-10 h-10 bg-emerald-500/20 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-5 h-5 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                    </div>
+                    <h3 class="text-base font-bold text-white mb-2">Parts &amp; Transparency</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">We source the best available component for your device. OEM when possible — quality-equivalent when not. You're always fully informed, and you always have the final say.</p>
+                </div>
+
+                <!-- Membership & Spare Devices -->
+                <div class="engineering-card" style="border-color:rgba(139,92,246,0.3);background:rgba(139,92,246,0.06);">
+                    <div class="w-10 h-10 bg-purple-500/20 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-5 h-5 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg>
+                    </div>
+                    <h3 class="text-base font-bold text-white mb-2">Membership &amp; Spare Devices</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-4">Members get priority booking and access to our spare device pool — carry on with life while we repair yours.</p>
+                    <a href="membership.html" class="text-xs font-bold text-purple-400 hover:text-purple-300 transition-colors uppercase tracking-wider">View Membership →</a>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Repair Journey -->
+        <section class="mb-20">
+            <div class="text-center mb-10">
+                <div class="inline-block bg-blue-500/10 text-blue-400 px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest mb-4">Start Here</div>
+                <h2 class="text-3xl font-black text-white mb-3">What brings you here today?</h2>
+                <p class="text-slate-400 text-sm max-w-xl mx-auto">Choose your situation and we'll guide you from there — no jargon, no guesswork.</p>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+
+                <button onclick="openModal('modal-call')" class="journey-tile">
+                    <div class="text-2xl mb-3">⚡</div>
+                    <div class="text-sky-400 font-bold text-base mb-1">I need a repair now</div>
+                    <div class="text-sm text-slate-400">Priority contact for urgent faults.</div>
+                </button>
+
+                <a href="repairs-estimates.html" class="journey-tile">
+                    <div class="text-2xl mb-3">💬</div>
+                    <div class="text-sky-400 font-bold text-base mb-1">I need an estimate</div>
+                    <div class="text-sm text-slate-400">Get a ballpark cost before committing.</div>
+                </a>
+
+                <a href="repair-bookings.html" class="journey-tile">
+                    <div class="text-2xl mb-3">📅</div>
+                    <div class="text-sky-400 font-bold text-base mb-1">I can wait a bit</div>
+                    <div class="text-sm text-slate-400">Book a slot when we're less busy.</div>
+                </a>
+
+                <button onclick="openModal('modal-firsttime')" class="journey-tile">
+                    <div class="text-2xl mb-3">👋</div>
+                    <div class="text-sky-400 font-bold text-base mb-1">First time here?</div>
+                    <div class="text-sm text-slate-400">Visit us in person &amp; see where we are.</div>
+                </button>
+
+                <button onclick="openCallbackModal()" class="journey-tile">
+                    <div class="text-2xl mb-3">📞</div>
+                    <div class="text-sky-400 font-bold text-base mb-1">Request a call-back</div>
+                    <div class="text-sm text-slate-400">Pick a date &amp; time for us to call you.</div>
+                </button>
+
+                <button onclick="scrollToProcess()" class="journey-tile">
+                    <div class="text-2xl mb-3">🔍</div>
+                    <div class="text-sky-400 font-bold text-base mb-1">How does this work?</div>
+                    <div class="text-sm text-slate-400">See our 8-step mastery process.</div>
+                </button>
+
+            </div>
+        </section>
+
+        <!-- 8-Step Mastery Process -->
+        <section id="process" class="mb-20">
+            <div class="text-center mb-10">
+                <div class="inline-block bg-blue-500/10 text-blue-400 px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest mb-4">The Process</div>
+                <h2 class="text-3xl font-black text-white mb-3">Our 8-Step Mastery Process</h2>
+                <p class="text-slate-400 text-sm max-w-xl mx-auto">Every repair follows this framework — from your first call to the final handover. Hover to pause.</p>
+            </div>
+            <div class="process-carousel" aria-label="Our 8-step repair process" role="region">
+                <div class="carousel-track">
+                    <div class="step-item">
+                        <div class="step-num bg-blue-500/20 text-blue-400">1</div>
+                        <h4 class="font-bold text-white">Enquiry</h4>
+                        <p>We capture the specific symptoms of your device.</p>
+                    </div>
+                    <div class="step-item step-member">
+                        <div class="step-num bg-indigo-500/20 text-indigo-300">1.1</div>
+                        <h4 class="font-bold text-indigo-200">Member Priority</h4>
+                        <p>If we have a spare, we'll swap your device for a working one instantly.</p>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-num bg-blue-500/20 text-blue-400">2</div>
+                        <h4 class="font-bold text-white">Diagnosis</h4>
+                        <p>Professional testing and precision circuit tracing.</p>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-num bg-blue-500/20 text-blue-400">3</div>
+                        <h4 class="font-bold text-white">Estimate</h4>
+                        <p>Transparent pricing provided via our BRO portal.</p>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-num bg-blue-500/20 text-blue-400">4</div>
+                        <h4 class="font-bold text-white">Repair</h4>
+                        <p>Precision fixing, soldering and restorative mastery.</p>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-num bg-blue-500/20 text-blue-400">5</div>
+                        <h4 class="font-bold text-white">Quality Control</h4>
+                        <p>Stress testing and rigorous final inspection.</p>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-num bg-blue-500/20 text-blue-400">6</div>
+                        <h4 class="font-bold text-white">Return</h4>
+                        <p>Ready for local collection or insured shipping.</p>
+                    </div>
+                    <div class="step-item step-done">
+                        <div class="step-num bg-emerald-500/20 text-emerald-400">7</div>
+                        <h4 class="font-bold text-emerald-200">Feedback</h4>
+                        <p>A post-repair email ensures we met your expectations.</p>
+                    </div>
+                    <!-- Duplicate set for seamless loop (hidden from assistive tech) -->
+                    <div class="step-item" aria-hidden="true">
+                        <div class="step-num bg-blue-500/20 text-blue-400">1</div>
+                        <h4 class="font-bold text-white">Enquiry</h4>
+                        <p>We capture the specific symptoms of your device.</p>
+                    </div>
+                    <div class="step-item step-member">
+                        <div class="step-num bg-indigo-500/20 text-indigo-300">1.1</div>
+                        <h4 class="font-bold text-indigo-200">Member Priority</h4>
+                        <p>If we have a spare, we'll swap your device for a working one instantly.</p>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-num bg-blue-500/20 text-blue-400">2</div>
+                        <h4 class="font-bold text-white">Diagnosis</h4>
+                        <p>Professional testing and precision circuit tracing.</p>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-num bg-blue-500/20 text-blue-400">3</div>
+                        <h4 class="font-bold text-white">Estimate</h4>
+                        <p>Transparent pricing provided via our BRO portal.</p>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-num bg-blue-500/20 text-blue-400">4</div>
+                        <h4 class="font-bold text-white">Repair</h4>
+                        <p>Precision fixing, soldering and restorative mastery.</p>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-num bg-blue-500/20 text-blue-400">5</div>
+                        <h4 class="font-bold text-white">Quality Control</h4>
+                        <p>Stress testing and rigorous final inspection.</p>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-num bg-blue-500/20 text-blue-400">6</div>
+                        <h4 class="font-bold text-white">Return</h4>
+                        <p>Ready for local collection or insured shipping.</p>
+                    </div>
+                    <div class="step-item step-done">
+                        <div class="step-num bg-emerald-500/20 text-emerald-400">7</div>
+                        <h4 class="font-bold text-emerald-200">Feedback</h4>
+                        <p>A post-repair email ensures we met your expectations.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section class="text-center py-12 border-t border-white/10">
             <h2 class="text-2xl font-bold mb-4">Want to run your own Inte.Team bench?</h2>
             <p class="text-slate-400 mb-8 max-w-xl mx-auto text-sm">Whether you want to be your own boss or want the safety net of a team, we have a custom partnership model for you.</p>
@@ -128,5 +469,138 @@
         INTE.TEAM // TECHNOLOGY WITH INTEGRITY // EH54 6LY
     </footer>
 
+    <!-- Modal: I need a repair now -->
+    <div id="modal-call" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-call-title" onclick="closeModalIfOverlay(event,'modal-call')">
+        <div class="modal-box">
+            <button onclick="closeModal('modal-call')" class="modal-close" aria-label="Close dialog">&#215;</button>
+            <div class="text-3xl mb-3" aria-hidden="true">⚡</div>
+            <h3 id="modal-call-title" class="text-xl font-black text-white mb-2">Get Your Repair Started</h3>
+            <p class="text-sm text-slate-400 mb-5">Give us a call and we'll get you sorted — no forms, no waiting.</p>
+            <div class="bg-white/5 rounded-2xl p-4 mb-5 border border-white/10">
+                <div class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-3">Opening Hours</div>
+                <div class="text-sm text-slate-200 space-y-1">
+                    <div>Mon – Fri &nbsp;<strong class="text-white">10am – 6pm</strong> <span class="text-slate-500 text-xs">(break 3–4pm)</span></div>
+                    <div>Most Saturdays &nbsp;<strong class="text-white">10am – 2pm</strong></div>
+                </div>
+            </div>
+            <p class="text-xs text-slate-500 mb-6">If we can't answer during those hours, leave a message — we'll call you back as soon as possible.</p>
+            <a href="tel:01506532247" class="block text-center bg-sky-500 hover:bg-sky-400 text-white font-bold py-4 rounded-xl transition-colors text-lg tracking-wide">
+                Call 01506 532247
+            </a>
+        </div>
+    </div>
+
+    <!-- Modal: Request a call-back -->
+    <div id="modal-callback" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-callback-title" onclick="closeModalIfOverlay(event,'modal-callback')">
+        <div class="modal-box" style="max-width:520px;max-height:90vh;overflow-y:auto;">
+            <button onclick="closeModal('modal-callback')" class="modal-close" aria-label="Close dialog">&#215;</button>
+            <div class="text-3xl mb-3" aria-hidden="true">📞</div>
+            <h3 id="modal-callback-title" class="text-xl font-black text-white mb-2">Request a Call-back</h3>
+            <p class="text-sm text-slate-400 mb-4">Use the form to tell us your preferred date and time — we'll ring you back at the slot you choose.</p>
+            <div class="bg-white/5 rounded-2xl p-3 mb-5 border border-white/10 flex gap-3 items-start">
+                <div class="text-amber-400 flex-shrink-0 text-base">&#9432;</div>
+                <p class="text-xs text-slate-400 m-0">We call back during opening hours: <strong class="text-white">Mon–Fri 10am–6pm</strong> (break 3–4pm) and <strong class="text-white">most Saturdays 10am–2pm</strong>. Pick a slot within those times.</p>
+            </div>
+            <div id="form-callback-embed"></div>
+        </div>
+    </div>
+
+    <!-- Modal: First time here -->
+    <div id="modal-firsttime" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-firsttime-title" onclick="closeModalIfOverlay(event,'modal-firsttime')">
+        <div class="modal-box">
+            <button onclick="closeModal('modal-firsttime')" class="modal-close" aria-label="Close dialog">&#215;</button>
+            <div class="text-3xl mb-3" aria-hidden="true">👋</div>
+            <h3 id="modal-firsttime-title" class="text-xl font-black text-white mb-2">Visiting Us?</h3>
+            <div class="inline-block bg-amber-500/15 text-amber-300 text-xs font-bold px-3 py-1 rounded-full mb-4">By Appointment Only</div>
+            <p class="text-sm text-slate-400 mb-4">We work from our home workshop — please call ahead to set a date and time before you come over.</p>
+            <div class="bg-white/5 rounded-2xl p-4 mb-4 border border-white/10 text-sm">
+                <div class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-2">Our HQ</div>
+                <div class="text-slate-200">43 Norman Rise</div>
+                <div class="text-slate-200">Livingston, EH54 6LY</div>
+            </div>
+            <div class="rounded-2xl overflow-hidden mb-5 border border-white/10">
+                <iframe
+                    src="https://maps.google.com/maps?q=43+Norman+Rise,+Livingston,+EH54+6LY&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                    width="100%" height="180" style="border:0;filter:grayscale(0.5) invert(0.88);"
+                    allowfullscreen="" loading="lazy" title="Inte.Team location map"></iframe>
+            </div>
+            <a href="tel:01506532247" class="block text-center bg-sky-500 hover:bg-sky-400 text-white font-bold py-4 rounded-xl transition-colors text-lg tracking-wide">
+                Call to Book &nbsp;01506 532247
+            </a>
+        </div>
+    </div>
+
+    <script>
+        let _modalTrigger = null;
+        const FOCUSABLE = 'a[href],button:not([disabled]),input,select,textarea,[tabindex]:not([tabindex="-1"])';
+
+        function openModal(id) {
+            _modalTrigger = document.activeElement;
+            const modal = document.getElementById(id);
+            modal.classList.add('open');
+            document.body.style.overflow = 'hidden';
+            const first = modal.querySelectorAll(FOCUSABLE)[0];
+            if (first) first.focus();
+        }
+        function closeModal(id) {
+            document.getElementById(id).classList.remove('open');
+            document.body.style.overflow = '';
+            if (_modalTrigger) { _modalTrigger.focus(); _modalTrigger = null; }
+        }
+        function closeModalIfOverlay(e, id) {
+            if (e.target === e.currentTarget) closeModal(id);
+        }
+
+        // Trap focus inside open modal
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') { ['modal-call','modal-firsttime','modal-callback'].forEach(closeModal); return; }
+            if (e.key !== 'Tab') return;
+            const modal = document.querySelector('.modal-overlay.open');
+            if (!modal) return;
+            const nodes = [...modal.querySelectorAll(FOCUSABLE)];
+            if (!nodes.length) return;
+            const first = nodes[0], last = nodes[nodes.length - 1];
+            if (e.shiftKey) { if (document.activeElement === first) { e.preventDefault(); last.focus(); } }
+            else            { if (document.activeElement === last)  { e.preventDefault(); first.focus(); } }
+        });
+
+        let callbackFormReady = false;
+        function openCallbackModal() {
+            openModal('modal-callback');
+            if (!callbackFormReady) {
+                callbackFormReady = true;
+                const s = document.createElement('script');
+                s.src = 'https://crm.bookrepaironline.co.uk/js/form-embed.js';
+                s.onload = function() {
+                    FormEmbed.render('4f26e2f1-28e9-49d1-b719-dcbf07a8905b', {
+                        container: '#form-callback-embed',
+                        apiBase: 'https://crm.bookrepaironline.co.uk',
+                        theme: 'dark'
+                    });
+                };
+                document.head.appendChild(s);
+            }
+        }
+
+        function setZoom(level) {
+            const svg = document.getElementById('microscope-svg');
+            const buttons = document.querySelectorAll('.zoom-btn');
+            if (level === 1)  svg.setAttribute('viewBox', '0 0 100 100');
+            if (level === 10) svg.setAttribute('viewBox', '40 40 20 20');
+            if (level === 40) svg.setAttribute('viewBox', '44.5 44.5 5 5');
+            buttons.forEach(btn => {
+                btn.classList.remove('bg-blue-600', 'text-white');
+                btn.classList.add('text-slate-400');
+                if (btn.innerText === level + 'x') {
+                    btn.classList.add('bg-blue-600', 'text-white');
+                    btn.classList.remove('text-slate-400');
+                }
+            });
+        }
+
+        function scrollToProcess() {
+            document.getElementById('process').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+    </script>
 </body>
 </html>

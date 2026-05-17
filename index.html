@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,7 +10,6 @@
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://inte.team/">
 
-    <!-- Open Graph / Social -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://inte.team/">
     <meta property="og:title" content="Inte.Team | Electronics Repairs & Web Solutions">
@@ -19,7 +17,6 @@
     <meta property="og:image" content="https://inte.team/og-image.png">
     <meta property="og:locale" content="en_GB">
 
-    <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Inte.Team | Electronics Repairs & Web Solutions">
     <meta name="twitter:description" content="Expert electronics repairs and custom web solutions in Livingston, Scotland.">
@@ -28,7 +25,6 @@
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="stylesheet" href="styles.css">
 
-    <!-- Structured Data -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -58,42 +54,110 @@
         "openingHoursSpecification": {
             "@type": "OpeningHoursSpecification",
             "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-            "opens": "09:00",
+            "opens": "10:00",
             "closes": "18:00"
         },
         "sameAs": []
     }
     </script>
+
+    <style>
+        /* Offerings section */
+        .offerings-section {
+            padding: 5rem 2rem 3rem;
+            background: var(--dark);
+        }
+        .offerings-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        .section-eyebrow {
+            text-align: center;
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: #64748b;
+            margin-bottom: 2.5rem;
+        }
+        .offerings-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+        }
+        .offering-card {
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 24px;
+            padding: 2rem;
+            text-decoration: none;
+            color: inherit;
+            display: flex;
+            flex-direction: column;
+            gap: 0.4rem;
+            transition: all 0.3s ease;
+        }
+        .offering-card:hover {
+            border-color: rgba(14,165,233,0.4);
+            background: rgba(14,165,233,0.04);
+            transform: translateY(-3px);
+        }
+        .offering-card.accent-web:hover {
+            border-color: rgba(99,102,241,0.4);
+            background: rgba(99,102,241,0.04);
+        }
+        .offering-card.accent-green:hover {
+            border-color: rgba(16,185,129,0.4);
+            background: rgba(16,185,129,0.04);
+        }
+        .offering-icon { font-size: 2rem; margin-bottom: 0.25rem; }
+        .offering-card h3 { font-size: 1.05rem; font-weight: 800; color: #fff; margin: 0; }
+        .offering-card p { font-size: 0.875rem; color: #94a3b8; line-height: 1.65; margin: 0.25rem 0 0; flex: 1; }
+        .offering-link { font-size: 0.7rem; font-weight: 700; color: #38bdf8; text-transform: uppercase; letter-spacing: 0.08em; margin-top: 0.75rem; }
+        .offering-card.accent-web .offering-link { color: #818cf8; }
+        .offering-card.accent-green .offering-link { color: #34d399; }
+        .offering-card.accent-purple .offering-link { color: #a78bfa; }
+        .offering-card.accent-purple:hover {
+            border-color: rgba(139,92,246,0.4);
+            background: rgba(139,92,246,0.04);
+        }
+
+        @media (max-width: 640px) {
+            .offerings-grid { grid-template-columns: 1fr; }
+            .offerings-section { padding: 3.5rem 1.25rem 2rem; }
+        }
+    </style>
 </head>
 <body>
 
-    <nav>
-    <div class="nav-left">
-        <a href="index.html" class="logo">I N T E . T E A M</a>
-        <a href="bookvisit.html" class="nav-link">BOOK VISIT</a>
-        <a href="membership.html" class="nav-link">MEMBERSHIP</a>
-    </div>
-    
-    <div class="nav-controls">
-        <div class="toggle-container">
-            <span>No Animations</span>
-            <label class="switch">
-                <input type="checkbox" id="motionToggle">
-                <span class="slider"></span>
-            </label>
+    <nav aria-label="Main navigation">
+        <div class="nav-left">
+            <a href="index.html" class="logo">I N T E . T E A M</a>
+            <a href="electronicsrepairs.html" class="nav-link">REPAIRS</a>
+            <a href="repair-bookings.html" class="nav-link">BOOK</a>
+            <a href="membership.html" class="nav-link">MEMBERSHIP</a>
         </div>
-        <div class="contact-info"><strong>01506 532 247</strong></div>
-    </div>
-</nav>
+        <div class="nav-controls">
+            <div class="toggle-container">
+                <span>No Animations</span>
+                <label class="switch">
+                    <input type="checkbox" id="motionToggle">
+                    <span class="slider"></span>
+                </label>
+            </div>
+            <div class="contact-info"><strong>01506 532 247</strong></div>
+        </div>
+    </nav>
 
+    <!-- Hero: 2-split -->
     <main class="hero-container">
         <div class="stats-float-container">
-            <span class="float-item">30+ Years Exp</span>
+            <span class="float-item">30+ Years Experience</span>
             <span class="float-item">300+ 5-Star Reviews</span>
-            <span class="float-item">2000+ Happy Clients</span>
-            <span class="float-item">Est. 1990s</span>
             <span class="float-item">2000+ Repairs Made</span>
+            <span class="float-item">Est. 1990s</span>
             <span class="float-item">Websites in 24h</span>
+            <span class="float-item">Technology with Integrity</span>
         </div>
 
         <section class="split repair-side">
@@ -101,61 +165,77 @@
             <div class="content">
                 <div class="stats-badge">⭐ 300+ Google Reviews</div>
                 <h1>Electronics Repairs</h1>
-                <p style="font-size: 1.3rem;">Expert diagnostics for Game consoles, TVs, PCs & Laptops, Smartphones, Apple, and Hi-Fi. Learn More!</p>
+                <p>30 years of bench expertise. We diagnose, restore, and return — from PS5 to vintage Hi-Fi. Domestic &amp; B2B.</p>
                 <a href="electronicsrepairs.html" class="btn btn-repair">Start Repair Journey</a>
-                <p style="color: #64748b; font-size: 1.2rem; margin-top: 20px;">We do fix all electronics devices, started in the '1990s'. Offers are for domestic and B2B customers. HQ in Livingston, and drop-off points in vaious locations. It's a franchise model, you can learn and run your branch as well.'</p>
             </div>
         </section>
 
         <section class="split web-side">
             <div id="img-webdev" class="bg-image"></div>
             <div class="content">
-                <div class="stats-badge">🚀 2,000+ Happy Clients</div>
-                <h1>Websites & Web Apps</h1>
-                <p style="font-size: 1.3rem;">Our main focus is affordability and security with performance. But, if you look for speed - just ask! Learn More!</p>
+                <div class="stats-badge">🚀 Affordable &amp; Secure</div>
+                <h1>Websites &amp; Web Apps</h1>
+                <p>Custom-built, fast, and affordable. From landing pages to full CRM, ERP, and e-commerce platforms.</p>
                 <a href="webdevelopment.html" class="btn btn-web">Start Web Journey</a>
-                <p style="color: #64748b; font-size: 1.2rem; margin-top: 20px;">We rent and build CUSTOM affordable CRM, ERP, CMS, e-commerce, and Web Automation. High-performance business solutions. Business in the UK? We can make you ready for "Making Tax Digital" within days*. Learn More!</p>
-            </div>
-        </section>
-        <section class="split repair-side">
-            <div id="img-repairs" class="bg-image"></div>
-            <div class="content">
-                <div class="stats-badge">⭐ 300+ Google Reviews</div>
-                <h1>Sales Engineering</h1>
-                <p style="font-size: 1.3rem;">Fractional engineering for UK startups. Contributor to <strong>NGINX Proxy Manager (2FA)</strong>. Proxmox stress-testing.</p>
-                <a href="sales-engineering.html" class="btn btn-repair">Click to read more</a>
-                <p style="color: #64748b; font-size: 1.2rem; margin-top: 20px;">Closing the Gap Between Complex Sales & Robust Reality. We provide the technical muscle to win high-stakes contracts. From **Stripe/Dojo** payment flows to **Multi-Warehouse Logistics**, we architect, integrate, and prove your solution.</p>
-            </div>
-        </section>
-
-        <section class="split web-side">
-            <div id="img-webdev" class="bg-image"></div>
-            <div class="content">
-                <div class="stats-badge">🚀 2,000+ Happy Clients</div>
-                <h1>Membership & 3H Charity</h1>
-                <p style="font-size: 1.3rem;">Access to the <strong>OOR-HQ</strong> household & project manager Web App and <strong>VIP (Vintage Internet Project)</strong> whilte helping with e-waste. Join the 1,000.</p>
-                <a href="membership.html" class="btn btn-web">Click to learn more</a>
-                <p style="color: #64748b; font-size: 1.2rem; margin-top: 20px;">Membership is not for everyone! It's for those who care about this planet and future generations. Those who believe that we should give as well, not only take. That's why we look only for 1000 members in our area before closing the doors.</p>
             </div>
         </section>
     </main>
 
+    <!-- Everything we do -->
+    <section class="offerings-section">
+        <div class="offerings-inner">
+            <p class="section-eyebrow">Everything we do</p>
+            <div class="offerings-grid">
+
+                <a href="electronicsrepairs.html" class="offering-card">
+                    <div class="offering-icon">🔧</div>
+                    <h3>Electronics Repairs</h3>
+                    <p>Consoles, TVs, laptops, Apple and Hi-Fi — component-level diagnosis and repair. Drop-off at Livingston HQ or Petzone in Craigshill.</p>
+                    <span class="offering-link">Start Repair Journey →</span>
+                </a>
+
+                <a href="webdevelopment.html" class="offering-card accent-web">
+                    <div class="offering-icon">💻</div>
+                    <h3>Websites &amp; Web Apps</h3>
+                    <p>Affordable, secure, custom-built. CRM, ERP, CMS, e-commerce and automation. UK businesses: Making Tax Digital ready within days.</p>
+                    <span class="offering-link">Start Web Journey →</span>
+                </a>
+
+                <a href="sales-engineering.html" class="offering-card accent-green">
+                    <div class="offering-icon">⚙️</div>
+                    <h3>Sales Engineering</h3>
+                    <p>Fractional technical muscle for UK startups. We close the gap between complex sales and robust delivery — from payment flows to multi-warehouse logistics.</p>
+                    <span class="offering-link">Read more →</span>
+                </a>
+
+                <a href="membership.html" class="offering-card accent-purple">
+                    <div class="offering-icon">🌱</div>
+                    <h3>Membership &amp; 3H Charity</h3>
+                    <p>Access to OOR-HQ and the Vintage Internet Project while fighting e-waste. Limited to 1,000 members — for those who believe in giving back.</p>
+                    <span class="offering-link">Learn more →</span>
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Google Map -->
     <section class="map-section">
         <div class="map-container">
-            <iframe 
+            <iframe
                 id="gmap"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d17906.330469520213!2d-3.5035719!3d55.874961299999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4887d95098a8b2ef%3A0xda435933649cca6!2sInte.Team%20-%20Laptop%2C%20Game%20Consoles%2C%20TV%2C%20Mobile%20phone%20%26%20Electronics%20repair!5e0!3m2!1sen!2suk!4v1736110585075!5m2!1sen!2suk" 
-                allowfullscreen="" 
-                loading="lazy">
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d17906.330469520213!2d-3.5035719!3d55.874961299999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4887d95098a8b2ef%3A0xda435933649cca6!2sInte.Team%20-%20Laptop%2C%20Game%20Consoles%2C%20TV%2C%20Mobile%20phone%20%26%20Electronics%20repair!5e0!3m2!1sen!2suk!4v1736110585075!5m2!1sen!2suk"
+                allowfullscreen=""
+                loading="lazy"
+                title="Inte.Team location — 43 Norman Rise, Livingston EH54 6LY">
             </iframe>
         </div>
     </section>
 
     <footer>
-        (Private Home) at 43 Norman Rise, EH546LY Livingston | © 2026 Inte.Team
+        43 Norman Rise, EH54 6LY Livingston (Private Home — By Appointment Only) | © <span class="yr"></span> Inte.Team
     </footer>
 
     <script src="script.js"></script>
 </body>
 </html>
-
