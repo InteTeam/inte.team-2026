@@ -126,6 +126,67 @@
             .offerings-grid { grid-template-columns: 1fr; }
             .offerings-section { padding: 3.5rem 1.25rem 2rem; }
         }
+
+        /* Trusted referrals section */
+        .referrals-section {
+            padding: 0 2rem 5rem;
+            background: var(--dark);
+        }
+        .referrals-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        .referrals-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        .referrals-eyebrow {
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: #475569;
+            margin-bottom: 0.75rem;
+        }
+        .referrals-subtext {
+            font-size: 0.825rem;
+            color: #64748b;
+            max-width: 540px;
+            margin: 0 auto;
+            line-height: 1.75;
+        }
+        .referrals-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+        }
+        .referral-card {
+            background: rgba(255,255,255,0.015);
+            border: 1px solid rgba(255,255,255,0.06);
+            border-radius: 20px;
+            padding: 1.75rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.35rem;
+        }
+        .referral-icon { font-size: 1.6rem; margin-bottom: 0.25rem; opacity: 0.7; }
+        .referral-card h3 { font-size: 0.95rem; font-weight: 700; color: #94a3b8; margin: 0; }
+        .referral-card p { font-size: 0.8rem; color: #475569; line-height: 1.65; margin: 0.2rem 0 0; flex: 1; }
+        .referral-cta {
+            font-size: 0.7rem;
+            font-weight: 700;
+            color: #475569;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-top: 0.75rem;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        .referral-cta:hover { color: #94a3b8; }
+        @media (max-width: 768px) {
+            .referrals-grid { grid-template-columns: 1fr; }
+            .referrals-section { padding: 0 1.25rem 3.5rem; }
+        }
     </style>
 </head>
 <body>
@@ -214,6 +275,40 @@
                     <p>Access to OOR-HQ and the Vintage Internet Project while fighting e-waste. Limited to 1,000 members — for those who believe in giving back.</p>
                     <span class="offering-link">Learn more →</span>
                 </a>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Trusted referrals -->
+    <section class="referrals-section" aria-label="Trusted referrals">
+        <div class="referrals-inner">
+            <div class="referrals-header">
+                <p class="referrals-eyebrow">Trusted Referrals</p>
+                <p class="referrals-subtext">We're often asked about services beyond electronics. Rather than turn you away, we connect you with specialists we personally know and trust. Call us and we'll point you in the right direction.</p>
+            </div>
+            <div class="referrals-grid">
+
+                <div class="referral-card">
+                    <div class="referral-icon">📡</div>
+                    <h3>Satellite Dish Installation</h3>
+                    <p>Domestic and commercial dish installation, alignment, and Freesat setup across central Scotland.</p>
+                    <a href="tel:01506532247" class="referral-cta">Call us to be connected →</a>
+                </div>
+
+                <div class="referral-card">
+                    <div class="referral-icon">🔒</div>
+                    <h3>CCTV &amp; Security Systems</h3>
+                    <p>Supply, installation, and configuration of CCTV and IP camera systems for homes and businesses.</p>
+                    <a href="tel:01506532247" class="referral-cta">Call us to be connected →</a>
+                </div>
+
+                <div class="referral-card">
+                    <div class="referral-icon">🫧</div>
+                    <h3>Home Appliance Repair</h3>
+                    <p>Washing machines, dishwashers, fridge-freezers, and tumble dryers — repair before you replace.</p>
+                    <a href="tel:01506532247" class="referral-cta">Call us to be connected →</a>
+                </div>
 
             </div>
         </div>
