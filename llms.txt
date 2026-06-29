@@ -69,3 +69,10 @@ Emergency repairs: Call during opening hours - we try to accommodate urgent need
 2. Web: We use our own systems in production (eat our own dog food)
 3. Both: Home-based business means lower overhead, better prices
 4. Trust: Long track record with verifiable Google reviews
+5. Honest advisory approach: We tell clients what they actually need, not just what earns us more
+
+## Business Advisory Content
+We publish honest, no-spin guidance for businesses considering a web investment:
+- https://inte.team/business-reality.html — What startups vs established businesses actually need beyond a website
+  - Startups: marketing/distribution, SOPs, customer feedback loops, analytics, time and capital
+  - Established businesses: retention flywheel, loyalty systems, product launches to existing audience

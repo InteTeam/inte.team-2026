@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Real Picture — What a Business Actually Needs Beyond a Website | Inte.Team</title>
+    <meta name="description" content="Honest advice on what startups and established businesses really need to grow. Marketing, SOPs, retention, loyalty — the iceberg under every successful website.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://inte.team/business-reality.html">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://inte.team/business-reality.html">
+    <meta property="og:title" content="The Real Picture | Inte.Team">
+    <meta property="og:description" content="What startups and established businesses actually need beyond a website. Honest. No sales spin.">
+    <meta property="og:locale" content="en_GB">
+
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        /* ── Hero ─────────────────────────────────────── */
+        .br-hero {
+            padding: 100px 1.25rem 2rem;
+            text-align: center;
+            max-width: 820px;
+            margin: 0 auto;
+        }
+        .br-hero h1 {
+            font-size: clamp(2rem, 7vw, 3.4rem);
+            line-height: 1.1;
+            margin: 0.75rem 0 1rem;
+        }
+        .br-hero p {
+            color: var(--text-dim);
+            font-size: clamp(0.95rem, 2.5vw, 1.15rem);
+            line-height: 1.75;
+            max-width: 580px;
+            margin: 0 auto;
+        }
+
+        /* ── Tab switcher ─────────────────────────────── */
+        .tab-switcher {
+            display: flex;
+            gap: 0.5rem;
+            padding: 1.75rem 1.25rem 2rem;
+            max-width: 580px;
+            margin: 0 auto;
+        }
+        .tab-btn {
+            flex: 1;
+            padding: 0.875rem 0.75rem;
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 18px;
+            color: var(--text-dim);
+            font-weight: 700;
+            font-size: 0.85rem;
+            cursor: pointer;
+            transition: all 0.25s ease;
+            text-align: center;
+            line-height: 1.35;
+        }
+        .tab-btn .tab-sub {
+            display: block;
+            font-size: 0.7rem;
+            font-weight: 400;
+            color: #475569;
+            margin-top: 0.2rem;
+        }
+        .tab-btn.active {
+            background: rgba(99,102,241,0.12);
+            border-color: rgba(99,102,241,0.4);
+            color: #a5b4fc;
+        }
+        .tab-btn.active .tab-sub { color: #6366f1; }
+        .tab-btn:hover:not(.active) {
+            border-color: rgba(255,255,255,0.15);
+            color: #fff;
+        }
+
+        /* ── Tab panels ────────────────────────────────── */
+        .tab-panel { display: none; }
+        .tab-panel.active { display: block; }
+
+        /* ── Opening quote ──────────────────────────────── */
+        .opening-quote {
+            padding: 0 1.25rem 2rem;
+            max-width: 660px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .opening-quote blockquote {
+            font-size: clamp(1.1rem, 3.5vw, 1.5rem);
+            font-weight: 700;
+            color: #fff;
+            line-height: 1.4;
+            margin: 0 0 0.75rem;
+            font-style: normal;
+        }
+        .opening-quote p {
+            color: #64748b;
+            font-size: 0.875rem;
+            line-height: 1.75;
+            margin: 0;
+        }
+
+        /* ── Shared section wrapper ─────────────────────── */
+        .br-section {
+            padding: 0 1.25rem 2.5rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .br-eyebrow {
+            font-size: 0.62rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: #475569;
+            text-align: center;
+            margin-bottom: 1.25rem;
+        }
+
+        /* ── Iceberg visualization ────────────────────── */
+        .iceberg-outer {
+            padding: 0 1.25rem 2.5rem;
+            max-width: 460px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .ice-meta-label {
+            font-size: 0.6rem;
+            font-weight: 700;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: #64748b;
+            margin-bottom: 0.5rem;
+        }
+        .iceberg-wrap {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 4px;
+        }
+        .ice-tip {
+            width: 58%;
+            min-height: 86px;
+            background: linear-gradient(150deg, rgba(99,102,241,0.32), rgba(129,132,248,0.18));
+            border: 1px solid rgba(99,102,241,0.5);
+            border-radius: 14px 14px 6px 6px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 0.875rem 0.5rem;
+            clip-path: polygon(16% 0%, 84% 0%, 100% 100%, 0% 100%);
+        }
+        .ice-tip strong {
+            display: block;
+            color: #c7d2fe;
+            font-size: 0.9rem;
+            margin-bottom: 0.15rem;
+        }
+        .ice-tip span { color: rgba(99,102,241,0.8); font-size: 0.68rem; }
+
+        .waterline-bar {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            margin: 0.4rem 0;
+        }
+        .waterline-bar::before,
+        .waterline-bar::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+        }
+        .waterline-bar::before { background: linear-gradient(90deg, transparent, #38bdf8); }
+        .waterline-bar::after  { background: linear-gradient(90deg, #38bdf8, transparent); }
+        .waterline-bar span {
+            font-size: 0.58rem;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            color: #38bdf8;
+            white-space: nowrap;
+        }
+
+        .ice-below-label {
+            font-size: 0.58rem;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: #334155;
+            margin-bottom: 0.35rem;
+        }
+        .ice-layer {
+            border-radius: 8px;
+            padding: 0.6rem 0.875rem;
+            font-size: 0.8rem;
+            font-weight: 600;
+            border: 1px solid;
+            text-align: center;
+        }
+        .il-1 { width: 68%; background: rgba(30,58,138,0.22); border-color: rgba(59,130,246,0.18); color: #93c5fd; }
+        .il-2 { width: 78%; background: rgba(30,58,138,0.30); border-color: rgba(59,130,246,0.15); color: #7db9fa; }
+        .il-3 { width: 87%; background: rgba(20,45,120,0.38); border-color: rgba(37,99,235,0.13); color: #60a5fa; }
+        .il-4 { width: 94%; background: rgba(15,35,100,0.48); border-color: rgba(29,78,216,0.11); color: #4b96f3; }
+        .il-5 { width: 100%; background: rgba(8,20,80,0.60);  border-color: rgba(28,60,190,0.10); color: #3b82f6; }
+
+        /* ── Reality cards ────────────────────────────── */
+        .reality-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 0.75rem;
+        }
+        .reality-card {
+            background: rgba(255,255,255,0.025);
+            border: 1px solid rgba(255,255,255,0.07);
+            border-radius: 20px;
+            padding: 1.5rem;
+        }
+        .rc-icon { font-size: 1.5rem; margin-bottom: 0.5rem; }
+        .reality-card h3 {
+            font-size: 1rem;
+            font-weight: 800;
+            color: #fff;
+            margin: 0 0 0.4rem;
+        }
+        .reality-card p {
+            font-size: 0.86rem;
+            color: #94a3b8;
+            line-height: 1.65;
+            margin: 0;
+        }
+        .rc-truth {
+            margin-top: 0.75rem;
+            padding: 0.55rem 0.75rem;
+            background: rgba(99,102,241,0.07);
+            border-left: 2px solid rgba(99,102,241,0.4);
+            border-radius: 0 8px 8px 0;
+            font-size: 0.78rem;
+            color: #818cf8;
+            font-style: italic;
+            line-height: 1.5;
+        }
+
+        /* ── Flywheel (numbered timeline) ──────────────── */
+        .flywheel-wrap { display: flex; flex-direction: column; }
+        .fw-step {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            padding: 1rem 0;
+            position: relative;
+        }
+        .fw-step:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            left: 1.25rem;
+            top: 3.5rem;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(to bottom, rgba(99,102,241,0.3), rgba(99,102,241,0.05));
+        }
+        .fw-num {
+            width: 2.6rem;
+            height: 2.6rem;
+            min-width: 2.6rem;
+            border-radius: 50%;
+            background: rgba(99,102,241,0.12);
+            border: 1px solid rgba(99,102,241,0.32);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.9rem;
+            font-weight: 800;
+            color: #818cf8;
+        }
+        .fw-body h4 {
+            font-size: 0.95rem;
+            font-weight: 800;
+            color: #fff;
+            margin: 0 0 0.25rem;
+        }
+        .fw-body p {
+            font-size: 0.83rem;
+            color: #64748b;
+            margin: 0;
+            line-height: 1.6;
+        }
+        .fw-loop {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 0.75rem 0 0.25rem;
+        }
+        .fw-loop-icon {
+            width: 2.6rem;
+            height: 2.6rem;
+            min-width: 2.6rem;
+            border-radius: 50%;
+            background: rgba(52,211,153,0.08);
+            border: 1px solid rgba(52,211,153,0.25);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+        }
+        .fw-loop-text {
+            font-size: 0.82rem;
+            color: #34d399;
+            font-weight: 700;
+        }
+
+        /* ── Brand examples ───────────────────────────── */
+        .brand-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 0.75rem;
+        }
+        .brand-card {
+            background: rgba(255,255,255,0.015);
+            border: 1px solid rgba(255,255,255,0.05);
+            border-radius: 20px;
+            padding: 1.5rem;
+        }
+        .brand-wordmark {
+            font-size: 1.7rem;
+            font-weight: 900;
+            color: rgba(255,255,255,0.05);
+            letter-spacing: -0.03em;
+            margin-bottom: 0.75rem;
+            font-style: italic;
+        }
+        .brand-card h3 {
+            font-size: 0.92rem;
+            font-weight: 800;
+            color: #94a3b8;
+            margin: 0 0 0.4rem;
+        }
+        .brand-card p {
+            font-size: 0.83rem;
+            color: #475569;
+            line-height: 1.65;
+            margin: 0;
+        }
+        .brand-lesson {
+            margin-top: 0.75rem;
+            padding: 0.55rem 0.75rem;
+            background: rgba(52,211,153,0.05);
+            border-left: 2px solid rgba(52,211,153,0.25);
+            border-radius: 0 8px 8px 0;
+            font-size: 0.78rem;
+            color: #34d399;
+            font-style: italic;
+            line-height: 1.5;
+        }
+
+        /* ── Help box ─────────────────────────────────── */
+        .help-box {
+            background: rgba(99,102,241,0.05);
+            border: 1px solid rgba(99,102,241,0.14);
+            border-radius: 28px;
+            padding: 2rem 1.5rem;
+            text-align: center;
+        }
+        .help-box h2 {
+            font-size: clamp(1.2rem, 4vw, 1.75rem);
+            margin: 0 0 0.75rem;
+        }
+        .help-box > p {
+            color: var(--text-dim);
+            font-size: 0.9rem;
+            line-height: 1.7;
+            max-width: 520px;
+            margin: 0 auto 1.5rem;
+        }
+        .help-list {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 0.6rem;
+            text-align: left;
+            max-width: 720px;
+            margin: 0 auto 1.75rem;
+        }
+        .help-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.625rem;
+            font-size: 0.86rem;
+            color: #94a3b8;
+            line-height: 1.55;
+        }
+        .hi { min-width: 1.4rem; }
+
+        /* ── Bottom CTA ───────────────────────────────── */
+        .br-cta {
+            padding: 3rem 1.25rem 5rem;
+            text-align: center;
+            max-width: 640px;
+            margin: 0 auto;
+        }
+        .br-cta h2 { font-size: clamp(1.4rem, 5vw, 2.2rem); margin-bottom: 0.875rem; }
+        .br-cta p  { color: var(--text-dim); font-size: 0.95rem; line-height: 1.7; margin-bottom: 2rem; }
+        .cta-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 0.875rem;
+        }
+
+        /* ── Responsive: tablet+ ──────────────────────── */
+        @media (min-width: 640px) {
+            .br-hero       { padding: 120px 2rem 2.5rem; }
+            .tab-switcher  { padding: 2rem 2rem 2.5rem; }
+            .opening-quote { padding: 0 2rem 2.5rem; }
+            .iceberg-outer { padding: 0 2rem 3rem; }
+            .br-section    { padding: 0 2rem 3rem; }
+            .br-cta        { padding: 3.5rem 2rem 6rem; }
+
+            .reality-grid  { grid-template-columns: repeat(2, 1fr); }
+            .brand-grid    { grid-template-columns: repeat(2, 1fr); }
+            .help-list     { grid-template-columns: repeat(2, 1fr); }
+            .cta-buttons   { flex-direction: row; justify-content: center; }
+        }
+
+        /* ── Responsive: desktop ──────────────────────── */
+        @media (min-width: 1024px) {
+            .reality-grid { grid-template-columns: repeat(3, 1fr); }
+            .brand-grid   { grid-template-columns: repeat(3, 1fr); }
+            .help-list    { grid-template-columns: repeat(3, 1fr); }
+        }
+    </style>
+</head>
+<body>
+
+    <nav aria-label="Main navigation">
+        <div class="nav-left">
+            <a href="index.html" class="logo">I N T E . T E A M</a>
+            <a href="index.html" class="nav-link">HOME</a>
+            <a href="webdevelopment.html" class="nav-link">WEB</a>
+        </div>
+        <div class="nav-controls">
+            <div class="contact-info"><strong>01506 532 247</strong></div>
+        </div>
+    </nav>
+
+    <header class="br-hero">
+        <div class="stats-badge">Honest Advice — No Sales Spin</div>
+        <h1>The Real Picture.</h1>
+        <p>A website is the beginning, not the answer. Two very different journeys — choose the one that reflects where you actually are.</p>
+    </header>
+
+    <!-- Tab switcher -->
+    <div class="tab-switcher" role="tablist" aria-label="Business stage">
+        <button class="tab-btn active" role="tab" data-tab="startup" aria-selected="true">
+            🚀 Starting Out
+            <span class="tab-sub">New &amp; Early-Stage Business</span>
+        </button>
+        <button class="tab-btn" role="tab" data-tab="established" aria-selected="false">
+            🏆 Established Business
+            <span class="tab-sub">Existing Brand &amp; Customer Base</span>
+        </button>
+    </div>
+
+
+    <!-- ═══════════════ TAB 1: STARTING OUT ═══════════════ -->
+    <div id="panel-startup" class="tab-panel active" role="tabpanel">
+
+        <div class="opening-quote">
+            <blockquote>"A website won't sell your business on its own."</blockquote>
+            <p>Most startups don't fail because of a bad website. They fail because they had no plan for what comes next — no distribution, no systems, no feedback loop. The site is step one of many invisible steps.</p>
+        </div>
+
+        <!-- Iceberg visualization -->
+        <div class="iceberg-outer" aria-label="Iceberg diagram showing the hidden work beneath a website">
+            <p class="ice-meta-label">What you can see</p>
+            <div class="iceberg-wrap">
+                <div class="ice-tip">
+                    <strong>Your Website</strong>
+                    <span>What customers find</span>
+                </div>
+                <div class="waterline-bar">
+                    <span>— WATERLINE —</span>
+                </div>
+                <p class="ice-below-label">What actually drives growth</p>
+                <div class="ice-layer il-1">📣 Marketing &amp; Distribution</div>
+                <div class="ice-layer il-2">📋 SOPs &amp; Documented Processes</div>
+                <div class="ice-layer il-3">💬 Customer Feedback Loops</div>
+                <div class="ice-layer il-4">📊 Analytics &amp; Iteration</div>
+                <div class="ice-layer il-5">⏳ Time, Capital &amp; Faith</div>
+            </div>
+        </div>
+
+        <!-- Reality cards -->
+        <div class="br-section">
+            <p class="br-eyebrow">The Invisible Work</p>
+            <div class="reality-grid">
+
+                <div class="reality-card">
+                    <div class="rc-icon">📣</div>
+                    <h3>Marketing &amp; Distribution</h3>
+                    <p>Nobody finds a new website organically. Google won't rank you for months. You need a real distribution plan — social, local presence, referrals, ads, or partnerships — before you launch, not after.</p>
+                    <div class="rc-truth">"Where will your first 10 customers come from? If you can't answer that, pause and plan first."</div>
+                </div>
+
+                <div class="reality-card">
+                    <div class="rc-icon">📋</div>
+                    <h3>SOPs &amp; Documented Processes</h3>
+                    <p>Without written processes, every task depends on one person. You can't delegate, can't train staff, and can't scale. SOPs feel boring until you're buried in chaos trying to fix everything at once.</p>
+                    <div class="rc-truth">"If it's not written down, it doesn't exist as a business system."</div>
+                </div>
+
+                <div class="reality-card">
+                    <div class="rc-icon">💬</div>
+                    <h3>Customer Feedback Loops</h3>
+                    <p>Your first 10 customers will tell you things that reshape everything you built. The best startups obsessively listen — calls, surveys, reviews. The worst assume they already know what customers want.</p>
+                    <div class="rc-truth">"Build something, show real people, throw half of it away. Repeat until it fits."</div>
+                </div>
+
+                <div class="reality-card">
+                    <div class="rc-icon">📊</div>
+                    <h3>Analytics &amp; Data</h3>
+                    <p>Which page converts? Who drops off and where? Where does traffic actually come from? Without data you're guessing. Analytics isn't optional — it's how you spend your next pound in the right place.</p>
+                    <div class="rc-truth">"You can't improve what you don't measure. Set it up on day one."</div>
+                </div>
+
+                <div class="reality-card">
+                    <div class="rc-icon">⏳</div>
+                    <h3>Time or Capital</h3>
+                    <p>Organic growth takes 12–24 months of consistent, patient effort. Paid growth needs real budget. There's no shortcut: invest significant time or significant money — and often both at once.</p>
+                    <div class="rc-truth">"Most businesses that failed had a working product. They ran out of runway before traction hit."</div>
+                </div>
+
+                <div class="reality-card">
+                    <div class="rc-icon">🙏</div>
+                    <h3>Faith &amp; Resilience</h3>
+                    <p>There will be weeks with zero enquiries. Months where nothing seems to work. The businesses that survive aren't always the smartest — they're the ones that kept showing up and kept adjusting.</p>
+                    <div class="rc-truth">"The graveyard of startups is full of great ideas that quit six months too early."</div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- What we help with -->
+        <div class="br-section">
+            <div class="help-box">
+                <h2>Where Inte.Team fits in</h2>
+                <p>We won't promise a website fixes everything. But we can build the systems that support every stage of your startup journey — and tell you honestly what you need first.</p>
+                <div class="help-list">
+                    <div class="help-item">
+                        <span class="hi">✅</span>
+                        <span><strong>Customer Journey Mapping</strong> — understand where leads come from and where they drop off before they buy</span>
+                    </div>
+                    <div class="help-item">
+                        <span class="hi">✅</span>
+                        <span><strong>Booking &amp; CRM Systems</strong> — capture every enquiry, track customers, follow up automatically</span>
+                    </div>
+                    <div class="help-item">
+                        <span class="hi">✅</span>
+                        <span><strong>Analytics Setup</strong> — know exactly what's working from day one, not month six</span>
+                    </div>
+                    <div class="help-item">
+                        <span class="hi">✅</span>
+                        <span><strong>Websites in 24h</strong> — get live fast, iterate based on real feedback, not assumptions</span>
+                    </div>
+                    <div class="help-item">
+                        <span class="hi">✅</span>
+                        <span><strong>WhatsApp Integration</strong> — respond to leads instantly, never lose an enquiry to a missed notification</span>
+                    </div>
+                    <div class="help-item">
+                        <span class="hi">✅</span>
+                        <span><strong>Honest 15-min Audit</strong> — we'll tell you what you actually need next, not what earns us the most</span>
+                    </div>
+                </div>
+                <a href="repair-bookings.html" class="btn btn-web" style="margin-top: 0;">Book a Free 15-Min Audit</a>
+            </div>
+        </div>
+
+    </div><!-- /panel-startup -->
+
+
+    <!-- ═══════════════ TAB 2: ESTABLISHED ═══════════════ -->
+    <div id="panel-established" class="tab-panel" role="tabpanel">
+
+        <div class="opening-quote">
+            <blockquote>"Your returning customers are your most valuable asset."</blockquote>
+            <p>Established businesses play a completely different game. Cold acquisition matters less. Retention, loyalty, and launching the right products to an audience that already trusts you — that's where the real compounding growth comes from.</p>
+        </div>
+
+        <!-- Flywheel -->
+        <div class="br-section">
+            <p class="br-eyebrow">The Retention Flywheel</p>
+            <div class="flywheel-wrap">
+
+                <div class="fw-step">
+                    <div class="fw-num">1</div>
+                    <div class="fw-body">
+                        <h4>Returning Customers</h4>
+                        <p>Your existing customers already trust you. They're 5× cheaper to retain than acquiring new ones. Make returning the easiest, most rewarding choice available to them.</p>
+                    </div>
+                </div>
+
+                <div class="fw-step">
+                    <div class="fw-num">2</div>
+                    <div class="fw-body">
+                        <h4>New Products &amp; Services</h4>
+                        <p>Existing customers are your best beta testers. Launch new products to them first — they'll give honest feedback and buy before strangers ever will.</p>
+                    </div>
+                </div>
+
+                <div class="fw-step">
+                    <div class="fw-num">3</div>
+                    <div class="fw-body">
+                        <h4>Upsell &amp; Delight</h4>
+                        <p>A customer who trusts you will spend more over time. Memberships, bundles, service upgrades — the sale doesn't end at the first transaction. Each good experience is an open door.</p>
+                    </div>
+                </div>
+
+                <div class="fw-step">
+                    <div class="fw-num">4</div>
+                    <div class="fw-body">
+                        <h4>Loyalty &amp; Reward Systems</h4>
+                        <p>Formal or informal — reward repeat business. App points, priority booking, member discounts. Make customers feel recognised, not anonymous. Feeling known is a loyalty driver.</p>
+                    </div>
+                </div>
+
+                <div class="fw-step">
+                    <div class="fw-num">5</div>
+                    <div class="fw-body">
+                        <h4>Referrals &amp; Word of Mouth</h4>
+                        <p>Happy, loyal customers become your best marketers. They refer friends without being asked — especially when the experience is consistently excellent and genuinely personal.</p>
+                    </div>
+                </div>
+
+                <div class="fw-loop">
+                    <div class="fw-loop-icon">🔄</div>
+                    <span class="fw-loop-text">The cycle compounds — each loop is stronger than the last.</span>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Key differences -->
+        <div class="br-section">
+            <p class="br-eyebrow">How It Differs From Starting Out</p>
+            <div class="reality-grid">
+
+                <div class="reality-card">
+                    <div class="rc-icon">📉</div>
+                    <h3>Marketing Spend Shifts</h3>
+                    <p>You still market — but the focus shifts from "find us" to "here's what's new." Broad awareness campaigns matter less. Targeted messages to warm, familiar audiences matter far more.</p>
+                    <div class="rc-truth">"Acquisition ads are a startup's lifeline. Retention is an established brand's growth engine."</div>
+                </div>
+
+                <div class="reality-card">
+                    <div class="rc-icon">🔁</div>
+                    <h3>Retention Beats Acquisition</h3>
+                    <p>A 5% increase in customer retention can increase profits by 25–95% (Bain &amp; Co). The maths changes completely once you have an existing base worth protecting.</p>
+                    <div class="rc-truth">"Stop treating every customer like they're new. Recognise the ones who keep coming back."</div>
+                </div>
+
+                <div class="reality-card">
+                    <div class="rc-icon">🧪</div>
+                    <h3>Product Launches, Not Rebrands</h3>
+                    <p>Established brands don't need to rebuild trust — they need to stay relevant. New services, seasonal offers, and product expansion keep existing customers engaged without starting from zero.</p>
+                    <div class="rc-truth">"Your brand is already trusted. Use that to launch faster than any startup can."</div>
+                </div>
+
+                <div class="reality-card">
+                    <div class="rc-icon">📲</div>
+                    <h3>Digital for Relationships, Not Just Sales</h3>
+                    <p>For established businesses, digital tools — portals, loyalty accounts, apps — are about deepening the relationship, not just completing transactions. Every touchpoint is a retention moment.</p>
+                    <div class="rc-truth">"The best B2C systems make a customer feel known, not processed."</div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Brand examples -->
+        <div class="br-section">
+            <p class="br-eyebrow">What the Big Brands Actually Do</p>
+            <div class="brand-grid">
+
+                <div class="brand-card">
+                    <div class="brand-wordmark">Apple</div>
+                    <h3>Product Launches to a Loyal Base</h3>
+                    <p>Apple doesn't run ads asking people to "try a smartphone." They announce what's new to millions of existing fans. Their marketing is built entirely on retained trust, not cold acquisition.</p>
+                    <div class="brand-lesson">"We don't run 'buy a phone' ads. We run 'here's what's next.'"</div>
+                </div>
+
+                <div class="brand-card">
+                    <div class="brand-wordmark">McDonald's</div>
+                    <h3>Loyalty Points, Not Leaflets</h3>
+                    <p>McDonald's shifted marketing budget heavily into the MyMcDonald's Rewards app — giving existing customers a reason to return weekly rather than spending on acquisition campaigns.</p>
+                    <div class="brand-lesson">"Reward the person who already chose you. That's cheaper than convincing a stranger."</div>
+                </div>
+
+                <div class="brand-card">
+                    <div class="brand-wordmark">Amazon</div>
+                    <h3>Retention as the Core Model</h3>
+                    <p>Over 30% of Amazon's revenue comes from existing Prime members. Prime is a retention tool disguised as a perk — paying to stay loyal. Their growth is powered by keeping, not just finding.</p>
+                    <div class="brand-lesson">"Make staying the path of least resistance. That's the model."</div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- What we help with -->
+        <div class="br-section">
+            <div class="help-box">
+                <h2>Where Inte.Team fits in</h2>
+                <p>We build the digital tools that help established businesses deepen customer relationships, launch new products cleanly, and protect the base they've already built.</p>
+                <div class="help-list">
+                    <div class="help-item">
+                        <span class="hi">✅</span>
+                        <span><strong>Customer Portals</strong> — give returning customers a login, their full history, and a reason to come back</span>
+                    </div>
+                    <div class="help-item">
+                        <span class="hi">✅</span>
+                        <span><strong>Membership &amp; Loyalty Systems</strong> — reward repeat business with structured, formal programmes</span>
+                    </div>
+                    <div class="help-item">
+                        <span class="hi">✅</span>
+                        <span><strong>CRM &amp; Follow-Up Automation</strong> — never lose a customer to silence or a missed message again</span>
+                    </div>
+                    <div class="help-item">
+                        <span class="hi">✅</span>
+                        <span><strong>Review &amp; Feedback Collection</strong> — capture satisfaction at peak moments automatically, not when it's too late</span>
+                    </div>
+                    <div class="help-item">
+                        <span class="hi">✅</span>
+                        <span><strong>Product Launch Infrastructure</strong> — email lists, booking systems, waitlists for new service announcements</span>
+                    </div>
+                    <div class="help-item">
+                        <span class="hi">✅</span>
+                        <span><strong>Data &amp; Analytics</strong> — understand customer lifetime value and where retention actually breaks down</span>
+                    </div>
+                </div>
+                <a href="repair-bookings.html" class="btn btn-web" style="margin-top: 0;">Book a Free 15-Min Audit</a>
+            </div>
+        </div>
+
+    </div><!-- /panel-established -->
+
+
+    <!-- Bottom CTA -->
+    <section class="br-cta">
+        <h2>Not sure which stage you're at?</h2>
+        <p>That's exactly what the free 15-minute audit is for. We'll tell you honestly where you are, what you need next, and what you don't. No pitch, no pressure.</p>
+        <div class="cta-buttons">
+            <a href="repair-bookings.html" class="btn btn-web">Book Free Audit</a>
+            <a href="tel:01506532247" class="btn" style="background: transparent; border: 1px solid var(--glass-border);">Call 01506 532 247</a>
+        </div>
+    </section>
+
+    <footer>
+        43 Norman Rise, EH54 6LY Livingston (Private Home — By Appointment Only) | &copy; <span class="yr"></span> Inte.Team
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        document.querySelectorAll('.tab-btn').forEach(function(btn) {
+            btn.addEventListener('click', function() {
+                document.querySelectorAll('.tab-btn').forEach(function(b) {
+                    b.classList.remove('active');
+                    b.setAttribute('aria-selected', 'false');
+                });
+                document.querySelectorAll('.tab-panel').forEach(function(p) {
+                    p.classList.remove('active');
+                });
+                btn.classList.add('active');
+                btn.setAttribute('aria-selected', 'true');
+                document.getElementById('panel-' + btn.dataset.tab).classList.add('active');
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        });
+    </script>
+</body>
+</html>

@@ -187,6 +187,64 @@
             .referrals-grid { grid-template-columns: 1fr; }
             .referrals-section { padding: 0 1.25rem 3.5rem; }
         }
+
+        /* Reality teaser */
+        .reality-teaser {
+            padding: 0 1.25rem 3rem;
+            background: var(--dark);
+        }
+        .reality-teaser-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            background: rgba(255,255,255,0.02);
+            border: 1px solid rgba(255,255,255,0.07);
+            border-radius: 28px;
+            padding: 2rem 1.5rem;
+            text-align: center;
+        }
+        .reality-eyebrow {
+            font-size: 0.68rem;
+            font-weight: 700;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: #475569;
+            margin-bottom: 0.75rem;
+        }
+        .reality-teaser h2 {
+            font-size: clamp(1.3rem, 4vw, 1.9rem);
+            font-weight: 900;
+            color: #fff;
+            margin: 0 0 0.625rem;
+            line-height: 1.2;
+        }
+        .reality-teaser-sub {
+            font-size: 0.86rem;
+            color: #64748b;
+            max-width: 460px;
+            margin: 0 auto 1.5rem;
+            line-height: 1.7;
+        }
+        .reality-peek {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.625rem;
+            max-width: 480px;
+            margin: 0 auto 1.5rem;
+        }
+        .rpc {
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(255,255,255,0.06);
+            border-radius: 16px;
+            padding: 1rem;
+            text-align: left;
+        }
+        .rpc-icon { font-size: 1.25rem; margin-bottom: 0.35rem; }
+        .rpc-label { font-size: 0.78rem; font-weight: 800; color: #94a3b8; margin-bottom: 0.2rem; }
+        .rpc-desc  { font-size: 0.72rem; color: #475569; line-height: 1.55; }
+        @media (max-width: 480px) {
+            .reality-teaser { padding: 0 1rem 2.5rem; }
+            .reality-teaser-inner { padding: 1.5rem 1rem; }
+        }
     </style>
 </head>
 <body>
@@ -277,6 +335,28 @@
                 </a>
 
             </div>
+        </div>
+    </section>
+
+    <!-- Reality teaser -->
+    <section class="reality-teaser" aria-label="Business reality check">
+        <div class="reality-teaser-inner">
+            <p class="reality-eyebrow">The Real Picture</p>
+            <h2>A website alone won't grow your business.</h2>
+            <p class="reality-teaser-sub">Whether you're launching something new or scaling an established brand, the journey looks very different. We lay it all out — honestly.</p>
+            <div class="reality-peek">
+                <div class="rpc">
+                    <div class="rpc-icon">🚀</div>
+                    <div class="rpc-label">Starting Out</div>
+                    <div class="rpc-desc">Marketing, SOPs, feedback loops, analytics — the iceberg hidden under your site.</div>
+                </div>
+                <div class="rpc">
+                    <div class="rpc-icon">🏆</div>
+                    <div class="rpc-label">Established Business</div>
+                    <div class="rpc-desc">Retention, loyalty, new products — how big brands grow without cold acquisition.</div>
+                </div>
+            </div>
+            <a href="business-reality.html" class="btn btn-web" style="margin-top: 0; padding: 0.9rem 2.25rem;">See the Full Picture &rarr;</a>
         </div>
     </section>
 
