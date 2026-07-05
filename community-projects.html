@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community Projects | Inte.Team — Free Digital Tools for Local Scotland</title>
+    <meta name="description" content="Inte.Team builds free digital directories and tools for local Scottish communities — starting with OpenFarm Scotland, a farm-shop and pick-your-own directory. More sectors coming.">
+    <meta name="keywords" content="Inte.Team community projects, OpenFarm Scotland, local directory Scotland, free community platform, digital infrastructure Livingston">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://inte.team/community-projects.html">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://inte.team/community-projects.html">
+    <meta property="og:title" content="Community Projects | Inte.Team">
+    <meta property="og:description" content="Free digital directories built for local Scottish communities — starting with OpenFarm Scotland. More sectors coming.">
+    <meta property="og:image" content="https://inte.team/og-image.png">
+    <meta property="og:locale" content="en_GB">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Community Projects | Inte.Team">
+    <meta name="twitter:description" content="Free digital directories built for local Scottish communities — starting with OpenFarm Scotland.">
+    <meta name="twitter:image" content="https://inte.team/og-image.png">
+
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        :root {
+            --community-accent: #10b981;
+            --community-glow: rgba(16, 185, 129, 0.3);
+        }
+
+        .cp-hero {
+            padding: 140px 1.25rem 3rem;
+            text-align: center;
+            max-width: 780px;
+            margin: 0 auto;
+        }
+        .cp-hero .stats-badge {
+            background: rgba(16, 185, 129, 0.1);
+            border: 1px solid rgba(16, 185, 129, 0.3);
+            color: #34d399;
+        }
+        .cp-hero h1 {
+            font-size: clamp(2rem, 6vw, 3.2rem);
+            line-height: 1.15;
+            margin: 1rem 0 1rem;
+            background: linear-gradient(135deg, #34d399, #6ee7b7);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .cp-hero p {
+            color: var(--text-dim);
+            font-size: clamp(0.95rem, 2.5vw, 1.1rem);
+            line-height: 1.75;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .cp-section {
+            padding: 1rem 1.25rem 4rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .cp-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.25rem;
+        }
+        .cp-card {
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 24px;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.3s ease;
+        }
+        .cp-card.is-live:hover {
+            border-color: rgba(16, 185, 129, 0.4);
+            background: rgba(16, 185, 129, 0.04);
+            transform: translateY(-3px);
+        }
+        .cp-card-icon { font-size: 2.25rem; margin-bottom: 0.25rem; }
+        .cp-card h3 { font-size: 1.2rem; font-weight: 800; color: #fff; margin: 0; }
+        .cp-card .cp-tagline { font-size: 0.78rem; font-weight: 700; color: #34d399; text-transform: uppercase; letter-spacing: 0.06em; }
+        .cp-card p { font-size: 0.88rem; color: #94a3b8; line-height: 1.7; margin: 0.25rem 0 0; flex: 1; }
+        .cp-card-link { font-size: 0.72rem; font-weight: 700; color: #34d399; text-transform: uppercase; letter-spacing: 0.08em; margin-top: 1rem; }
+
+        .cp-card.is-placeholder {
+            border-style: dashed;
+            border-color: rgba(255,255,255,0.12);
+            background: transparent;
+            align-items: flex-start;
+            justify-content: center;
+            opacity: 0.75;
+        }
+        .cp-card.is-placeholder h3 { color: #64748b; }
+        .cp-card.is-placeholder .cp-tagline { color: #475569; }
+        .cp-card.is-placeholder p { color: #475569; }
+
+        @media (max-width: 680px) {
+            .cp-grid { grid-template-columns: 1fr; }
+        }
+
+        .cp-cta {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 1.25rem 5rem;
+            text-align: center;
+        }
+        .cp-cta-inner {
+            background: rgba(255,255,255,0.02);
+            border: 1px solid rgba(255,255,255,0.07);
+            border-radius: 28px;
+            padding: 2.5rem 1.5rem;
+        }
+        .cp-cta h2 {
+            font-size: clamp(1.2rem, 4vw, 1.6rem);
+            font-weight: 900;
+            color: #fff;
+            margin: 0 0 0.625rem;
+        }
+        .cp-cta p {
+            font-size: 0.85rem;
+            color: #64748b;
+            max-width: 480px;
+            margin: 0 auto 1.5rem;
+            line-height: 1.7;
+        }
+    </style>
+</head>
+<body>
+
+    <nav aria-label="Main navigation">
+        <div class="nav-left">
+            <a href="index.html" class="logo">I N T E . T E A M</a>
+            <a href="index.html" class="nav-link">HOME</a>
+            <a href="webdevelopment.html" class="nav-link">WEB</a>
+        </div>
+        <div class="nav-controls">
+            <div class="contact-info"><strong>01506 532 247</strong></div>
+        </div>
+    </nav>
+
+    <header class="cp-hero">
+        <div class="stats-badge">🌱 Built &amp; Hosted by Inte.Team</div>
+        <h1>Free Digital Tools for Local Scotland.</h1>
+        <p>Beyond repairs and client work, we build and host free directories for parts of the local community that are usually left out of the digital economy — no subscriptions, no gatekeeping, just useful tools that work.</p>
+    </header>
+
+    <section class="cp-section">
+        <div class="cp-grid">
+
+            <a href="https://farmsinscotland.co.uk/" target="_blank" rel="noopener" class="cp-card is-live">
+                <div class="cp-card-icon">🌾</div>
+                <p class="cp-tagline">Live now</p>
+                <h3>OpenFarm Scotland</h3>
+                <p>A free, map-based directory of Scottish farm shops and pick-your-own farms — real-time crop availability, no account needed to browse. Farmers self-manage their own listing.</p>
+                <span class="cp-card-link">Visit farmsinscotland.co.uk →</span>
+            </a>
+
+            <div class="cp-card is-placeholder">
+                <div class="cp-card-icon">🔧</div>
+                <p class="cp-tagline">In planning</p>
+                <h3>Local Garages &amp; Trades</h3>
+                <p>A directory for independent garages and tradespeople — the same free, no-subscription model as OpenFarm Scotland, applied to a different corner of the local economy.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="cp-cta">
+        <div class="cp-cta-inner">
+            <h2>Know a local sector that deserves this?</h2>
+            <p>We pick new sectors based on where a simple, free directory would genuinely help — not where it's profitable. Tell us who's missing out.</p>
+            <a href="tel:01506532247" class="btn btn-web" style="margin-top: 0; padding: 0.9rem 2.25rem;">Call 01506 532 247</a>
+        </div>
+    </section>
+
+    <footer>
+        43 Norman Rise, EH54 6LY Livingston (Private Home — By Appointment Only) | &copy; <span class="yr"></span> Inte.Team
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

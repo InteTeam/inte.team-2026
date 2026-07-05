@@ -188,6 +188,63 @@
             .referrals-section { padding: 0 1.25rem 3.5rem; }
         }
 
+        /* Community projects teaser */
+        .community-teaser {
+            padding: 0 1.25rem 3rem;
+            background: var(--dark);
+        }
+        .community-teaser-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            background: rgba(16,185,129,0.03);
+            border: 1px solid rgba(16,185,129,0.15);
+            border-radius: 28px;
+            padding: 2.25rem 1.5rem;
+            text-align: center;
+        }
+        .community-eyebrow {
+            font-size: 0.68rem;
+            font-weight: 700;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: #34d399;
+            margin-bottom: 0.75rem;
+        }
+        .community-teaser h2 {
+            font-size: clamp(1.3rem, 4vw, 1.9rem);
+            font-weight: 900;
+            color: #fff;
+            margin: 0 0 0.625rem;
+            line-height: 1.2;
+        }
+        .community-teaser-sub {
+            font-size: 0.86rem;
+            color: #64748b;
+            max-width: 520px;
+            margin: 0 auto 1.5rem;
+            line-height: 1.7;
+        }
+        .community-peek {
+            display: flex;
+            justify-content: center;
+            gap: 0.625rem;
+            flex-wrap: wrap;
+            margin-bottom: 1.75rem;
+        }
+        .community-chip {
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 999px;
+            padding: 0.5rem 1rem;
+            font-size: 0.78rem;
+            color: #94a3b8;
+        }
+        .community-chip.is-next { color: #475569; border-style: dashed; }
+        @media (max-width: 480px) {
+            .community-teaser { padding: 0 1rem 2.5rem; }
+            .community-teaser-inner { padding: 1.75rem 1rem; }
+        }
+
         /* Reality teaser */
         .reality-teaser {
             padding: 0 1.25rem 3rem;
@@ -391,6 +448,20 @@
                 </div>
 
             </div>
+        </div>
+    </section>
+
+    <!-- Community projects teaser -->
+    <section class="community-teaser" aria-label="Community projects">
+        <div class="community-teaser-inner">
+            <p class="community-eyebrow">Giving Back, Digitally</p>
+            <h2>We build free tools for the local community too.</h2>
+            <p class="community-teaser-sub">Beyond repairs and client work, we design and host free directories for parts of the local economy the digital world usually overlooks — no subscriptions, no gatekeeping.</p>
+            <div class="community-peek">
+                <span class="community-chip">🌾 OpenFarm Scotland — live now</span>
+                <span class="community-chip is-next">🔧 Local Garages — in planning</span>
+            </div>
+            <a href="community-projects.html" class="btn btn-web" style="margin-top: 0; padding: 0.9rem 2.25rem;">See Our Community Projects &rarr;</a>
         </div>
     </section>
 
