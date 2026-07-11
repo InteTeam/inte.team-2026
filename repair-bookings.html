@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Book a Repair Slot | Inte.Team Livingston</title>
-    <meta name="description" content="Book your electronics repair with Inte.Team in Livingston. First visit to our HQ or drop off at Petzone in Craigshill — pick a time that suits you.">
+    <meta name="description" content="Book your electronics repair with Inte.Team in Livingston. First visit to our HQ, or drop off at Petzone in Craigshill or D&J Records in Bathgate — pick a time that suits you.">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://inte.team/repair-bookings.html">
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
@@ -102,7 +102,7 @@
         <header style="text-align:center;margin-bottom:2rem;">
             <div style="display:inline-block;background:rgba(14,165,233,0.1);color:#38bdf8;padding:0.25rem 1rem;border-radius:99px;font-size:0.7rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:1rem;">Book a Slot</div>
             <h1 style="font-size:2.25rem;font-weight:900;color:#fff;margin-bottom:0.75rem;">Book Your Repair</h1>
-            <p style="color:#94a3b8;font-size:0.9rem;max-width:480px;margin:0 auto;line-height:1.6;">First visit? Come to us. Returning customer? Drop off at Petzone — no call needed.</p>
+            <p style="color:#94a3b8;font-size:0.9rem;max-width:480px;margin:0 auto;line-height:1.6;">First visit? Come to us. Returning customer? Drop off at Petzone (Livingston) or D&amp;J Records (Bathgate) — no call needed.</p>
         </header>
 
         <!-- Tab bar -->
@@ -112,6 +112,9 @@
             </button>
             <button class="tab-btn" role="tab" id="tab-btn-petzone" aria-selected="false" aria-controls="tab-petzone" data-tab="petzone" onclick="switchTab('petzone')">
                 <span aria-hidden="true">🐾</span> Returning Customer<br><span style="font-weight:400;opacity:0.8;">Non-TV · Petzone - our drop-off place.</span>
+            </button>
+            <button class="tab-btn" role="tab" id="tab-btn-dandj" aria-selected="false" aria-controls="tab-dandj" data-tab="dandj" onclick="switchTab('dandj')">
+                <span aria-hidden="true">🎵</span> Bathgate Drop-off<br><span style="font-weight:400;opacity:0.8;">Non-TV · D&amp;J Records</span>
             </button>
         </div>
 
@@ -169,7 +172,37 @@
 
         </div>
 
-        <!-- Form scripts — loaded once, both forms rendered on page load -->
+        <!-- Tab: D&J Records (Bathgate drop-off) -->
+        <div id="tab-dandj" class="tab-panel" role="tabpanel" aria-labelledby="tab-btn-dandj">
+
+            <div style="background:rgba(245,158,11,0.08);border:1px solid rgba(245,158,11,0.3);border-radius:16px;padding:0.9rem 1.25rem;margin-bottom:1.25rem;display:flex;align-items:flex-start;gap:0.75rem;">
+                <div style="font-size:1.1rem;flex-shrink:0;" aria-hidden="true">⚠️</div>
+                <p style="font-size:0.825rem;color:#fcd34d;margin:0;line-height:1.6;"><strong style="color:#f59e0b;">TV &amp; Hi-Fi repairs are not accepted at D&amp;J Records.</strong> For those, please use the <button onclick="switchTab('hq')" style="background:none;border:none;color:#f59e0b;font-weight:700;cursor:pointer;padding:0;text-decoration:underline;font-family:inherit;font-size:inherit;">HQ tab</button> instead. D&amp;J Records accepts consoles, laptops, phones, and all other small electronics.</p>
+            </div>
+
+            <div class="dropoff-card">
+                <div class="dropoff-icon">🎵</div>
+                <div>
+                    <div style="font-weight:700;color:#fff;font-size:0.95rem;margin-bottom:0.2rem;">D&amp;J Records — 36 George Street, Bathgate, EH48 1PD</div>
+                    <div style="font-size:0.8rem;color:#94a3b8;line-height:1.55;">Our drop-off partner for Bathgate-area customers. No appointment call needed — just book below, drop off the device, and we'll handle the rest. <a href="tel:+447930341419" style="color:#38bdf8;font-weight:600;">+44 7930 341419</a> · <a href="https://dandjrecords.co.uk/" target="_blank" rel="noopener" style="color:#38bdf8;font-weight:600;">dandjrecords.co.uk ↗</a></div>
+                </div>
+            </div>
+
+            <div class="instructions-box">
+                <h2 style="color:#38bdf8;font-size:0.95rem;font-weight:700;margin:0 0 0.9rem;">How it works</h2>
+                <p class="step"><strong style="color:#fff;">1. Fill in the form below</strong> — tell us your device and the fault.</p>
+                <p class="step"><strong style="color:#fff;">2. Check your email</strong> — confirmation arrives within 5 minutes. Check spam/junk if it doesn't appear.</p>
+                <p class="step"><strong style="color:#fff;">3. Drop off at D&amp;J Records</strong> — bring your device to 36 George Street, Bathgate. No call needed.</p>
+                <p class="step"><strong style="color:#fff;">4. Bring your booking ID</strong> — it's in your confirmation email. Show it on arrival so we can match your device instantly.</p>
+            </div>
+
+            <div class="embed-holder-dark">
+                <div id="form-f3a559c8-4c6a-4822-88e3-62c24d374c1d"></div>
+            </div>
+
+        </div>
+
+        <!-- Form scripts — loaded once, all forms rendered on page load -->
         <script src="https://crm.bookrepaironline.co.uk/js/form-embed.js"></script>
         <script>
             FormEmbed.render('4f26e2f1-28e9-49d1-b719-dcbf07a8905b', {
@@ -179,6 +212,11 @@
             });
             FormEmbed.render('4d97ffa6-6723-49ee-90a5-ff8b8df504db', {
                 container: '#form-4d97ffa6-6723-49ee-90a5-ff8b8df504db',
+                apiBase: 'https://crm.bookrepaironline.co.uk',
+                theme: 'dark'
+            });
+            FormEmbed.render('f3a559c8-4c6a-4822-88e3-62c24d374c1d', {
+                container: '#form-f3a559c8-4c6a-4822-88e3-62c24d374c1d',
                 apiBase: 'https://crm.bookrepaironline.co.uk',
                 theme: 'dark'
             });
