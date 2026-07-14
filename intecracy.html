@@ -145,6 +145,53 @@
             color: #10b981;
         }
 
+        .song-section {
+            max-width: 700px;
+            margin: 0 auto 3rem;
+            text-align: center;
+        }
+
+        .song-section .listen-label {
+            color: var(--text-dim);
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+        }
+
+        .listen-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        .listen-buttons .btn {
+            margin-top: 0;
+        }
+
+        .btn-youtube { background: #FF0000; box-shadow: 0 4px 15px rgba(255, 0, 0, 0.3); }
+        .btn-spotify { background: #1DB954; box-shadow: 0 4px 15px rgba(29, 185, 84, 0.3); }
+        .btn-apple { background: linear-gradient(135deg, #FA233B, #FB5C74); box-shadow: 0 4px 15px rgba(250, 35, 59, 0.3); }
+
+        .read-cue {
+            text-align: center;
+            color: var(--text-dim);
+            font-size: 0.9rem;
+            margin-top: 2rem;
+        }
+
+        .read-cue .arrow {
+            display: block;
+            margin: 0.5rem auto 0;
+            font-size: 1.2rem;
+            color: #34d399;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(6px); }
+        }
+
         .connection-section {
             background: linear-gradient(135deg, rgba(16, 185, 129, 0.1), rgba(52, 211, 153, 0.05));
             border: 1px solid rgba(16, 185, 129, 0.2);
@@ -205,6 +252,16 @@
             <h1>Intecracy</h1>
             <p class="subtitle">Meeting in the middle</p>
         </header>
+
+        <section class="song-section">
+            <p class="listen-label">Not everyone wants to read. Here's Intecracy as a song, made with Gemini and Producer AI.</p>
+            <div class="listen-buttons">
+                <a href="https://www.youtube.com/watch?v=GyOyeOCOG70" class="btn btn-youtube" target="_blank" rel="noopener">Watch on YouTube</a>
+                <a href="https://open.spotify.com/track/4DCUr8Lpdugf5fNBt02sFp" class="btn btn-spotify" target="_blank" rel="noopener">Listen on Spotify</a>
+                <a href="https://music.apple.com/us/album/intecracy/1871968419?i=1871968420" class="btn btn-apple" target="_blank" rel="noopener">Listen on Apple Music</a>
+            </div>
+            <p class="read-cue">Prefer to read? The full story is right below.<span class="arrow">↓</span></p>
+        </section>
 
         <article class="philosophy-content">
             <h2>The Problem</h2>

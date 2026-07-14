@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Membership | Inte.Team - Grow With Us</title>
-    <meta name="description" content="Join Inte.Team membership for £10/month. Build your savings, get priority access to spare devices during repairs, and be part of a community making electronics more accessible.">
+    <meta name="description" content="Join Inte.Team membership for £10/month. Invest in the community, get priority access to spare devices during repairs, and grow your benefits the longer you stay.">
     <meta name="keywords" content="Inte.Team membership, electronics membership Livingston, device rental, repair membership Scotland">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://inte.team/membership.html">
@@ -12,7 +12,7 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://inte.team/membership.html">
     <meta property="og:title" content="Membership | Inte.Team - Grow With Us">
-    <meta property="og:description" content="Join our membership programme. Build savings, access spare devices, and be part of something bigger.">
+    <meta property="og:description" content="Join our membership programme. Invest in the community, access spare devices, and be part of something bigger.">
     <meta property="og:locale" content="en_GB">
 
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
@@ -224,6 +224,58 @@
             font-weight: 600;
         }
 
+        .tab-nav {
+            display: flex;
+            justify-content: center;
+            gap: 0.75rem;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .tab-btn {
+            flex: 1;
+            background: var(--glass);
+            border: 1px solid var(--glass-border);
+            border-radius: 50px;
+            padding: 0.9rem 1.5rem;
+            color: var(--text-dim);
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .tab-btn:hover {
+            border-color: var(--member-accent);
+            color: #fff;
+        }
+
+        .tab-btn.active {
+            background: linear-gradient(135deg, var(--member-accent), #fbbf24);
+            border-color: transparent;
+            color: #1a1a1a;
+        }
+
+        .tab-panel {
+            display: none;
+        }
+
+        .tab-panel.active {
+            display: block;
+        }
+
+        @media (max-width: 600px) {
+            .tab-nav {
+                padding: 0 1rem;
+            }
+
+            .tab-btn {
+                padding: 0.8rem 1rem;
+                font-size: 0.9rem;
+            }
+        }
+
         @media (max-width: 768px) {
             .membership-hero h1 {
                 font-size: 2rem;
@@ -262,7 +314,7 @@
         <section class="membership-hero">
             <div class="stats-badge">Grow With Us</div>
             <h1>Inte.Team Membership</h1>
-            <p class="tagline">More than a subscription. It's your savings account for electronics, and our shared path to growth.</p>
+            <p class="tagline">More than a subscription. It's your investment in our community, and our shared path to growth.</p>
 
             <div class="price-highlight">
                 <span class="amount">£10</span>
@@ -270,84 +322,101 @@
             </div>
         </section>
 
-        <section class="membership-grid">
-            <div class="member-card">
-                <div class="icon">💰</div>
-                <h3>Your E-Wallet Savings</h3>
-                <p>Every £10 goes into your personal e-wallet. Set a goal, watch it grow. This is your deposit for future services, rentals, or purchases. The longer you stay, the more you accumulate.</p>
-            </div>
-
-            <div class="member-card">
-                <div class="icon">📱</div>
-                <h3>Spare Devices When You Need Them</h3>
-                <p>Device in for repair? As a member, you get priority access to our spare devices. No waiting without a phone, laptop, or console. Your saved amount acts as your deposit.</p>
-            </div>
-
-            <div class="member-card">
-                <div class="icon">🏠</div>
-                <h3>Helping Us Grow Together</h3>
-                <p>We work from home, space is limited. Your membership helps us rent space to store more devices, fix more electronics, and serve you better. As we grow, so do your benefits.</p>
-            </div>
-
-            <div class="member-card">
-                <div class="icon">🔧</div>
-                <h3>Lower Prices for Members</h3>
-                <p>With rental income, web development revenue, and membership support, we don't need to be greedy. Members enjoy lower repair rates and cheaper device rentals than regular customers.</p>
-            </div>
-        </section>
-
-        <section class="vision-section">
-            <div class="vision-content">
-                <h2>The Bigger Picture</h2>
-                <p>Here's how your membership helps us both:</p>
-                <p>We use membership funds to <span class="highlight">buy faulty and working electronics</span>, repair the faulty ones, and build a stock of spare devices. When we have enough members, we can <span class="highlight">rent proper space</span> instead of working from our limited home setup.</p>
-                <p>More space means more stock. More stock means you <span class="highlight">always have a spare device</span> when yours is being repaired, or if you just need to rent one.</p>
-                <p>Later, we'll buy new electronics, <span class="highlight">redesign and improve them</span>, and rent them to members at lower rates. Regular customers pay more. That's fair, they haven't invested in us like you have.</p>
-            </div>
-        </section>
-
-        <section class="timeline">
-            <h2>How We Grow Together</h2>
-
-            <div class="timeline-item">
-                <div class="timeline-marker">1</div>
-                <div class="timeline-content">
-                    <h4>Today: Electronics Repairs</h4>
-                    <p>Game consoles, TVs, laptops, phones. Your membership builds your savings while helping us stock spare devices.</p>
-                </div>
-            </div>
-
-            <div class="timeline-item">
-                <div class="timeline-marker">2</div>
-                <div class="timeline-content">
-                    <h4>Tomorrow: White Appliances</h4>
-                    <p>Washing machines, fridges, dishwashers. Same model, bigger scale. Members get priority service and lower rates.</p>
-                </div>
-            </div>
-
-            <div class="timeline-item">
-                <div class="timeline-marker">3</div>
-                <div class="timeline-content">
-                    <h4>The Future: Beyond Electronics</h4>
-                    <p>Who knows? Maybe one day we apply this model to other aspects of life. The principle stays the same: integrity, community, fair prices.</p>
-                </div>
-            </div>
-        </section>
-
-        <div class="integrity-quote">
-            <p>"Heal the world, make it a better place, for you and for me and the entire human race."</p>
-            <div class="source">Michael Jackson - Heal The World</div>
+        <div class="tab-nav">
+            <button class="tab-btn active" data-tab="membership" type="button">Membership</button>
+            <button class="tab-btn" data-tab="why" type="button">Why Membership</button>
         </div>
 
-        <section class="vision-content" style="padding: 2rem;">
-            <p><span class="highlight">INTE</span> stands for <span class="highlight">Integrity</span>. Inte.Team is on a mission to make this world just a bit better. For you, for us, for everyone.</p>
-            <p>If a member or customer never comes back for the next 15 years? No problem. We're paid through repairs, rentals, and web development. We have time. And with that time, we keep moving forward, one device at a time.</p>
-            <p style="margin-top: 1.5rem;"><a href="intecracy.html" style="color: var(--member-accent); text-decoration: none; border-bottom: 1px solid var(--member-accent);">Want to know more about our philosophy? Read about Intecracy.</a></p>
-        </section>
+        <div class="tab-panel active" id="tab-membership">
+            <section class="membership-grid">
+                <div class="member-card">
+                    <div class="icon">💰</div>
+                    <h3>Your Stake in the Community</h3>
+                    <p>Every £10 goes into a shared pool that helps us buy stock, tools, and space for everyone, tracked in your personal e-wallet. The longer you're a member, the more that shared growth turns into real benefits for you: priority access, bigger discounts, more stock available when you need it.</p>
+                </div>
+
+                <div class="member-card">
+                    <div class="icon">📱</div>
+                    <h3>Spare Devices When You Need Them</h3>
+                    <p>Device in for repair? As a member, you get priority access to our spare devices. No waiting without a phone, laptop, or console. Your e-wallet balance acts as your deposit.</p>
+                </div>
+
+                <div class="member-card">
+                    <div class="icon">🏠</div>
+                    <h3>Helping Us Grow Together</h3>
+                    <p>We work from home, space is limited. Your membership helps us rent space to store more devices, fix more electronics, and serve you better. As we grow, so do your benefits.</p>
+                </div>
+
+                <div class="member-card">
+                    <div class="icon">🔧</div>
+                    <h3>Lower Prices for Members</h3>
+                    <p>With rental income, web development revenue, and membership support, we don't need to be greedy. Members enjoy lower repair rates and cheaper device rentals than regular customers.</p>
+                </div>
+
+                <div class="member-card">
+                    <div class="icon">🌐</div>
+                    <h3>An Account on oorhq.inte.team</h3>
+                    <p>Every member can get an account on oorhq.inte.team if they'd like one, our space for the wider community. You're not just a customer, you're part of what we're building.</p>
+                    <p style="margin-top: 0.75rem;"><a href="https://oorhq.inte.team/" target="_blank" rel="noopener" style="color: var(--member-accent); text-decoration: none; border-bottom: 1px solid var(--member-accent); font-weight: 600;">Go take a look, the app alone is worth joining for.</a></p>
+                </div>
+            </section>
+        </div>
+
+        <div class="tab-panel" id="tab-why">
+            <section class="vision-section">
+                <div class="vision-content">
+                    <h2>The Bigger Picture</h2>
+                    <p>Here's how your membership helps us both:</p>
+                    <p>We use membership funds to <span class="highlight">buy faulty and working electronics</span>, repair the faulty ones, and build a stock of spare devices. When we have enough members, we can <span class="highlight">rent proper space</span> instead of working from our limited home setup.</p>
+                    <p>More space means more stock. More stock means you <span class="highlight">always have a spare device</span> when yours is being repaired, or if you just need to rent one.</p>
+                    <p>Later, we'll buy new electronics, <span class="highlight">redesign and improve them</span>, and rent them to members at lower rates. Regular customers pay more. That's fair, they haven't invested in us like you have.</p>
+                    <p>We don't think of this as charity in the traditional sense, one side giving, the other receiving. It's closer to what we call <span class="highlight">Prosumer Philanthropy</span>: you invest, we grow, and what we build together comes back to you as lower prices, more stock, and a community you're part of, not a programme you receive.</p>
+                </div>
+            </section>
+
+            <section class="timeline">
+                <h2>How We Grow Together</h2>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker">1</div>
+                    <div class="timeline-content">
+                        <h4>Today: Electronics Repairs</h4>
+                        <p>Game consoles, TVs, laptops, phones. Your membership helps us stock spare devices for everyone, and grows your priority access the longer you stay.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker">2</div>
+                    <div class="timeline-content">
+                        <h4>Tomorrow: White Appliances</h4>
+                        <p>Washing machines, fridges, dishwashers. Same model, bigger scale. Members get priority service and lower rates.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker">3</div>
+                    <div class="timeline-content">
+                        <h4>The Future: Beyond Electronics</h4>
+                        <p>Who knows? Maybe one day we apply this model to other aspects of life. The principle stays the same: integrity, community, fair prices.</p>
+                    </div>
+                </div>
+            </section>
+
+            <div class="integrity-quote">
+                <p>"Heal the world, make it a better place, for you and for me and the entire human race."</p>
+                <div class="source">Michael Jackson - Heal The World</div>
+            </div>
+
+            <section class="vision-content" style="padding: 2rem;">
+                <p><span class="highlight">INTE</span> stands for <span class="highlight">Integrity</span>. Inte.Team is on a mission to make this world just a bit better. For you, for us, for everyone.</p>
+                <p>If a member or customer never comes back for the next 15 years? No problem. We're paid through repairs, rentals, and web development. We have time. And with that time, we keep moving forward, one device at a time.</p>
+                <p style="margin-top: 1.5rem;"><a href="intecracy.html" style="color: var(--member-accent); text-decoration: none; border-bottom: 1px solid var(--member-accent);">Want to know more about our philosophy? Read about Intecracy, or listen to the song.</a></p>
+            </section>
+        </div>
 
         <section class="cta-section">
             <h2>Ready to Grow With Us?</h2>
-            <p>Start building your e-wallet savings today. Get in touch and we'll help you get started.</p>
+            <p>Start investing in the community today. Get in touch and we'll help you get started.</p>
             <a href="bookvisit.html" class="btn btn-member">Contact Us to Join</a>
         </section>
     </main>
@@ -357,5 +426,15 @@
     </footer>
 
     <script src="script.js"></script>
+    <script>
+        document.querySelectorAll('.tab-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+                document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+                btn.classList.add('active');
+                document.getElementById('tab-' + btn.dataset.tab).classList.add('active');
+            });
+        });
+    </script>
 </body>
 </html>
