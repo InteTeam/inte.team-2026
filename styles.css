@@ -203,8 +203,8 @@ body.no-motion *, body.no-motion *::before {
 
 /* */
 footer {
-    width: 100%; text-align: center; padding: 2rem;
-    background: #0b1120; color: #64748b; font-size: 1.2rem;
+    width: 100%; text-align: center; padding: 1.5rem 1rem;
+    background: #0b1120; color: #64748b; font-size: 0.85rem;
     border-top: 1px solid var(--glass-border);
 }
 
@@ -231,7 +231,7 @@ footer {
 
     .map-container { height: 300px; }
 
-    footer { font-size: 0.9rem; padding: 1.5rem 1rem; }
+    footer { font-size: 0.8rem; padding: 1.25rem 1rem; }
 }
 
 @media (max-width: 480px) {

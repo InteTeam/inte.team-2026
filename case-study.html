@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case Study: We Built Our Own CRM to Run Inte.Team | Web Development Livingston</title>
+    <meta name="description" content="Real case study: how Inte.Team replaced paper-based repair bookings with our own CRM, now the flagship of our web development work for local Scottish businesses.">
+    <meta name="keywords" content="web development case study Scotland, CRM case study, business automation Livingston, Inte.Team web dev proof">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://inte.team/case-study.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://inte.team/case-study.html">
+    <meta property="og:title" content="Case Study: We Built Our Own CRM to Run Inte.Team">
+    <meta property="og:description" content="How Inte.Team went from paper-based repair bookings to a CRM we now build for other local businesses.">
+    <meta property="og:image" content="https://inte.team/og-image.png">
+    <meta property="og:locale" content="en_GB">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Case Study: We Built Our Own CRM to Run Inte.Team">
+    <meta name="twitter:description" content="How Inte.Team went from paper-based repair bookings to a CRM we now build for other local businesses.">
+    <meta name="twitter:image" content="https://inte.team/og-image.png">
+
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        .cs-hero {
+            padding: 140px 1.25rem 3rem;
+            text-align: center;
+            max-width: 780px;
+            margin: 0 auto;
+        }
+        .cs-hero .stats-badge {
+            background: rgba(99, 102, 241, 0.1);
+            border: 1px solid rgba(99, 102, 241, 0.3);
+            color: #a5b4fc;
+        }
+        .cs-hero h1 {
+            font-size: clamp(2rem, 6vw, 3.2rem);
+            line-height: 1.15;
+            margin: 1rem 0 1rem;
+            background: linear-gradient(135deg, var(--web-accent), #a5b4fc);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .cs-hero p {
+            color: var(--text-dim);
+            font-size: clamp(0.95rem, 2.5vw, 1.1rem);
+            line-height: 1.75;
+            max-width: 620px;
+            margin: 0 auto;
+        }
+
+        .cs-section {
+            padding: 1rem 1.25rem 3rem;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .cs-story {
+            display: flex;
+            flex-direction: column;
+            gap: 1.25rem;
+        }
+
+        .cs-block {
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 24px;
+            padding: 2rem;
+        }
+        .cs-block .cs-tag {
+            font-size: 0.72rem;
+            font-weight: 800;
+            color: var(--web-accent);
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin: 0 0 0.5rem;
+        }
+        .cs-block h3 {
+            font-size: 1.3rem;
+            color: #fff;
+            margin: 0 0 0.75rem;
+        }
+        .cs-block p, .cs-block li {
+            color: var(--text-dim);
+            line-height: 1.75;
+            font-size: 0.95rem;
+        }
+        .cs-block ul {
+            margin: 0.5rem 0 0;
+            padding-left: 1.2rem;
+        }
+
+        .cs-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 1.25rem;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 1.25rem 3rem;
+        }
+        .cs-stat {
+            text-align: center;
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 20px;
+            padding: 1.75rem 1rem;
+        }
+        .cs-stat .num {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--web-accent);
+            display: block;
+        }
+        .cs-stat .label {
+            font-size: 0.82rem;
+            color: var(--text-dim);
+        }
+
+        .cs-cta {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 1.25rem 5rem;
+            text-align: center;
+        }
+        .cs-cta-inner {
+            background: rgba(255,255,255,0.02);
+            border: 1px solid rgba(255,255,255,0.07);
+            border-radius: 28px;
+            padding: 2.5rem 1.5rem;
+        }
+        .cs-cta h2 {
+            font-size: clamp(1.2rem, 4vw, 1.6rem);
+            font-weight: 900;
+            color: #fff;
+            margin: 0 0 0.625rem;
+        }
+        .cs-cta p {
+            font-size: 0.9rem;
+            color: var(--text-dim);
+            max-width: 520px;
+            margin: 0 auto 1.5rem;
+            line-height: 1.7;
+        }
+        .cs-cta-actions {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+    </style>
+</head>
+<body>
+
+    <nav aria-label="Main navigation">
+        <div class="nav-left">
+            <a href="index.html" class="logo">I N T E . T E A M</a>
+            <a href="index.html" class="nav-link">HOME</a>
+            <a href="webdevelopment.html" class="nav-link">WEB</a>
+        </div>
+        <div class="nav-controls">
+            <div class="contact-info"><strong>01506 532 247</strong></div>
+        </div>
+    </nav>
+
+    <header class="cs-hero">
+        <div class="stats-badge">Case Study</div>
+        <h1>We Built the Software That Runs Our Own Business.</h1>
+        <p>Before we built anything for anyone else, we had the same problem most local businesses have: bookings on paper, updates over WhatsApp, no record of what was promised to who. Here's what we replaced it with — and why it's now the flagship of our web development work.</p>
+    </header>
+
+    <section class="cs-section">
+        <div class="cs-story">
+            <div class="cs-block">
+                <p class="cs-tag">The Problem</p>
+                <h3>Paper-based bookings don't scale past one person remembering everything.</h3>
+                <p>Running electronics repairs out of paper tickets and WhatsApp chats meant no shared record between jobs, no automatic follow-up, and no way to see stock or job status without asking. Every new booking depended on someone being available to write it down correctly.</p>
+            </div>
+
+            <div class="cs-block">
+                <p class="cs-tag">What We Built</p>
+                <h3>Our own multi-tenant CRM — Book Repair Online.</h3>
+                <ul>
+                    <li>Lead capture through to final invoicing, with nothing falling through the cracks between stages.</li>
+                    <li>Business WhatsApp linked directly to tickets — any message becomes a trackable job.</li>
+                    <li>Low-stock alerts so spare parts and devices are ready before they run out.</li>
+                    <li>Self-hosted, white-labelled infrastructure — full control of our own data and uptime.</li>
+                </ul>
+            </div>
+
+            <div class="cs-block">
+                <p class="cs-tag">The Result</p>
+                <h3>We use it every day, and it's what we now build for other local businesses.</h3>
+                <p>It's not a demo environment or a sales prototype — it's the same system behind every repair we book. When we build a CRM, booking flow, or WhatsApp integration for a client, it's built on infrastructure we already trust with our own business.</p>
+            </div>
+
+            <div class="cs-block">
+                <p class="cs-tag">It Didn't Stop There</p>
+                <h3>As our customer base has grown, so has the platform underneath it.</h3>
+                <p>CRM was the first piece, not the only one. Every one of these lives in the same ecosystem, built by our own team, day after day:</p>
+                <ul>
+                    <li><strong style="color:#fff;">CMS</strong> — content management for shop websites</li>
+                    <li><strong style="color:#fff;">Store Front</strong> — e-commerce, built on the same customer data as the CRM</li>
+                    <li><strong style="color:#fff;">Warehouse & Logistics</strong> — stock and fulfilment across locations</li>
+                    <li><strong style="color:#fff;">Procurement</strong> — purchasing, handled inside the same platform</li>
+                    <li><strong style="color:#fff;">Nextcloud</strong> — private storage, calendars and contacts, connected in</li>
+                    <li><strong style="color:#fff;">oor-hq</strong> — how our own team runs projects, day to day</li>
+                </ul>
+                <p>Automatic backups and 2FA run underneath all of it, with single sign-on tying it together so switching between systems feels like one product, not several. And everywhere a customer's own customers look, it's white-label — no Inte.Team logo in sight. Just their brand, running on our infrastructure.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="cs-stats">
+        <div class="cs-stat">
+            <span class="num">500+</span>
+            <span class="label">branch roadmap this platform is built for</span>
+        </div>
+        <div class="cs-stat">
+            <span class="num">+300</span>
+            <span class="label">five-star reviews since going digital</span>
+        </div>
+        <div class="cs-stat">
+            <span class="num">3+</span>
+            <span class="label">systems running daily — CRM, email, website — not a pitch deck</span>
+        </div>
+    </section>
+
+    <section class="cs-cta">
+        <div class="cs-cta-inner">
+            <h2>Want to see it running live?</h2>
+            <p>Have a look at the platform itself, or get in touch for a free 15-minute audit of your own biggest bottleneck.</p>
+            <div class="cs-cta-actions">
+                <a href="https://crm.bookrepaironline.co.uk/" target="_blank" rel="noopener" class="btn btn-web" style="margin-top: 0; padding: 0.9rem 2.25rem;">Explore the Platform →</a>
+                <a href="repair-bookings.html" class="btn" style="margin-top: 0; background: transparent; border: 1px solid var(--glass-border); padding: 0.9rem 2.25rem;">Book Your 15-Min Audit</a>
+            </div>
+        </div>
+    </section>
+
+    <!--#include virtual="/partials/footer.html" -->
+
+    <script src="script.js"></script>
+</body>
+</html>
