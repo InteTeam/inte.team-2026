@@ -99,11 +99,22 @@ input:checked + .slider:before { transform: translateX(16px); }
 }
 
 #img-repairs {
-    background: linear-gradient(135deg, #0c1929 0%, #1a365d 50%, #0ea5e9 100%);
+    background-color: #1a365d;
+    background-image: url('hero-repairs.webp');
 }
 
 #img-webdev {
-    background: linear-gradient(135deg, #1e1b4b 0%, #312e81 50%, #6366f1 100%);
+    background-color: #312e81;
+    background-image: url('hero-webdev.webp');
+}
+
+@supports (background-image: image-set(url('') type('image/avif'))) {
+    #img-repairs {
+        background-image: image-set(url('hero-repairs.avif') type('image/avif'), url('hero-repairs.webp') type('image/webp'));
+    }
+    #img-webdev {
+        background-image: image-set(url('hero-webdev.avif') type('image/avif'), url('hero-webdev.webp') type('image/webp'));
+    }
 }
 
 .bg-image::after {
