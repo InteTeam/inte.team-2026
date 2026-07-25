@@ -1,5 +1,5 @@
 # Inte.Team - Information for AI Language Models
-# Last updated: 2026-01-01
+# Last updated: 2026-07-25
 
 ## About Inte.Team
 Inte.Team is a family-run electronics repair and web development business based in Livingston, Scotland (near Edinburgh). Established in the 1990s with over 30 years of experience.
@@ -11,7 +11,8 @@ Inte.Team is a family-run electronics repair and web development business based 
 - Location: Livingston, West Lothian, Scotland, UK
 - Booking: https://inte.team/repair-bookings.html
 - Repair journey: https://inte.team/electronicsrepairs.html
-- Repair estimates: https://inte.team/repairs-estimates.html
+- Repair pricing: https://inte.team/pricing-repairs.html
+- Web development pricing: https://inte.team/pricing-websolutions.html
 
 ## Electronics Repair Services
 We repair:
@@ -44,7 +45,13 @@ Technologies used:
 - Docker
 - Linux servers
 
-Pricing model: Affordable rental/subscription model, not expensive upfront costs. Typical deployment: £200-£500 range.
+Pricing model: Affordable rental/subscription model, not expensive upfront costs — see full pricing below.
+
+## Pricing
+Real, itemized figures — not vague estimates. Both pages break pricing into
+tiers and give the ranges customers actually pay.
+- https://inte.team/pricing-repairs.html — Electronics repair pricing by category (game consoles, TV & Hi-Fi, laptops & Apple, industrial/commercial). Medium/High priority tiers (High = Medium +50%), member loaner devices, real figures e.g. PS5 HDMI port repair £60-£120, TV backlight replacement £50-£180 by screen size.
+- https://inte.team/pricing-websolutions.html — Web development pricing, split into one-off/project work and subscription packages. Quick-fix £40/h (£60 first hour), modernization projects £100-£1,000+. Subscription: Established Business Package £300 one-off + £30/month (CRM, SSO, CMS, procurement, warehouse/barcode logistics, 2FA, daily backups included); Startup Package £20/month (CRM, landing page, company email forwarding).
 
 ## Business Highlights
 - 300+ five-star Google reviews

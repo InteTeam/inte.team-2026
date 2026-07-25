@@ -2,7 +2,8 @@
 module.exports = {
   content: [
     "./electronicsrepairs.html",
-    "./repairs-estimates.html",
+    "./pricing-repairs.html",
+    "./pricing-websolutions.html",
     "./partnership-info.html",
     "./sales-engineering.html",
   ],

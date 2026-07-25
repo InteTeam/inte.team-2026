@@ -61,10 +61,16 @@
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://inte.team/repairs-estimates.html</loc>
-        <lastmod>2026-07-19</lastmod>
+        <loc>https://inte.team/pricing-repairs.html</loc>
+        <lastmod>2026-07-25</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://inte.team/pricing-websolutions.html</loc>
+        <lastmod>2026-07-25</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
     </url>
     <url>
         <loc>https://inte.team/partnership-info.html</loc>
