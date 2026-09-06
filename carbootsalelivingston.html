@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bring a Car Boot Sale to Livingston | Inte.Team Community Initiative</title>
+    <meta name="description" content="Support the campaign to bring a regular weekend car boot sale to Livingston. Have your say on location, pricing, and timing.">
+    <meta name="keywords" content="car boot sale Livingston, Livingston market, West Lothian car boot, Inte.Team community initiative">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://inte.team/carbootsalelivingston">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://inte.team/carbootsalelivingston">
+    <meta property="og:title" content="Bring a Car Boot Sale to Livingston | Inte.Team Community Initiative">
+    <meta property="og:description" content="Livingston is Scotland's largest town without its own car boot sale. Add your voice and help us bring a regular weekend market to town.">
+    <meta property="og:image" content="https://inte.team/og-image.png">
+    <meta property="og:locale" content="en_GB">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Bring a Car Boot Sale to Livingston">
+    <meta name="twitter:description" content="Support the campaign to bring a regular weekend car boot sale to Livingston. Have your say on location, pricing, and timing.">
+    <meta name="twitter:image" content="https://inte.team/og-image.png">
+
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="tailwind.css">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Who is organizing this?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Inte.Team is leading the research, logistics, and planning to bring this to life for Livingston." }
+            },
+            {
+                "@type": "Question",
+                "name": "Will it cost anything to support?",
+                "acceptedAnswer": { "@type": "Answer", "text": "No, pledging your interest or completing the research form is 100% free." }
+            },
+            {
+                "@type": "Question",
+                "name": "Where will it be located?",
+                "acceptedAnswer": { "@type": "Answer", "text": "We are currently evaluating multiple accessible surface parking sites across Livingston and will announce the trial location once land owner negotiations complete." }
+            },
+            {
+                "@type": "Question",
+                "name": "How can land owners or venue managers get in touch?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Contact our admin team directly at our main contact channels to discuss hosting the trial." }
+            }
+        ]
+    }
+    </script>
+
+    <style>
+        :root {
+            --cbs-accent: #f59e0b;
+            --cbs-accent-bright: #fbbf24;
+        }
+
+        .cbs-hero {
+            padding: 140px 1.25rem 3rem;
+            text-align: center;
+            max-width: 820px;
+            margin: 0 auto;
+        }
+        .cbs-hero h1 {
+            font-size: clamp(2rem, 5.5vw, 3rem);
+            line-height: 1.2;
+            margin: 1.25rem 0 1.25rem;
+            font-weight: 900;
+            background: linear-gradient(135deg, #fbbf24, #f59e0b);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .cbs-hero p {
+            color: var(--text-dim);
+            font-size: clamp(0.95rem, 2.5vw, 1.15rem);
+            line-height: 1.75;
+            max-width: 620px;
+            margin: 0 auto;
+        }
+        .cbs-badge {
+            background: rgba(245, 158, 11, 0.1);
+            border: 1px solid rgba(245, 158, 11, 0.3);
+            color: var(--cbs-accent-bright);
+        }
+        .btn-cbs {
+            background: var(--cbs-accent);
+            box-shadow: 0 4px 15px rgba(245, 158, 11, 0.3);
+        }
+
+        .cbs-momentum {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 1.25rem 3rem;
+        }
+
+        .cp-section {
+            padding: 1rem 1.25rem 4rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .cbs-stat-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.25rem;
+        }
+        .cbs-stat {
+            background: var(--glass);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            padding: 1.75rem 1rem;
+            text-align: center;
+        }
+        .cbs-stat .num {
+            font-size: clamp(1.6rem, 4vw, 2.25rem);
+            font-weight: 900;
+            color: var(--cbs-accent-bright);
+            line-height: 1;
+        }
+        .cbs-stat .label {
+            margin-top: 0.5rem;
+            font-size: 0.78rem;
+            color: var(--text-dim);
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            font-weight: 700;
+        }
+        @media (max-width: 680px) {
+            .cbs-stat-grid { grid-template-columns: 1fr; }
+        }
+
+        .cbs-why-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.25rem;
+        }
+        .cbs-why-card {
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 24px;
+            padding: 2rem;
+        }
+        .cbs-why-card .icon { font-size: 2.25rem; margin-bottom: 0.75rem; }
+        .cbs-why-card h3 { font-size: 1.1rem; font-weight: 800; color: #fff; margin: 0 0 0.5rem; }
+        .cbs-why-card p { font-size: 0.9rem; color: #94a3b8; line-height: 1.7; margin: 0; }
+        @media (max-width: 780px) {
+            .cbs-why-grid { grid-template-columns: 1fr; }
+        }
+
+        .embed-holder {
+            width: 100%;
+            max-width: 760px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(5px);
+            border-radius: 28px;
+            padding: 1.25rem;
+            border: 1px solid var(--glass-border);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            min-height: 420px;
+            position: relative;
+        }
+        .embed-holder iframe,
+        .embed-holder embed {
+            border-radius: 15px;
+            background: white;
+        }
+        .embed-skeleton {
+            position: absolute;
+            inset: 1.25rem;
+            border-radius: 15px;
+            background: linear-gradient(90deg, rgba(255,255,255,0.04) 25%, rgba(255,255,255,0.08) 37%, rgba(255,255,255,0.04) 63%);
+            background-size: 400% 100%;
+            animation: cbs-shimmer 1.4s ease infinite;
+        }
+        @keyframes cbs-shimmer {
+            0% { background-position: 100% 50%; }
+            100% { background-position: 0 50%; }
+        }
+        body.no-motion .embed-skeleton { animation: none; }
+
+        .cbs-faq details {
+            background: var(--glass);
+            border: 1px solid var(--glass-border);
+            border-radius: 16px;
+            padding: 1.1rem 1.4rem;
+            margin-bottom: 0.9rem;
+        }
+        .cbs-faq summary {
+            cursor: pointer;
+            font-weight: 700;
+            color: #fff;
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1rem;
+        }
+        .cbs-faq summary::-webkit-details-marker { display: none; }
+        .cbs-faq summary::after {
+            content: '+';
+            font-size: 1.4rem;
+            font-weight: 400;
+            color: var(--cbs-accent-bright);
+            flex-shrink: 0;
+            transition: transform 0.25s ease;
+        }
+        .cbs-faq details[open] summary::after { transform: rotate(45deg); }
+        .cbs-faq p {
+            color: var(--text-dim);
+            font-size: 0.92rem;
+            line-height: 1.7;
+            margin: 0.85rem 0 0;
+        }
+    </style>
+</head>
+<body>
+
+    <nav aria-label="Main navigation">
+        <div class="nav-left">
+            <a href="index.html" class="logo">I N T E . T E A M</a>
+            <a href="index.html" class="nav-link">HOME</a>
+            <a href="community-projects.html" class="nav-link">COMMUNITY</a>
+        </div>
+        <div class="nav-controls">
+            <div class="contact-info"><strong>01506 532 247</strong></div>
+        </div>
+    </nav>
+
+    <header class="cbs-hero">
+        <div class="stats-badge cbs-badge">Community Initiative by Inte.Team</div>
+        <h1>Livingston is Scotland's largest town without its own Car Boot Sale. Let's fix that together.</h1>
+        <p>Stop driving to Bathgate or Edinburgh to clear out your home or hunt for bargains. Help us bring a vibrant, regular weekend car boot market straight to Livingston.</p>
+        <a href="#pledge-form" class="btn btn-cbs">Add Your Voice ↓</a>
+    </header>
+
+    <section class="cbs-momentum">
+        <div class="cbs-stat-grid">
+            <div class="cbs-stat">
+                <div class="num" id="stat-pledges">350+</div>
+                <div class="label">Target Pledges</div>
+            </div>
+            <div class="cbs-stat">
+                <div class="num" id="stat-cost">£0</div>
+                <div class="label">Upfront Cost to Community</div>
+            </div>
+            <div class="cbs-stat">
+                <div class="num" id="stat-venues">3</div>
+                <div class="label">Candidate Venues Under Review</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cp-section">
+        <h2 class="text-center text-2xl font-black text-white mb-8">Why Livingston Needs This</h2>
+        <div class="cbs-why-grid">
+            <div class="cbs-why-card">
+                <div class="icon">💷</div>
+                <h3>Clear Space, Make Cash</h3>
+                <p>Keep local trade within Livingston instead of travelling out of town to sell what you no longer need.</p>
+            </div>
+            <div class="cbs-why-card">
+                <div class="icon">♻️</div>
+                <h3>Bargains &amp; Re-Use</h3>
+                <p>A sustainable, affordable way for families and collectors to buy second-hand goods locally.</p>
+            </div>
+            <div class="cbs-why-card">
+                <div class="icon">🛠️</div>
+                <h3>Fully Managed &amp; Local</h3>
+                <p>Managed end-to-end by Inte.Team — logistics, site maintenance, insurance, and setup all handled.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="pledge-form" class="cp-section">
+        <h2 class="text-center text-2xl font-black text-white mb-3">Add Your Voice &amp; Reserve Your Interest</h2>
+        <p class="text-center text-slate-400 max-w-lg mx-auto text-sm leading-relaxed mb-8">
+            We are currently pitching local land owners with real data. The more pledges we collect, the stronger our case to secure a central venue for a 6-month trial.
+        </p>
+
+        <div class="embed-holder" id="pledge-embed-holder">
+            <div class="embed-skeleton" id="pledge-embed-skeleton" aria-hidden="true"></div>
+            <div id="form-14b7700b-704c-4fbb-bae7-6c3c312a4afa"></div>
+        </div>
+    </section>
+
+    <section class="cp-section cbs-faq" style="max-width: 760px;">
+        <h2 class="text-center text-2xl font-black text-white mb-8">Frequently Asked Questions</h2>
+
+        <details>
+            <summary>Who is organizing this?</summary>
+            <p>Inte.Team is leading the research, logistics, and planning to bring this to life for Livingston.</p>
+        </details>
+
+        <details>
+            <summary>Will it cost anything to support?</summary>
+            <p>No, pledging your interest or completing the research form is 100% free.</p>
+        </details>
+
+        <details>
+            <summary>Where will it be located?</summary>
+            <p>We are currently evaluating multiple accessible surface parking sites across Livingston and will announce the trial location once land owner negotiations complete.</p>
+        </details>
+
+        <details>
+            <summary>How can land owners or venue managers get in touch?</summary>
+            <p>Contact our admin team directly at our main contact channels to discuss hosting the trial.</p>
+        </details>
+    </section>
+
+    <!--#include virtual="/partials/footer.html" -->
+
+    <script src="script.js"></script>
+    <script>
+        (function () {
+            var PLEDGE_FORM_ID = '14b7700b-704c-4fbb-bae7-6c3c312a4afa';
+            var API_BASE = 'https://crm.bookrepaironline.co.uk';
+            var loaded = false;
+
+            function loadPledgeForm() {
+                if (loaded) return;
+                loaded = true;
+                var s = document.createElement('script');
+                s.src = API_BASE + '/js/form-embed.js';
+                s.onload = function () {
+                    FormEmbed.render(PLEDGE_FORM_ID, {
+                        container: '#form-14b7700b-704c-4fbb-bae7-6c3c312a4afa',
+                        apiBase: API_BASE,
+                        theme: 'dark'
+                    });
+                    var skeleton = document.getElementById('pledge-embed-skeleton');
+                    if (skeleton) skeleton.remove();
+                };
+                document.head.appendChild(s);
+            }
+
+            var holder = document.getElementById('pledge-embed-holder');
+            if ('IntersectionObserver' in window && holder) {
+                var observer = new IntersectionObserver(function (entries) {
+                    entries.forEach(function (entry) {
+                        if (entry.isIntersecting) {
+                            loadPledgeForm();
+                            observer.disconnect();
+                        }
+                    });
+                }, { rootMargin: '200px' });
+                observer.observe(holder);
+            } else {
+                loadPledgeForm();
+            }
+        })();
+    </script>
+</body>
+</html>

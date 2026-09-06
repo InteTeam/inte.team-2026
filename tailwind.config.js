@@ -6,6 +6,7 @@ module.exports = {
     "./pricing-websolutions.html",
     "./partnership-info.html",
     "./sales-engineering.html",
+    "./carbootsalelivingston.html",
   ],
   theme: {
     extend: {},
