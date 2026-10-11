@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* The CRM chat button (chat-widget.js). Tailwind's reset clears a button's background,
+   padding and text size, and the loader's own rules are written to lose to the page's CSS,
+   so on Tailwind pages the button showed as bare text. Same values as the loader. */
+.inteteam-chat-launcher {
+    padding: 12px 16px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.2;
+    background: var(--inteteam-chat-bg, #2563EB);
+    color: var(--inteteam-chat-fg, #fff);
+}
