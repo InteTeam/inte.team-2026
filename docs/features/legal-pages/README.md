@@ -15,8 +15,10 @@ grep -c 'class="gap"' privacy.html
 - **Decided (Piotr, 2026-10-21):** Piotr Ficner, sole trader, trading as Inte.Team. No Ltd company.
 - **Decided (Piotr, 2026-07-05, for farmsinscotland):** legal and data contact `support@inte.team`;
   Inte.Team does not sell, rent or trade personal data, for any product.
-- Address shown on the site today (footer partial): 43 Norman Rise, Livingston, EH54 6LY, "Private
-  Home, By Appointment Only". Using it as the policy address is **Proposed, pending confirmation** (Q1).
+- **Decided (Piotr, 2026-10-21):** business address 43 Norman Rise, Livingston, EH54 6LY (Q1), as in
+  the footer ("Private Home, By Appointment Only").
+- ICO data protection fee **paid 2026-10-21** (Piotr). Application number C2065527. The registration
+  number is not issued yet; the policy shows the registration number, not the application number (Q2 open).
 
 ## Scope
 
@@ -51,8 +53,7 @@ Each is a gap in `privacy.html`, numbered to match.
 
 | # | Question | Why it matters |
 |---|---|---|
-| Q1 | Is 43 Norman Rise the address to publish as the business address? | The policy must name where the controller is |
-| Q2 | Has the ICO data protection fee been paid? Registration number? | Most businesses handling customer data must pay it; the number goes in the policy |
+| Q2 | ICO registration number (fee paid 2026-10-21, application C2065527, number not issued yet) | The registration number goes in the policy |
 | Q3 | VAT registered? Number? | Shown with the business details if so |
 | Q4 | Does the production chat AI ever use Gemini, Claude or OpenAI, or only Inte.Team's own servers (Ollama on the Dell / P40)? Including any fallback | The policy must say truthfully where chat text goes |
 | Q5 | Which Contabo region are the VPSes in (Germany, UK, other)? | Says where data is stored |
