@@ -17,8 +17,27 @@ grep -c 'class="gap"' privacy.html
   Inte.Team does not sell, rent or trade personal data, for any product.
 - **Decided (Piotr, 2026-10-21):** business address 43 Norman Rise, Livingston, EH54 6LY (Q1), as in
   the footer ("Private Home, By Appointment Only").
-- ICO data protection fee **paid 2026-10-21** (Piotr). Application number C2065527. The registration
-  number is not issued yet; the policy shows the registration number, not the application number (Q2 open).
+- ICO data protection fee **paid 2026-10-21** (Piotr). Application number C2065527.
+  **Decided (Piotr, 2026-10-21):** publish now with "fee paid, registration number shown once issued"
+  (Q2). **Follow-up after merge:** when the ICO issues the number (usually "Z" + digits), replace
+  that sentence in `privacy.html` section 1. The application number is not published.
+- **Decided (Piotr, 2026-10-21):** not VAT registered (Q3). The VAT line is removed.
+
+## Answers from Piotr, 2026-10-21 (Q4-Q10)
+
+| # | Answer | Where in `privacy.html` |
+|---|---|---|
+| Q4 | Chat AI uses only Inte.Team's own LLMs on own hardware at 43 Norman Rise. No third-party AI | 3, Website chat |
+| Q5 | Contabo servers are in Germany (EU) | 5, Hosting + transfers line |
+| Q6 | Customer email goes out from own Mailu servers on Contabo | 5, Email |
+| Q7 (SMS) | Own SMS gateway at Norman Rise, built in-house, Smarty SIM. AI never sends SMS; it can draft templates/replies that a person must edit before sending. CRM automatic SMS = team-made templates filled with booking details | 3, Phone/SMS; 5, SMS |
+| Q8 | WhatsApp Business account via Meta's API | 5, WhatsApp |
+| Q9 | Dojo, SumUp, Monzo Business bank transfer, cash | 5, Payments |
+| Q10 | Drop-off points get no customer data, only the booking ID; the CRM does the rest | 5, Drop-off partners |
+
+**Poka-yoke (Q4):** `inteteam-ai` supports Gemini, Claude and OpenAI. The policy now promises chat text
+never reaches an outside AI provider, so on production those provider keys must stay empty. Enabling
+any of them (even as a fallback) needs this policy changed first.
 
 ## Scope
 
@@ -53,15 +72,7 @@ Each is a gap in `privacy.html`, numbered to match.
 
 | # | Question | Why it matters |
 |---|---|---|
-| Q2 | ICO registration number (fee paid 2026-10-21, application C2065527, number not issued yet) | The registration number goes in the policy |
-| Q3 | VAT registered? Number? | Shown with the business details if so |
-| Q4 | Does the production chat AI ever use Gemini, Claude or OpenAI, or only Inte.Team's own servers (Ollama on the Dell / P40)? Including any fallback | The policy must say truthfully where chat text goes |
-| Q5 | Which Contabo region are the VPSes in (Germany, UK, other)? | Says where data is stored |
-| Q6 | How does Inte.Team send emails to customers: own mail server (Mailu) or Resend? | Processor list |
-| Q7 | How are SMS sent (own gateway phone, Twilio, other)? Are phone calls recorded (Twilio/Webex call history)? | Processor list; call recording must be stated |
-| Q8 | WhatsApp: the forms offer it as a contact method. Business app on a phone, or the API? | Meta is then a processor / independent controller |
-| Q9 | How do customers pay (card terminal provider, bank transfer, online)? | Processor list |
-| Q10 | What do Petzone and D&J Records see: name and booking reference only, or more? | They handle devices on Inte.Team's behalf |
+| Q7 | Phone: which provider carries calls (Webex, Twilio, other)? Are phone calls recorded? | Processor list; call recording must be stated |
 | Q11 | How long are customer and repair records kept in the CRM? | Retention section. HMRC needs business records kept at least 5 years after the 31 January Self Assessment deadline; **Proposed:** 6 years after the last job, then deleted |
 | Q12 | How long are web server logs (nginx in Docker, Cloudflare) kept? | Retention section |
 | Q13 | Is chat slice B (leave your email, 6-digit code) live yet? | Describe only what visitors can actually do; the text is written to cover it |
