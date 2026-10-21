@@ -8,7 +8,7 @@
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://inte.team/electronicsrepairs.html">
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="tailwind.css?v=20261011">
+    <link rel="stylesheet" href="tailwind.css?v=20261021">
     <style>
         :root { 
             --text-main: #0f172a; 
@@ -35,6 +35,17 @@
             transition: border-color 0.3s ease;
         }
         .engineering-card:hover { border-color: rgba(14,165,233,0.35); }
+        /* Turnaround tiers */
+        .tier-row { display: flex; gap: 0.9rem; align-items: flex-start; margin-bottom: 1rem; }
+        .tier-row:last-of-type { margin-bottom: 0; }
+        .tier-badge {
+            flex-shrink: 0; width: 4.5rem; text-align: center;
+            font-size: 0.68rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.08em;
+            padding: 0.3rem 0; border-radius: 999px; margin-top: 0.1rem;
+        }
+        .tier-high { background: rgba(239,68,68,0.15); color: #f87171; }
+        .tier-medium { background: rgba(14,165,233,0.15); color: #38bdf8; }
+        .tier-low { background: rgba(148,163,184,0.15); color: #94a3b8; }
         .zoom-btn { transition: all 0.2s; border: none; cursor: pointer; font-family: inherit; }
 
         /* Journey tiles */
@@ -290,7 +301,8 @@
                         <svg class="w-5 h-5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
                     </div>
                     <h3 class="text-base font-bold text-white mb-2">Express Turnaround</h3>
-                    <p class="text-slate-400 text-sm leading-relaxed">HDMI port replacements and most laptop &amp; PC repairs are prioritised for same-day or next-day completion.</p>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-4">On High priority, most diagnoses and repairs are completed within 1–2 days. Need it sooner? Ask us about Urgent.</p>
+                    <a href="#turnaround" class="text-xs font-bold text-blue-400 hover:text-blue-300 transition-colors uppercase tracking-wider">Turnaround Times →</a>
                 </div>
 
                 <!-- Parts & Transparency -->
@@ -339,7 +351,7 @@
                 <a href="repair-bookings.html" class="journey-tile">
                     <div class="text-2xl mb-3">📅</div>
                     <div class="text-sky-400 font-bold text-base mb-1">I can wait a bit</div>
-                    <div class="text-sm text-slate-400">Book a slot when we're less busy.</div>
+                    <div class="text-sm text-slate-400">No deadline? Book a Low or Medium priority slot.</div>
                 </a>
 
                 <button onclick="openModal('modal-firsttime')" class="journey-tile">
@@ -460,6 +472,63 @@
                         <p>A post-repair email ensures we met your expectations.</p>
                     </div>
                 </div>
+            </div>
+        </section>
+
+        <!-- Turnaround Times -->
+        <section id="turnaround" class="mb-20">
+            <div class="text-center mb-10">
+                <div class="inline-block bg-blue-500/10 text-blue-400 px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest mb-4">Turnaround Times</div>
+                <h2 class="text-3xl font-black text-white mb-3">How long will my repair take?</h2>
+                <p class="text-slate-400 text-sm max-w-xl mx-auto">Timescales depend on the priority you choose. Every job has two stages: diagnosis, then repair once you've approved the estimate.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+
+                <!-- Diagnosis -->
+                <div class="engineering-card">
+                    <h3 class="text-lg font-bold text-white mb-5">1. Diagnosis</h3>
+                    <div class="tier-row">
+                        <span class="tier-badge tier-high">High</span>
+                        <p class="text-slate-400 text-sm leading-relaxed"><strong class="text-white">1–2 days.</strong> High-priority diagnosis is completed within 1–2 days of receiving your device.</p>
+                    </div>
+                    <div class="tier-row">
+                        <span class="tier-badge tier-medium">Medium</span>
+                        <p class="text-slate-400 text-sm leading-relaxed"><strong class="text-white">3–5 working days</strong>, up to a week. This can take longer during busy periods.</p>
+                    </div>
+                    <div class="tier-row">
+                        <span class="tier-badge tier-low">Low</span>
+                        <p class="text-slate-400 text-sm leading-relaxed"><strong class="text-white">No fixed timescale.</strong> For customers with no deadline. Low-priority jobs are handled between scheduled work, so they can take considerably longer. You can upgrade to Medium at any time for an additional fee.</p>
+                    </div>
+                    <p class="text-slate-500 text-xs leading-relaxed mt-5 pt-4 border-t border-white/10">Diagnosis covers up to 1–2 hours of bench time. If that isn't enough to find the fault, we'll contact you to agree next steps before doing any further work.</p>
+                </div>
+
+                <!-- Repair -->
+                <div class="engineering-card">
+                    <h3 class="text-lg font-bold text-white mb-5">2. Repair</h3>
+                    <div class="tier-row">
+                        <span class="tier-badge tier-high">High</span>
+                        <p class="text-slate-400 text-sm leading-relaxed"><strong class="text-white">1–2 days</strong> once diagnosed and approved. If parts need sourcing, fitting is completed within 1–2 days of them arriving.</p>
+                    </div>
+                    <div class="tier-row">
+                        <span class="tier-badge tier-medium">Medium</span>
+                        <p class="text-slate-400 text-sm leading-relaxed"><strong class="text-white">3–5 working days</strong>, up to a week, from approval or from parts arriving. This can take longer during busy periods.</p>
+                    </div>
+                    <div class="tier-row">
+                        <span class="tier-badge tier-low">Low</span>
+                        <p class="text-slate-400 text-sm leading-relaxed"><strong class="text-white">No fixed timescale.</strong> Completed as capacity allows. Upgrade to Medium for an additional fee and we'll reserve dedicated bench time for your repair.</p>
+                    </div>
+                    <p class="text-slate-500 text-xs leading-relaxed mt-5 pt-4 border-t border-white/10">Parts delivery times are outside our control. We'll keep you updated if a part is delayed. High priority isn't available for every device type. See <a href="pricing-repairs.html" class="text-sky-400 hover:text-sky-300">pricing</a> for details.</p>
+                </div>
+
+            </div>
+
+            <!-- Urgent -->
+            <div class="engineering-card flex flex-col md:flex-row md:items-center gap-4" style="border-color:rgba(245,158,11,0.3);background:rgba(245,158,11,0.06);">
+                <div class="flex-1">
+                    <h3 class="text-base font-bold text-amber-400 mb-1">⚡ Need it urgently?</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">Tell us. Urgent jobs go ahead of all other work, including evenings and weekends where needed. Urgent pricing is agreed with you before we start.</p>
+                </div>
+                <button onclick="openModal('modal-call')" class="shrink-0 bg-amber-500 text-slate-900 px-6 py-3 rounded-xl font-bold text-sm hover:bg-amber-400 transition-all">Contact us</button>
             </div>
         </section>
 

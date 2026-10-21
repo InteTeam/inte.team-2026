@@ -17,7 +17,19 @@ Acceptance Criteria once all categories are captured.
 
 ## General pricing framework (applies across categories unless overridden)
 
-- **Priority tiers:**
+- **Priority tiers** (turnaround wording confirmed by Piotr 2026-10-21, shown
+  on `electronicsrepairs.html#turnaround`; applies to diagnosis and repair
+  separately):
+  - **Low** — no fixed timescale, done between scheduled work. Can be
+    upgraded to Medium for an additional fee (fee amount not yet set);
+    upgraded jobs get 1–2h blocked in the CRM scheduler (internal only,
+    not stated on the site).
+  - **Urgent** — available to all customers (not just B2B), price agreed
+    in advance; we drop everything, evenings/weekends if needed.
+  - **Diagnosis cap** — up to 1–2h bench time; beyond that we contact the
+    customer about next steps before continuing.
+  - Parts: High = fitted within 1–2 days of parts arriving; Medium = 3–5
+    working days from arrival.
   - **Medium** — 3–5 working days (up to 1 week) if parts don't need
     sourcing.
   - **High** — turnaround same/next day (1–2 days), or same-hours where

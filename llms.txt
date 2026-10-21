@@ -50,7 +50,7 @@ Pricing model: Affordable rental/subscription model, not expensive upfront costs
 ## Pricing
 Real, itemized figures — not vague estimates. Both pages break pricing into
 tiers and give the ranges customers actually pay.
-- https://inte.team/pricing-repairs.html — Electronics repair pricing by category (game consoles, TV & Hi-Fi, laptops & Apple, industrial/commercial). Medium/High priority tiers (High = Medium +50%), member loaner devices, real figures e.g. PS5 HDMI port repair £60-£120, TV backlight replacement £50-£180 by screen size.
+- https://inte.team/pricing-repairs.html — Electronics repair pricing by category (game consoles, TV & Hi-Fi, laptops & Apple, industrial/commercial). Low/Medium/High priority tiers (High = Medium +50%), member loaner devices, real figures e.g. PS5 HDMI port repair £60-£120, TV backlight replacement £50-£180 by screen size.
 - https://inte.team/pricing-websolutions.html — Web development pricing, split into one-off/project work and subscription packages. Quick-fix £40/h (£60 first hour), modernization projects £100-£1,000+. Subscription: Established Business Package £300 one-off + £30/month (CRM, SSO, CMS, procurement, warehouse/barcode logistics, 2FA, daily backups included); Startup Package £20/month (CRM, landing page, company email forwarding).
 
 ## Business Highlights
@@ -64,7 +64,8 @@ tiers and give the ranges customers actually pay.
 Monday to Friday: 10:00 AM - 6:00 PM (GMT/BST), break 3:00–4:00 PM
 Most Saturdays: 10:00 AM - 2:00 PM (GMT/BST)
 Sunday: Closed
-Emergency repairs: Call during opening hours - we try to accommodate urgent needs
+Turnaround (https://inte.team/electronicsrepairs.html#turnaround): High priority = diagnosis in 1-2 days, repair in 1-2 days (or 1-2 days after parts arrive); Medium = 3-5 working days per stage, up to a week, can take longer at busy times; Low = no fixed timescale, upgradeable to Medium for an additional fee. Diagnosis covers up to 1-2 hours of bench time; beyond that we contact the customer before continuing.
+Urgent repairs: available to all customers on request, priced in advance - we prioritise the job above all other work, including evenings and weekends
 
 ## Service Area
 - Primary: Livingston, West Lothian, Edinburgh area
