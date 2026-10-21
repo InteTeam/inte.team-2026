@@ -8,8 +8,8 @@
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://inte.team/electronicsrepairs.html">
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="section-dock.css?v=20261021">
-    <link rel="stylesheet" href="tailwind.css?v=20261021">
+    <link rel="stylesheet" href="section-dock.css?v=20261021b">
+    <link rel="stylesheet" href="tailwind.css?v=20261021b">
     <style>
         :root { 
             --text-main: #0f172a; 
@@ -36,6 +36,28 @@
             transition: border-color 0.3s ease;
         }
         .engineering-card:hover { border-color: rgba(14,165,233,0.35); }
+        /* Partnership panel. Tall enough that the section dock can scroll it to the
+           top of the screen even though it is the last section on the page. */
+        .partner-panel {
+            position: relative; overflow: hidden;
+            display: flex; align-items: center; justify-content: center;
+            text-align: center;
+            padding: 4rem 1.5rem;
+            min-height: max(440px, calc(100vh - 240px));
+            min-height: max(440px, calc(100svh - 240px));
+            border-radius: 3rem;
+            border: 1px solid rgba(255,255,255,0.1);
+            /* Photo slot: add the background image as the layer just above #0d1e35.
+               The top scrim keeps the white title readable over it. */
+            background:
+                linear-gradient(180deg, rgba(15,23,42,0.55), rgba(15,23,42,0.85)),
+                radial-gradient(ellipse at 25% 15%, rgba(59,130,246,0.35), transparent 60%),
+                radial-gradient(ellipse at 80% 90%, rgba(139,92,246,0.3), transparent 60%),
+                #0d1e35;
+            background-size: cover;
+            background-position: center;
+        }
+
         /* Turnaround tiers */
         .tier-row { display: flex; gap: 0.9rem; align-items: flex-start; margin-bottom: 1rem; }
         .tier-row:last-of-type { margin-bottom: 0; }
@@ -533,10 +555,14 @@
             </div>
         </section>
 
-        <section id="partnership" data-dock="Partner With Us" data-dock-icon="🤝" class="text-center py-12 border-t border-white/10">
-            <h2 class="text-2xl font-bold mb-4">Want to run your own Inte.Team bench?</h2>
-            <p class="text-slate-400 mb-8 max-w-xl mx-auto text-sm">Whether you want to be your own boss or want the safety net of a team, we have a custom partnership model for you.</p>
-            <a href="partnership-info.html" class="inline-block bg-white text-slate-900 px-8 py-4 rounded-xl font-bold hover:bg-blue-400 transition-all">View Partnership Benefits →</a>
+        <!-- Partnership -->
+        <section id="partnership" data-dock="Partner With Us" data-dock-icon="🤝" class="partner-panel mt-28">
+            <div class="relative max-w-2xl">
+                <div class="inline-block bg-blue-500/15 text-blue-300 px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest mb-5">Partnership</div>
+                <h2 class="text-3xl md:text-5xl font-black text-white mb-5">Want to run your own Inte.Team bench?</h2>
+                <p class="text-slate-300 md:text-lg leading-relaxed max-w-xl mx-auto mb-10">Whether you want to be your own boss or want the safety net of a team, we have a custom partnership model for you.</p>
+                <a href="partnership-info.html" class="inline-block bg-white text-slate-900 px-8 py-4 rounded-xl font-bold hover:bg-blue-400 transition-all">View Partnership Benefits →</a>
+            </div>
         </section>
 
     </main>
@@ -678,7 +704,7 @@
             document.getElementById('process').scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
     </script>
-    <script src="section-dock.js?v=20261021" defer></script>
+    <script src="section-dock.js?v=20261021b" defer></script>
     <script src="https://crm.bookrepaironline.co.uk/js/chat-widget.js" data-widget="xjwMkoge8ynYnssj94x3Ojpp" async></script>
 </body>
 </html>

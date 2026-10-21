@@ -87,8 +87,17 @@
     document.addEventListener('keydown', function (e) {
         if (e.key === 'Escape' && open) { setOpen(false); handle.focus(); }
     });
+    // Scroll ourselves: a plain #link does nothing when the URL already has that hash
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
     list.addEventListener('click', function (e) {
-        if (e.target.closest('.sdock-item')) setOpen(false);
+        const link = e.target.closest('.sdock-item');
+        if (!link) return;
+        e.preventDefault();
+        setOpen(false);
+        const target = document.getElementById(link.hash.slice(1));
+        if (!target) return;
+        target.scrollIntoView({ behavior: reduceMotion.matches ? 'auto' : 'smooth', block: 'start' });
+        if (location.hash !== link.hash) history.pushState(null, '', link.hash);
     });
 
     // macOS-dock style magnification: the hovered item grows, its neighbours a little
