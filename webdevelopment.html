@@ -17,6 +17,7 @@
 
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="section-dock.css?v=20261021b">
 
     <script type="application/ld+json">
     {
@@ -123,7 +124,7 @@
         </div>
     </nav>
 
-    <header class="web-hero">
+    <header id="overview" data-dock="Overview" data-dock-icon="🚀" class="web-hero">
         <div class="stats-badge">Proven in 500+ Branch Roadmap</div>
         <h1>The "Business Engine" You Actually Own.</h1>
         <p style="color: var(--text-dim); font-size: 1.25rem; line-height: 1.6;">
@@ -132,7 +133,7 @@
         </p>
     </header>
 
-    <section class="value-grid">
+    <section id="services" data-dock="What You Get" data-dock-icon="🧩" class="value-grid">
         <div class="value-card">
             <div class="price-tag">Affordable Rental Model</div>
             <h3>Modernize & Automate</h3>
@@ -201,7 +202,7 @@
         </div>
     </section>
 
-    <section style="max-width: 1200px; margin: 0 auto; padding: 0 2rem 2.5rem;">
+    <section id="blueprint" data-dock="Any Industry" data-dock-icon="🏭" style="max-width: 1200px; margin: 0 auto; padding: 0 2rem 2.5rem;">
         <div class="value-card" style="display: flex; align-items: center; justify-content: space-between; gap: 2rem; flex-wrap: wrap;">
             <div>
                 <div class="stats-badge" style="margin-bottom: 0.75rem;">The Framework Behind Every Solution We Build</div>
@@ -217,7 +218,7 @@
         </div>
     </section>
 
-<section class="process-flow">
+<section id="bro-crm" data-dock="BRO CRM Demo" data-dock-icon="🖥️" class="process-flow">
         <div class="stats-badge" style="background: rgba(14, 165, 233, 0.1);">Live Ecosystem</div>
         <h2>Experience the BRO CRM</h2>
         <p style="max-width: 800px; margin: 1rem auto; color: var(--text-dim);">
@@ -233,7 +234,7 @@
         </p>
     </section>
 
-    <section style="padding: 6rem 2rem; text-align: center;">
+    <section id="get-started" data-dock="Get Started" data-dock-icon="✉️" style="padding: 6rem 2rem; text-align: center;">
         <h2 style="font-size: 2.5rem; margin-bottom: 1.5rem;">Ready to stop the paper chase?</h2>
         <p style="color: var(--text-dim); margin-bottom: 2.5rem; max-width: 600px; margin-left: auto; margin-right: auto;">
             Let’s start with a <strong>15-minute audit</strong>. No hard sales, just a look at your biggest bottleneck and a plan to solve it in "chunks."
@@ -257,6 +258,7 @@
 
     <!--#include virtual="/partials/footer.html" -->
 
+    <script src="section-dock.js?v=20261021b" defer></script>
     <script src="script.js"></script>
 </body>
 </html>

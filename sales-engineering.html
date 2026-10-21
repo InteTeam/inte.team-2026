@@ -18,6 +18,7 @@
     <meta name="twitter:description" content="Fractional sales engineering for UK startups. We close the gap between complex sales and robust delivery — payment flows, Proxmox stress testing, multi-warehouse logistics.">
     <meta name="twitter:image" content="https://inte.team/og-image.png">
     <link rel="stylesheet" href="tailwind.css?v=20261011">
+    <link rel="stylesheet" href="section-dock.css?v=20261021b">
     <style>
         .hero-gradient { background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); }
         .tech-card:hover { border-color: #3b82f6; transform: translateY(-3px); transition: all 0.3s ease; }
@@ -39,7 +40,7 @@
         </div>
     </nav>
 
-    <header class="hero-gradient text-white py-24 px-4 overflow-hidden relative">
+    <header id="overview" data-dock="Overview" data-dock-icon="🧭" class="hero-gradient text-white py-24 px-4 overflow-hidden relative">
         <div class="max-w-4xl mx-auto text-center relative z-10">
             <span class="bg-blue-500/10 text-blue-400 border border-blue-500/20 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest">
                 Fractional Sales Engineering
@@ -59,7 +60,7 @@
         </div>
     </header>
 
-    <section class="py-20 max-w-6xl mx-auto px-4">
+    <section id="services" data-dock="What We Do" data-dock-icon="🛠️" class="py-20 max-w-6xl mx-auto px-4">
         <div class="grid md:grid-cols-3 gap-8">
             <div class="bg-white p-8 rounded-2xl border border-slate-200 tech-card">
                 <h3 class="text-xl font-bold mb-4">1. Technical Pre-Sales</h3>
@@ -79,7 +80,7 @@
         </div>
     </section>
 
-    <section class="bg-slate-900 text-white py-24 px-4 overflow-hidden">
+    <section id="simulation" data-dock="Performance Simulation" data-dock-icon="📈" class="bg-slate-900 text-white py-24 px-4 overflow-hidden">
         <div class="max-w-6xl mx-auto">
             <div class="flex flex-col lg:flex-row gap-16 items-center">
 
@@ -139,7 +140,7 @@
         </div>
     </section>
 
-    <section class="py-24 max-w-4xl mx-auto px-4 text-center">
+    <section id="standards" data-dock="Proven Standards" data-dock-icon="✅" class="py-24 max-w-4xl mx-auto px-4 text-center">
         <h2 class="text-3xl font-bold mb-6">Proven Standards. No Compromise.</h2>
         <p class="text-slate-600 mb-12">We build for longevity. Our codebase follows DRY principles and is verified by an extensive automated test suite.</p>
 
@@ -162,7 +163,7 @@
             </div>
         </div>
     </section>
-    <section class="py-20 bg-white px-4">
+    <section id="security" data-dock="Security &amp; Engagement" data-dock-icon="🔒" class="py-20 bg-white px-4">
         <div class="max-w-6xl mx-auto">
 
             <div class="mb-20 bg-slate-50 rounded-3xl p-8 md:p-12 border border-slate-200 relative overflow-hidden">
@@ -235,7 +236,7 @@
         </div>
     </section>
 
-    <section id="contact" class="py-20 bg-blue-600 text-white text-center px-4">
+    <section data-dock="Contact" data-dock-icon="✉️" id="contact" class="py-20 bg-blue-600 text-white text-center px-4">
         <h2 class="text-3xl font-bold mb-4">Let's Build the Bridge.</h2>
         <p class="mb-10 text-blue-100 max-w-xl mx-auto">Available for fractional Sales Engineering contracts and high-complexity system integrations in the UK.</p>
         <a href="mailto:contact@inte.team" class="bg-white text-blue-600 px-10 py-4 rounded-xl font-extrabold hover:bg-slate-100 transition-all shadow-xl">
@@ -247,6 +248,7 @@
         <p class="text-slate-400 text-xs font-mono">INTE.TEAM ENGINEERING // LIVINGSTON EH54 // <a href="privacy.html" style="text-decoration:underline">PRIVACY</a></p>
     </footer>
 
+    <script src="section-dock.js?v=20261021b" defer></script>
     <script src="https://crm.bookrepaironline.co.uk/js/chat-widget.js" data-widget="xjwMkoge8ynYnssj94x3Ojpp" async></script>
 </body>
 </html>

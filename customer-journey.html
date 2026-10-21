@@ -16,6 +16,7 @@
 
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="section-dock.css?v=20261021b">
 
     <style>
         /* Hero */
@@ -266,7 +267,7 @@
         </div>
     </nav>
 
-    <header class="journey-hero">
+    <header id="overview" data-dock="Overview" data-dock-icon="🧭" class="journey-hero">
         <div class="stats-badge">The Framework Behind Every Solution We Build</div>
         <h1>One Blueprint.<br><em>Every Business.</em></h1>
         <p>
@@ -288,7 +289,7 @@
 
     <section class="phases-section" aria-label="The five universal lifecycle stages">
 
-        <div class="phase-item">
+        <div id="identified" data-dock="1 · Identified" data-dock-icon="🔍" class="phase-item">
             <div class="phase-num">01</div>
             <div class="phase-body">
                 <div class="phase-label">Phase One</div>
@@ -307,7 +308,7 @@
             </div>
         </div>
 
-        <div class="phase-item">
+        <div id="committed" data-dock="2 · Committed" data-dock-icon="🤝" class="phase-item">
             <div class="phase-num">02</div>
             <div class="phase-body">
                 <div class="phase-label">Phase Two</div>
@@ -326,7 +327,7 @@
             </div>
         </div>
 
-        <div class="phase-item">
+        <div id="fulfilling" data-dock="3 · Fulfilling" data-dock-icon="⚙️" class="phase-item">
             <div class="phase-num">03</div>
             <div class="phase-body">
                 <div class="phase-label">Phase Three</div>
@@ -345,7 +346,7 @@
             </div>
         </div>
 
-        <div class="phase-item">
+        <div id="delivered" data-dock="4 · Delivered" data-dock-icon="📦" class="phase-item">
             <div class="phase-num">04</div>
             <div class="phase-body">
                 <div class="phase-label">Phase Four</div>
@@ -364,7 +365,7 @@
             </div>
         </div>
 
-        <div class="phase-item">
+        <div id="closed" data-dock="5 · Closed" data-dock-icon="✅" class="phase-item">
             <div class="phase-num">05</div>
             <div class="phase-body">
                 <div class="phase-label">Phase Five</div>
@@ -386,7 +387,7 @@
 
     </section>
 
-    <div class="crm-bridge">
+    <div id="our-software" data-dock="Our Software" data-dock-icon="🖥️" class="crm-bridge">
         <div class="crm-bridge-inner">
             <div class="stats-badge">What this means for your software</div>
             <h2>We Build Around This Lifecycle</h2>
@@ -408,7 +409,7 @@
         </div>
     </div>
 
-    <section class="journey-cta">
+    <section id="get-started" data-dock="Get Started" data-dock-icon="✉️" class="journey-cta">
         <h2>Ready to put the blueprint to work?</h2>
         <p>
             We'll map your current customer flow against the five stages in a free 15-minute audit —
@@ -435,6 +436,7 @@
 
     <!--#include virtual="/partials/footer.html" -->
 
+    <script src="section-dock.js?v=20261021b" defer></script>
     <script src="script.js"></script>
 </body>
 </html>

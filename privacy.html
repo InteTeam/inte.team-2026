@@ -17,6 +17,7 @@
 
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="section-dock.css?v=20261021b">
 
     <style>
         .legal {
@@ -79,7 +80,7 @@
             <p><strong>In short:</strong> we collect only what we need to book, repair and return your device, and to answer your questions. We do not sell, rent or trade your personal data to anyone. This website has no analytics, advertising or tracking scripts.</p>
         </div>
 
-        <h2>1. Who we are</h2>
+        <h2 id="who-we-are" data-dock="Who We Are" data-dock-icon="👤">1. Who we are</h2>
         <p>Inte.Team is the trading name of <strong>Piotr Ficner</strong>, a sole trader based in Livingston, West Lothian, Scotland. Under UK data protection law (UK GDPR and the Data Protection Act 2018), Piotr Ficner trading as Inte.Team is the <strong>data controller</strong> for the personal data described in this policy.</p>
         <ul>
             <li>Address: 43 Norman Rise, Livingston, EH54 6LY (private home, visits by appointment only)</li>
@@ -89,10 +90,10 @@
         </ul>
         <p>This policy covers the inte.team website and our electronics repair service. Our other products (for example oorhq.inte.team or OpenFarm Scotland) have their own privacy policies.</p>
 
-        <h2>2. We do not sell your data</h2>
+        <h2 id="no-selling">2. We do not sell your data</h2>
         <p>We do not sell, rent or trade personal data to anyone, for any product or purpose. There is no advertising network, data broker or analytics service on this website.</p>
 
-        <h2>3. What we collect, and why</h2>
+        <h2 id="what-we-collect" data-dock="What We Collect" data-dock-icon="📋">3. What we collect, and why</h2>
 
         <h3>Booking, enquiry and call-back forms</h3>
         <p>When you book a repair, a visit or a call-back, we collect your <strong>name, email address and phone number</strong>, a <strong>description of your device or enquiry</strong>, the best time to call you, how you prefer to be contacted (phone, email or WhatsApp) and the appointment time you choose. We use this to arrange and carry out the job and to keep you updated.</p>
@@ -117,7 +118,7 @@
         <h3>Visiting this website</h3>
         <p>Like any website, our servers and our network provider, Cloudflare, briefly record technical details of each visit, such as your IP address and browser type, to keep the site running and secure. We do not use this to identify or profile you.</p>
 
-        <h2>4. Our legal reasons for using your data</h2>
+        <h2 id="legal-reasons" data-dock="Legal Reasons" data-dock-icon="⚖️">4. Our legal reasons for using your data</h2>
         <table>
             <thead><tr><th>Purpose</th><th>Lawful basis (UK GDPR)</th></tr></thead>
             <tbody>
@@ -130,7 +131,7 @@
         </table>
         <p>We do not make decisions about you by automated means that have legal or similarly significant effects. Automatic chat answers are information only, and our team handles everything else.</p>
 
-        <h2>5. Who we share data with</h2>
+        <h2 id="sharing" data-dock="Who We Share With" data-dock-icon="🔗">5. Who we share data with</h2>
         <p>We share personal data only with the service providers we need to run the business, under contracts that require them to protect it and use it only on our instructions:</p>
         <ul>
             <li><strong>Hosting:</strong> our booking system, website and mail server run on servers rented from Contabo, located in Germany (EU).</li>
@@ -146,7 +147,7 @@
         </ul>
         <p>Our servers are in Germany, which UK law recognises as giving adequate protection to personal data. If any other provider processes data outside the UK, it does so under safeguards approved under UK law.</p>
 
-        <h2>6. How long we keep it</h2>
+        <h2 id="retention" data-dock="How Long We Keep It" data-dock-icon="🗓️">6. How long we keep it</h2>
         <table>
             <thead><tr><th>Data</th><th>How long</th></tr></thead>
             <tbody>
@@ -160,11 +161,11 @@
         </table>
         <p>Our database backups rotate over 2 weeks, so deleted data is fully gone from backups at most 2 weeks after its deletion date.</p>
 
-        <h2>7. Cookies and storage in your browser</h2>
+        <h2 id="cookies" data-dock="Cookies" data-dock-icon="🍪">7. Cookies and storage in your browser</h2>
         <p>This website sets no cookies of its own. If you switch off animations, your browser remembers that choice on your own device; it is never sent to us. The booking forms and the chat window do not set cookies.</p>
         <p>The maps on our pages are provided by Google. They load only when you press "Show map", so nothing is requested from Google until you choose to. Once a map is shown, Google may set its own cookies, under Google's privacy policy.</p>
 
-        <h2>8. Your rights</h2>
+        <h2 id="your-rights" data-dock="Your Rights" data-dock-icon="✋">8. Your rights</h2>
         <p>Under UK data protection law you can ask us to:</p>
         <ul>
             <li>give you a copy of the personal data we hold about you;</li>
@@ -177,15 +178,16 @@
         <p>Email <a href="mailto:support@inte.team">support@inte.team</a>. We reply within one month. It's free in almost all cases.</p>
         <p>If you're unhappy with how we've handled your data, please tell us first so we can put it right. You also have the right to complain to the Information Commissioner's Office (ICO): <a href="https://ico.org.uk/make-a-complaint/" rel="noopener">ico.org.uk/make-a-complaint</a>, 0303 123 1113.</p>
 
-        <h2>9. Keeping your data safe</h2>
+        <h2 id="security" data-dock="Security" data-dock-icon="🔒">9. Keeping your data safe</h2>
         <p>Access to customer records is limited to our team, who need it for their work. The servers that hold customer data can be administered only through our private encrypted network (VPN). Backups are encrypted before they leave our servers.</p>
 
-        <h2>10. Changes to this policy</h2>
+        <h2 id="changes">10. Changes to this policy</h2>
         <p>We may update this policy when our services change. The latest version is always on this page, with the date it was last updated.</p>
     </main>
 
     <!--#include virtual="/partials/footer.html" -->
 
+    <script src="section-dock.js?v=20261021b" defer></script>
     <script src="script.js"></script>
 </body>
 </html>
