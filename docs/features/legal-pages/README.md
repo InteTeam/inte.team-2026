@@ -39,7 +39,8 @@ grep -c 'class="gap"' privacy.html
 
 | # | Answer | Where in `privacy.html` |
 |---|---|---|
-| Q7 (phone) | Calls run through Webex and Twilio, plus Smarty when calls are forwarded to a mobile. Call recording: **not answered**, so the policy says nothing about recording. If calls are recorded, add it | 5, Phone |
+| Q7 (phone) | Calls run through Webex and Twilio, plus Smarty when calls are forwarded to a mobile | 5, Phone |
+| Q7 (recording) | **Decided (Piotr, 2026-10-21):** calls are not recorded. Voice AI calling (e.g. vapi.ai) is planned. Policy says "we do not record; we will update this policy first and tell you at the start of each call" | 3, Phone/SMS |
 | Q11 | 6 years after the last job | 6 |
 | Q12 | CRM server logs roll over 14 days. Website container logs had no limit (Docker default), so `docker-compose.yml` now caps them (2 x 5 MB) and the policy says "kept briefly, overwritten automatically" | 6 |
 | Q13 | Chat slice B is in testing; the policy says "we are introducing" it. Reword when it is live | 3, Website chat |
@@ -51,7 +52,10 @@ Publication date set to 21 October 2026. If the merge goes live on a later day, 
 **Merge gate passed 2026-10-21:** `grep -c 'class="gap"' privacy.html` prints 0.
 
 **Follow-ups after merge:** ICO registration number (Q2); chat slice B wording when live (Q13); call
-recording line if calls are recorded (Q7); production needs `docker compose up -d` once so the
+voice AI calling (planned): before it goes live, update section 3 + the processor list (provider,
+where audio/transcripts go, retention), add the call-start announcement, and do a DPIA (new tech on
+customer voices). A hosted provider like Vapi also breaks the "own hardware only" stance from Q4,
+so decide that first; production needs `docker compose up -d` once so the
 log cap applies.
 
 **Poka-yoke (Q4):** `inteteam-ai` supports Gemini, Claude and OpenAI. The policy now promises chat text
