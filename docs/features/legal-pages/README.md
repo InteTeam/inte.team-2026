@@ -35,6 +35,25 @@ grep -c 'class="gap"' privacy.html
 | Q9 | Dojo, SumUp, Monzo Business bank transfer, cash | 5, Payments |
 | Q10 | Drop-off points get no customer data, only the booking ID; the CRM does the rest | 5, Drop-off partners |
 
+## Answers from Piotr, 2026-10-21 (Q7 phone, Q11-Q14, maps)
+
+| # | Answer | Where in `privacy.html` |
+|---|---|---|
+| Q7 (phone) | Calls run through Webex and Twilio, plus Smarty when calls are forwarded to a mobile. Call recording: **not answered**, so the policy says nothing about recording. If calls are recorded, add it | 5, Phone |
+| Q11 | 6 years after the last job | 6 |
+| Q12 | CRM server logs roll over 14 days. Website container logs had no limit (Docker default), so `docker-compose.yml` now caps them (2 x 5 MB) and the policy says "kept briefly, overwritten automatically" | 6 |
+| Q13 | Chat slice B is in testing; the policy says "we are introducing" it. Reword when it is live | 3, Website chat |
+| Q14 | Customer-data servers admin-reachable only over WireGuard; backups encrypted; backups go to Google Cloud Storage and Google Drive (Workspace) | 5, Google; 9 |
+| Maps | **Decided (Piotr, 2026-10-21):** click-to-load. Built: `map-consent.js` + `.map-consent` in `styles.css`, on `index.html` and the `electronicsrepairs.html` "Visiting Us?" pop-up. Checked in Chrome: zero Google requests before the click, map loads after | 7 |
+
+Publication date set to 21 October 2026. If the merge goes live on a later day, change it.
+
+**Merge gate passed 2026-10-21:** `grep -c 'class="gap"' privacy.html` prints 0.
+
+**Follow-ups after merge:** ICO registration number (Q2); chat slice B wording when live (Q13); call
+recording line if calls are recorded (Q7); production needs `docker compose up -d` once so the
+log cap applies.
+
 **Poka-yoke (Q4):** `inteteam-ai` supports Gemini, Claude and OpenAI. The policy now promises chat text
 never reaches an outside AI provider, so on production those provider keys must stay empty. Enabling
 any of them (even as a fallback) needs this policy changed first.
@@ -66,25 +85,17 @@ Checked in code or on the live endpoints, not assumed:
 | Website and CRM run on the Contabo 12GB VPS, behind Cloudflare | memory `project_contabo_deployment` (not re-checked on the server) |
 | CRM database backups go to Google Drive (restic) | memory `project_business_infra` / `dr_gap` (not re-checked) |
 
-## Not checked (needs Piotr or a server check)
+## Not checked
 
-Each is a gap in `privacy.html`, numbered to match.
-
-| # | Question | Why it matters |
-|---|---|---|
-| Q7 | Phone: which provider carries calls (Webex, Twilio, other)? Are phone calls recorded? | Processor list; call recording must be stated |
-| Q11 | How long are customer and repair records kept in the CRM? | Retention section. HMRC needs business records kept at least 5 years after the 31 January Self Assessment deadline; **Proposed:** 6 years after the last job, then deleted |
-| Q12 | How long are web server logs (nginx in Docker, Cloudflare) kept? | Retention section |
-| Q13 | Is chat slice B (leave your email, 6-digit code) live yet? | Describe only what visitors can actually do; the text is written to cover it |
-| Q14 | Are all servers holding customer data (CRM 12GB VPS, Mailu 8GB VPS, backups) admin-reachable only over WireGuard? Is the restic backup to Google Drive encrypted (restic's default) with the key kept off Google? | Security section. Memory says the 3rd VPS still has public SSH; whether it holds customer data was not checked |
+All of Q1-Q14 were answered by Piotr on 2026-10-21 (tables above). The answers are his, not
+re-checked on the servers.
 
 ## Proposed choices (pending confirmation)
 
-1. **Google Maps loads only on click** ("Show map" placeholder) on the homepage and repairs page.
+1. **Decided (Piotr, 2026-10-21), built:** **Google Maps loads only on click** ("Show map" placeholder) on the homepage and repairs page.
    Today the homepage map loads on every visit and Google can set cookies before the visitor has
    agreed. A click-to-load map needs no cookie banner. Ruled out: a cookie banner. More friction for
-   every visitor, and it needs consent-recording logic (poka-yoke + complexity lenses). Not built
-   yet: separate small change once agreed.
+   every visitor, and it needs consent-recording logic (poka-yoke + complexity lenses).
 2. **One policy page, `privacy.html`, linked from every footer** (the shared `partials/footer.html`
    plus the three bespoke footers on `electronicsrepairs.html`, `partnership-info.html`,
    `sales-engineering.html`). Links are added in this branch but only go live with the page.

@@ -17,7 +17,7 @@
     <meta name="twitter:title" content="Electronics Repairs | PS5, Xbox, TV, Apple, Laptop Repair Livingston | Inte.Team">
     <meta name="twitter:description" content="Electronics repairs in Livingston: consoles, TVs, laptops, Apple and Hi-Fi. Component-level diagnostics, 30+ years' experience, High-priority turnaround in 1–2 days.">
     <meta name="twitter:image" content="https://inte.team/og-image.png">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css?v=20261021c">
     <link rel="stylesheet" href="section-dock.css?v=20261021b">
     <link rel="stylesheet" href="tailwind.css?v=20261021b">
     <style>
@@ -634,11 +634,11 @@
                 <div class="text-slate-200">43 Norman Rise</div>
                 <div class="text-slate-200">Livingston, EH54 6LY</div>
             </div>
-            <div class="rounded-2xl overflow-hidden mb-5 border border-white/10">
-                <iframe
-                    src="https://maps.google.com/maps?q=43+Norman+Rise,+Livingston,+EH54+6LY&t=&z=15&ie=UTF8&iwloc=&output=embed"
-                    width="100%" height="180" style="border:0;filter:grayscale(0.5) invert(0.88);"
-                    allowfullscreen="" loading="lazy" title="Inte.Team location map"></iframe>
+            <div class="rounded-2xl overflow-hidden mb-5 border border-white/10" style="height:180px">
+                <div class="map-consent">
+                    <button type="button" class="map-consent-btn" data-map-src="https://maps.google.com/maps?q=43+Norman+Rise,+Livingston,+EH54+6LY&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=&amp;output=embed" data-map-title="Inte.Team location map">Show map</button>
+                    <p>Loading the map connects to Google Maps, which may set its own cookies. <a href="https://www.google.com/maps/search/?api=1&amp;query=43+Norman+Rise,+Livingston,+EH54+6LY" target="_blank" rel="noopener">Open in Google Maps</a></p>
+                </div>
             </div>
             <a href="tel:01506532247" class="block text-center bg-sky-500 hover:bg-sky-400 text-white font-bold py-4 rounded-xl transition-colors text-lg tracking-wide">
                 Call to Book &nbsp;01506 532247
@@ -719,6 +719,7 @@
         }
     </script>
     <script src="section-dock.js?v=20261021b" defer></script>
+    <script src="map-consent.js?v=20261021c" defer></script>
     <script src="https://crm.bookrepaironline.co.uk/js/chat-widget.js" data-widget="xjwMkoge8ynYnssj94x3Ojpp" async></script>
 </body>
 </html>

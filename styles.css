@@ -241,6 +241,23 @@ input:checked + .slider:before { transform: translateX(16px); }
     overflow: hidden; border: 1px solid var(--glass-border);
 }
 #gmap { width: 100%; height: 100%; border: none; filter: grayscale(0.5) invert(0.9); }
+.map-frame { display: block; width: 100%; height: 100%; border: 0; filter: grayscale(0.5) invert(0.9); }
+/* Click-to-load map placeholder (map-consent.js) */
+.map-consent {
+    width: 100%; height: 100%; box-sizing: border-box;
+    display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0.75rem;
+    padding: 1.25rem; text-align: center;
+    background: radial-gradient(circle at center, rgba(14,165,233,0.12), transparent 70%), var(--glass);
+    color: #94a3b8; font-size: 0.85rem; line-height: 1.5;
+}
+.map-consent p { margin: 0; max-width: 34rem; }
+.map-consent .map-consent-btn {
+    padding: 0.7rem 1.6rem; border: 0; border-radius: 999px; cursor: pointer;
+    background: var(--repair-accent); color: #fff; font: inherit; font-weight: 700; font-size: 0.95rem;
+}
+.map-consent .map-consent-btn:hover { filter: brightness(1.1); }
+.map-consent .map-consent-btn:focus-visible { outline: 2px solid #fff; outline-offset: 3px; }
+.map-consent a { color: var(--repair-accent); }
 
 /* */
 body.no-motion .split:hover { 

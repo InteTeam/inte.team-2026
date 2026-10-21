@@ -23,7 +23,7 @@
     <meta name="twitter:image" content="https://inte.team/og-image.png">
 
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
-    <link rel="stylesheet" href="styles.css?v=20261008">
+    <link rel="stylesheet" href="styles.css?v=20261021c">
 
     <script type="application/ld+json">
     {
@@ -473,13 +473,11 @@
     <!-- Google Map -->
     <section class="map-section">
         <div class="map-container">
-            <iframe
-                id="gmap"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d17906.330469520213!2d-3.5035719!3d55.874961299999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4887d95098a8b2ef%3A0xda435933649cca6!2sInte.Team%20-%20Laptop%2C%20Game%20Consoles%2C%20TV%2C%20Mobile%20phone%20%26%20Electronics%20repair!5e0!3m2!1sen!2suk!4v1736110585075!5m2!1sen!2suk"
-                allowfullscreen=""
-                loading="lazy"
-                title="Inte.Team location — 43 Norman Rise, Livingston EH54 6LY">
-            </iframe>
+            <div class="map-consent">
+                <p><strong style="color:#fff">43 Norman Rise, Livingston, EH54 6LY</strong></p>
+                <button type="button" class="map-consent-btn" data-map-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d17906.330469520213!2d-3.5035719!3d55.874961299999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4887d95098a8b2ef%3A0xda435933649cca6!2sInte.Team%20-%20Laptop%2C%20Game%20Consoles%2C%20TV%2C%20Mobile%20phone%20%26%20Electronics%20repair!5e0!3m2!1sen!2suk!4v1736110585075!5m2!1sen!2suk" data-map-title="Inte.Team location — 43 Norman Rise, Livingston EH54 6LY">Show map</button>
+                <p>Loading the map connects to Google Maps, which may set its own cookies. <a href="https://www.google.com/maps/search/?api=1&amp;query=43+Norman+Rise,+Livingston,+EH54+6LY" target="_blank" rel="noopener">Open in Google Maps</a></p>
+            </div>
         </div>
         <a class="btn btn-review" href="https://g.page/r/CabMSTaTNaQNEBM/review" target="_blank" rel="noopener noreferrer" aria-label="Leave us a review on Google (opens in a new tab)"><span aria-hidden="true">★</span> Review us on Google</a>
     </section>
@@ -487,5 +485,6 @@
     <!--#include virtual="/partials/footer.html" -->
 
     <script src="script.js"></script>
+    <script src="map-consent.js?v=20261021c"></script>
 </body>
 </html>

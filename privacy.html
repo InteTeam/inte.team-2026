@@ -73,7 +73,7 @@
 
     <main class="legal">
         <h1>Privacy Policy</h1>
-        <p class="updated">Last updated: <mark class="gap">date of publication</mark></p>
+        <p class="updated">Last updated: 21 October 2026</p>
 
         <div class="lead">
             <p><strong>In short:</strong> we collect only what we need to book, repair and return your device, and to answer your questions. We do not sell, rent or trade your personal data to anyone. This website has no analytics, advertising or tracking scripts.</p>
@@ -105,10 +105,10 @@
 
         <h3>Website chat</h3>
         <p>The chat button on our pages opens a chat window served by our own booking system. Questions you type are answered automatically, using only our own knowledge base, and those answers are marked as automatic. The answers are produced by AI models that run on our own hardware in Livingston. Your messages are never sent to an outside AI provider.</p>
-        <p>If you leave a message for our team, you can choose to give your email address. We confirm it with a 6-digit code, then send you a copy of your message and our reply. <mark class="gap">Q13: is this live yet?</mark></p>
+        <p>We are introducing an option to leave a message for our team in the chat. If you use it, you can choose to give your email address. We confirm it with a 6-digit code, then send you a copy of your message and our reply.</p>
 
         <h3>Phone, email, SMS and WhatsApp</h3>
-        <p>When you contact us, we keep the conversation so we can answer you and refer back to it during your repair. <mark class="gap">Q7: are phone calls recorded? If yes, say so here and why.</mark></p>
+        <p>When you contact us, we keep the conversation so we can answer you and refer back to it during your repair.</p>
         <p>Text messages are sent by our own SMS gateway in Livingston. Automatic messages from our booking system (for example booking confirmations and repair updates) use templates written by our team, filled in with your booking details. Our in-house AI may suggest a draft reply to our team, but a person always reads and edits it before anything is sent to you. AI never sends you a message by itself.</p>
 
         <h3>Car Boot Sale Livingston interest list</h3>
@@ -135,10 +135,10 @@
         <ul>
             <li><strong>Hosting:</strong> our booking system, website and mail server run on servers rented from Contabo, located in Germany (EU).</li>
             <li><strong>Cloudflare:</strong> delivers and protects this website.</li>
-            <li><strong>Google:</strong> stores encrypted backup copies of our booking database (Google Drive), and shows the maps on our pages (Google Maps).</li>
+            <li><strong>Google:</strong> stores encrypted backup copies of our booking database (Google Cloud Storage and Google Drive), and shows the maps on our pages if you choose to load them (Google Maps).</li>
             <li><strong>Email:</strong> sent from our own mail server (on the Contabo servers above). No outside email service handles your messages.</li>
             <li><strong>SMS:</strong> sent from our own gateway, using a SIM card on the Smarty mobile network, which delivers the messages.</li>
-            <li><strong>Phone:</strong> <mark class="gap">Q7: phone provider</mark></li>
+            <li><strong>Phone:</strong> our business phone line runs through Webex and Twilio. When we forward calls to a mobile, they are also carried by the Smarty mobile network.</li>
             <li><strong>WhatsApp (Meta):</strong> only if you choose to contact us by WhatsApp. We use the WhatsApp Business Platform, so your messages pass through Meta.</li>
             <li><strong>Payments:</strong> card payments are handled by Dojo or SumUp; we never see or store your full card number. Bank transfers go to our Monzo Business account. You can also pay in cash.</li>
             <li><strong>Drop-off partners</strong> (Petzone, Craigshill and D&amp;J Records, Bathgate): they receive your device and a booking reference only. They do not receive your name or contact details; everything else is handled by our booking system.</li>
@@ -150,18 +150,19 @@
         <table>
             <thead><tr><th>Data</th><th>How long</th></tr></thead>
             <tbody>
-                <tr><td>Customer and repair records</td><td><mark class="gap">Q11: proposed 6 years after your last job, for tax records</mark></td></tr>
+                <tr><td>Customer and repair records</td><td>6 years after your last job, for tax and accounting records, then deleted</td></tr>
                 <tr><td>Chat with no email confirmed</td><td>Deleted after 30 days</td></tr>
                 <tr><td>Chat with a confirmed email</td><td>Deleted 12 months after the last message</td></tr>
                 <tr><td>Car boot sale interest list</td><td>Until you ask us to remove you, or the event plan ends</td></tr>
-                <tr><td>Website technical logs</td><td><mark class="gap">Q12</mark></td></tr>
+                <tr><td>Booking system server logs</td><td>14 days, then overwritten</td></tr>
+                <tr><td>Website server logs</td><td>Kept briefly for security and troubleshooting, then overwritten automatically</td></tr>
             </tbody>
         </table>
         <p>Our database backups rotate over 2 weeks, so deleted data is fully gone from backups at most 2 weeks after its deletion date.</p>
 
         <h2>7. Cookies and storage in your browser</h2>
         <p>This website sets no cookies of its own. If you switch off animations, your browser remembers that choice on your own device; it is never sent to us. The booking forms and the chat window do not set cookies.</p>
-        <p>The maps on our pages are provided by Google, which may set its own cookies when a map is shown. <mark class="gap">Proposed: maps load only when you click "Show map", then change this sentence</mark></p>
+        <p>The maps on our pages are provided by Google. They load only when you press "Show map", so nothing is requested from Google until you choose to. Once a map is shown, Google may set its own cookies, under Google's privacy policy.</p>
 
         <h2>8. Your rights</h2>
         <p>Under UK data protection law you can ask us to:</p>
@@ -177,7 +178,7 @@
         <p>If you're unhappy with how we've handled your data, please tell us first so we can put it right. You also have the right to complain to the Information Commissioner's Office (ICO): <a href="https://ico.org.uk/make-a-complaint/" rel="noopener">ico.org.uk/make-a-complaint</a>, 0303 123 1113.</p>
 
         <h2>9. Keeping your data safe</h2>
-        <p>Access to customer records is limited to our team, who need it for their work. <mark class="gap">Q14: servers holding customer data reachable for administration only through a private encrypted network (VPN)? Backups encrypted before they leave the server?</mark></p>
+        <p>Access to customer records is limited to our team, who need it for their work. The servers that hold customer data can be administered only through our private encrypted network (VPN). Backups are encrypted before they leave our servers.</p>
 
         <h2>10. Changes to this policy</h2>
         <p>We may update this policy when our services change. The latest version is always on this page, with the date it was last updated.</p>
