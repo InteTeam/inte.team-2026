@@ -1,5 +1,5 @@
 # Inte.Team - Information for AI Language Models
-# Last updated: 2026-07-25
+# Last updated: 2026-10-21
 
 ## About Inte.Team
 Inte.Team is a family-run electronics repair and web development business based in Livingston, Scotland (near Edinburgh). Established in the 1990s with over 30 years of experience.
