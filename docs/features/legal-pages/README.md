@@ -117,6 +117,11 @@ Goods) Act 1977 does not apply in Scotland), and consumer law limits what can be
 (Consumer Rights Act 2015). What the business rules are is Piotr's call; the outline lists what
 must be decided first.
 
+**Decided (Piotr, 2026-10-21):** T&Cs are paused. Before any rules or wording, the first step is a
+full inventory of every service Inte.Team offers (repairs, drop-off, membership/loaners, web
+development, sales engineering, hosting/subscriptions, community projects, ...), then a plan for
+which terms each needs. Do not jump straight into the T1-T13 table below.
+
 Business rules to decide (Piotr):
 
 | # | Rule | Known so far |

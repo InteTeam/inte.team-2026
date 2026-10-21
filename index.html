@@ -24,6 +24,7 @@
 
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="stylesheet" href="styles.css?v=20261021c">
+    <link rel="stylesheet" href="section-dock.css?v=20261021b">
 
     <script type="application/ld+json">
     {
@@ -329,7 +330,7 @@
     </nav>
 
     <!-- Hero: 2-split -->
-    <main class="hero-container">
+    <main id="start" data-dock="Repairs or Web" data-dock-icon="🧭" class="hero-container">
         <div class="stats-float-container">
             <span class="float-item">30+ Years Experience</span>
             <span class="float-item">300+ 5-Star Reviews</span>
@@ -361,7 +362,7 @@
     </main>
 
     <!-- Everything we do -->
-    <section class="offerings-section">
+    <section id="services" data-dock="Everything We Do" data-dock-icon="🧰" class="offerings-section">
         <div class="offerings-inner">
             <p class="section-eyebrow">Everything we do</p>
             <div class="offerings-grid">
@@ -399,7 +400,7 @@
     </section>
 
     <!-- Reality teaser -->
-    <section class="reality-teaser" aria-label="Business reality check">
+    <section id="real-picture" data-dock="The Real Picture" data-dock-icon="📊" class="reality-teaser" aria-label="Business reality check">
         <div class="reality-teaser-inner">
             <p class="reality-eyebrow">The Real Picture</p>
             <h2>A website alone won't grow your business.</h2>
@@ -421,7 +422,7 @@
     </section>
 
     <!-- Trusted referrals -->
-    <section class="referrals-section" aria-label="Trusted referrals">
+    <section id="referrals" data-dock="Trusted Referrals" data-dock-icon="🤝" class="referrals-section" aria-label="Trusted referrals">
         <div class="referrals-inner">
             <div class="referrals-header">
                 <p class="referrals-eyebrow">Trusted Referrals</p>
@@ -455,7 +456,7 @@
     </section>
 
     <!-- Community projects teaser -->
-    <section class="community-teaser" aria-label="Community projects">
+    <section id="community" data-dock="Community Projects" data-dock-icon="🌱" class="community-teaser" aria-label="Community projects">
         <div class="community-teaser-inner">
             <p class="community-eyebrow">Giving Back, Digitally</p>
             <h2>We build tools for the local community too.</h2>
@@ -471,7 +472,7 @@
     </section>
 
     <!-- Google Map -->
-    <section class="map-section">
+    <section id="find-us" data-dock="Find Us" data-dock-icon="📍" class="map-section">
         <div class="map-container">
             <div class="map-consent">
                 <p><strong style="color:#fff">43 Norman Rise, Livingston, EH54 6LY</strong></p>
@@ -486,5 +487,6 @@
 
     <script src="script.js"></script>
     <script src="map-consent.js?v=20261021c"></script>
+    <script src="section-dock.js?v=20261021b" defer></script>
 </body>
 </html>
