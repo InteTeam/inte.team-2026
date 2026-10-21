@@ -1,0 +1,115 @@
+/* Section dock: a half-circle "on this page" menu pinned to the left edge.
+   Built by section-dock.js from [data-dock] sections, see that file. */
+.sdock {
+    --sdock-r: 150px;            /* radius of the arc the items sit on */
+    --sdock-icon: 42px;
+    position: fixed; left: 0; top: 50%;
+    width: 0; height: 0;
+    z-index: 60;                 /* above the sticky nav (50), below modals (200) */
+    font-family: inherit;
+}
+
+/* Collapsed handle: a small translucent half-disc */
+.sdock-handle {
+    position: absolute; left: 0; top: 0;
+    z-index: 2;                  /* items fan out from under the handle: keep it clickable */
+    transform: translateY(-50%);
+    width: 26px; height: 60px;
+    padding: 0 0 0 4px;
+    border: 1px solid rgba(255,255,255,0.14); border-left: none;
+    border-radius: 0 60px 60px 0;
+    background: rgba(15,23,42,0.55);
+    backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
+    color: #38bdf8;
+    cursor: pointer;
+    opacity: 0.6;
+    display: flex; align-items: center; justify-content: flex-start;
+    transition: opacity 0.2s, width 0.25s, background 0.2s;
+    animation: sdockPeek 2.4s ease-in-out 1.2s 2;
+}
+.sdock-handle svg { width: 14px; height: 14px; transition: transform 0.3s; }
+.sdock-handle:hover, .sdock-handle:focus-visible, .sdock.is-open .sdock-handle {
+    opacity: 1; width: 32px; background: rgba(15,23,42,0.85);
+}
+.sdock-handle:focus-visible { outline: 2px solid #38bdf8; outline-offset: 2px; }
+.sdock.is-open .sdock-handle svg { transform: rotate(180deg); }
+
+@keyframes sdockPeek {
+    0%, 100% { width: 26px; opacity: 0.6; }
+    50% { width: 36px; opacity: 1; }
+}
+
+/* Backdrop half-disc that the items fan out over */
+.sdock-disc {
+    position: absolute; left: 0; top: 0;
+    width: calc(var(--sdock-r) + 34px); height: calc((var(--sdock-r) + 34px) * 2);
+    transform: translateY(-50%) scale(0.15);
+    transform-origin: left center;
+    border-radius: 0 999px 999px 0;
+    background: radial-gradient(circle at left center, rgba(14,165,233,0.18), transparent 70%), rgba(15,23,42,0.93);
+    border: 1px solid rgba(255,255,255,0.1); border-left: none;
+    backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+    opacity: 0; pointer-events: none;
+    transition: transform 0.35s cubic-bezier(.2,.9,.3,1.2), opacity 0.25s;
+}
+.sdock.is-open .sdock-disc { transform: translateY(-50%) scale(1); opacity: 1; pointer-events: auto; }
+
+.sdock-list { list-style: none; margin: 0; padding: 0; }
+.sdock-list li {
+    position: absolute; left: 0; top: 0;
+    transform: translate(calc(var(--sdock-icon) / -2), calc(var(--sdock-icon) / -2)) scale(0.3);
+    transform-origin: calc(var(--sdock-icon) / 2) center;
+    opacity: 0; visibility: hidden;
+    transition: transform 0.3s cubic-bezier(.2,.9,.3,1.25), opacity 0.2s, visibility 0s 0.3s;
+}
+.sdock.is-open .sdock-list li {
+    transform: translate(calc(var(--x) - var(--sdock-icon) / 2), calc(var(--y) - var(--sdock-icon) / 2)) scale(var(--mag, 1));
+    opacity: 1; visibility: visible;
+    transition-delay: calc(var(--i) * 30ms), calc(var(--i) * 30ms), 0s;
+}
+
+.sdock-item {
+    display: flex; align-items: center; gap: 10px;
+    text-decoration: none; color: #e2e8f0;
+    transform-origin: calc(var(--sdock-icon) / 2) center;
+}
+.sdock-icon {
+    flex-shrink: 0;
+    width: var(--sdock-icon); height: var(--sdock-icon);
+    display: flex; align-items: center; justify-content: center;
+    border-radius: 50%;
+    background: rgba(30,41,59,0.95);
+    border: 1px solid rgba(255,255,255,0.14);
+    font-size: 1.15rem; line-height: 1;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.35);
+    transition: border-color 0.2s, background 0.2s;
+}
+.sdock-label {
+    white-space: nowrap;
+    font-size: 0.72rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase;
+    padding: 0.35rem 0.7rem;
+    border-radius: 999px;
+    background: rgba(15,23,42,0.92);
+    border: 1px solid rgba(255,255,255,0.1);
+    transition: color 0.2s, border-color 0.2s;
+}
+.sdock-item:hover .sdock-icon, .sdock-item:focus-visible .sdock-icon { border-color: #38bdf8; background: rgba(14,165,233,0.25); }
+.sdock-item:hover .sdock-label, .sdock-item:focus-visible .sdock-label { color: #fff; border-color: rgba(56,189,248,0.5); }
+.sdock-item:focus-visible { outline: none; }
+.sdock-item.is-current .sdock-icon { border-color: #38bdf8; box-shadow: 0 0 0 3px rgba(56,189,248,0.25), 0 4px 14px rgba(0,0,0,0.35); }
+.sdock-item.is-current .sdock-label { color: #38bdf8; }
+
+/* Clear the sticky nav when jumping to a section */
+[data-dock] { scroll-margin-top: 96px; }
+
+@media (max-width: 640px) {
+    .sdock { --sdock-r: 128px; --sdock-icon: 38px; }
+    .sdock-handle { width: 20px; height: 52px; }
+    .sdock-handle:hover, .sdock-handle:focus-visible, .sdock.is-open .sdock-handle { width: 26px; }
+    @keyframes sdockPeek { 0%, 100% { width: 20px; opacity: 0.6; } 50% { width: 30px; opacity: 1; } }
+    .sdock-label { font-size: 0.68rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .sdock *, .sdock-handle { animation: none !important; transition-duration: 0.01ms !important; transition-delay: 0s !important; }
+}

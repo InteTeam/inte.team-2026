@@ -8,6 +8,7 @@
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://inte.team/electronicsrepairs.html">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="section-dock.css?v=20261021">
     <link rel="stylesheet" href="tailwind.css?v=20261021">
     <style>
         :root { 
@@ -162,7 +163,7 @@
 
     <main class="max-w-6xl mx-auto px-6 py-12">
         
-        <header class="text-center mb-16">
+        <header id="overview" data-dock="Overview" data-dock-icon="🏠" class="text-center mb-16">
             <div class="inline-block bg-blue-500/10 text-blue-400 px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest mb-4">
                 Started in the 1990s | Livingston HQ
             </div>
@@ -215,7 +216,7 @@
         </div>
 
         <!-- Why We Do It -->
-        <section class="bg-white/5 rounded-[3rem] p-8 md:p-16 border border-white/10 mb-20">
+        <section id="why-we-do-it" data-dock="Why We Do It" data-dock-icon="💡" class="bg-white/5 rounded-[3rem] p-8 md:p-16 border border-white/10 mb-20">
             <div class="grid md:grid-cols-2 gap-12 items-center">
                 <div>
                     <h2 class="text-3xl font-black mb-6 text-white">Why We Do It.</h2>
@@ -242,7 +243,7 @@
         </section>
 
         <!-- Engineering Workflow -->
-        <section class="mb-20">
+        <section id="how-we-work" data-dock="How We Work" data-dock-icon="🔧" class="mb-20">
             <div class="text-center mb-10">
                 <div class="inline-block bg-blue-500/10 text-blue-400 px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest mb-4">Engineering Workflow</div>
                 <h2 class="text-3xl font-black text-white mb-3">Built to Minimise Human Error</h2>
@@ -328,7 +329,7 @@
         </section>
 
         <!-- Repair Journey -->
-        <section class="mb-20">
+        <section id="start-here" data-dock="Start Here" data-dock-icon="🧭" class="mb-20">
             <div class="text-center mb-10">
                 <div class="inline-block bg-blue-500/10 text-blue-400 px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest mb-4">Start Here</div>
                 <h2 class="text-3xl font-black text-white mb-3">What brings you here today?</h2>
@@ -382,7 +383,7 @@
         </section>
 
         <!-- 8-Step Mastery Process -->
-        <section id="process" class="mb-20">
+        <section id="process" data-dock="8-Step Process" data-dock-icon="🔄" class="mb-20">
             <div class="text-center mb-10">
                 <div class="inline-block bg-blue-500/10 text-blue-400 px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest mb-4">The Process</div>
                 <h2 class="text-3xl font-black text-white mb-3">Our 8-Step Mastery Process</h2>
@@ -476,7 +477,7 @@
         </section>
 
         <!-- Turnaround Times -->
-        <section id="turnaround" class="mb-20">
+        <section id="turnaround" data-dock="Turnaround Times" data-dock-icon="⏱️" class="mb-20">
             <div class="text-center mb-10">
                 <div class="inline-block bg-blue-500/10 text-blue-400 px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest mb-4">Turnaround Times</div>
                 <h2 class="text-3xl font-black text-white mb-3">How long will my repair take?</h2>
@@ -532,7 +533,7 @@
             </div>
         </section>
 
-        <section class="text-center py-12 border-t border-white/10">
+        <section id="partnership" data-dock="Partner With Us" data-dock-icon="🤝" class="text-center py-12 border-t border-white/10">
             <h2 class="text-2xl font-bold mb-4">Want to run your own Inte.Team bench?</h2>
             <p class="text-slate-400 mb-8 max-w-xl mx-auto text-sm">Whether you want to be your own boss or want the safety net of a team, we have a custom partnership model for you.</p>
             <a href="partnership-info.html" class="inline-block bg-white text-slate-900 px-8 py-4 rounded-xl font-bold hover:bg-blue-400 transition-all">View Partnership Benefits →</a>
@@ -677,6 +678,7 @@
             document.getElementById('process').scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
     </script>
+    <script src="section-dock.js?v=20261021" defer></script>
     <script src="https://crm.bookrepaironline.co.uk/js/chat-widget.js" data-widget="xjwMkoge8ynYnssj94x3Ojpp" async></script>
 </body>
 </html>
