@@ -113,6 +113,19 @@
     .sdock-label { font-size: 0.68rem; }
 }
 
+/* The site's "No Animations" switch (styles.css) sets `transform: none !important` on every
+   element. The dock places its items with transforms, so put those back (no motion, only position). */
+body.no-motion .sdock .sdock-handle { transform: translateY(-50%) !important; }
+body.no-motion .sdock .sdock-disc { transform: translateY(-50%) scale(0.15) !important; }
+body.no-motion .sdock.is-open .sdock-disc { transform: translateY(-50%) scale(1) !important; }
+body.no-motion .sdock.is-open .sdock-handle svg { transform: rotate(180deg) !important; }
+body.no-motion .sdock .sdock-list li {
+    transform: translate(calc(var(--sdock-icon) / -2), calc(var(--sdock-icon) / -2)) scale(0.3) !important;
+}
+body.no-motion .sdock.is-open .sdock-list li {
+    transform: translate(calc(var(--x) - var(--sdock-icon) / 2), calc(var(--y) - var(--sdock-icon) / 2)) !important;
+}
+
 @media (prefers-reduced-motion: reduce) {
     .sdock *, .sdock-handle { animation: none !important; transition-duration: 0.01ms !important; transition-delay: 0s !important; }
 }
