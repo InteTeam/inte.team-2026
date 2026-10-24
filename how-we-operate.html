@@ -20,7 +20,7 @@
 
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="stylesheet" href="styles.css?v=20261021c">
-    <link rel="stylesheet" href="how-we-operate.css?v=20261024b">
+    <link rel="stylesheet" href="how-we-operate.css?v=20261024c">
 </head>
 <body class="hwo">
 
@@ -62,6 +62,7 @@
                     <div class="start-actions">
                         <a href="repair-bookings.html" class="hwo-btn">Book a repair</a>
                         <a href="tel:01506532247" class="hwo-btn hwo-btn-ghost">Call 01506 532 247</a>
+                        <button type="button" class="hwo-btn hwo-btn-chat" data-open-chat hidden>💬 Chat with us</button>
                     </div>
                     <p class="more-options">More options, from a call-back to an estimate: <a href="electronicsrepairs.html#start-here">What brings you here today? →</a></p>
                 </div>
@@ -169,6 +170,7 @@
                         <div><dt class="key key-you">You</dt><dd>Call us, or press <strong>Chat with us</strong> (bottom right on <a href="index.html">inte.team</a>, and on this page too) to book a time yourself.</dd></div>
                         <div><dt class="key key-time">Time</dt><dd>30 days to collect from this message. <a href="#collection-rule">What if I can't?</a></dd></div>
                     </dl>
+                    <button type="button" class="hwo-btn hwo-btn-chat card-chat" data-open-chat hidden>💬 Book a collection time in the chat</button>
                     <p class="tip">Where you collect from is agreed with you.</p>
                 </div>
             </li>
@@ -234,12 +236,15 @@
     <section class="hwo-cta">
         <h2>Ready when you are.</h2>
         <p>Questions first? Press <strong>Chat with us</strong> in the bottom right, or call <a href="tel:01506532247" class="nowrap">01506 532 247</a>.</p>
-        <a href="repair-bookings.html" class="hwo-btn">Book a repair</a>
+        <div class="cta-actions">
+            <a href="repair-bookings.html" class="hwo-btn">Book a repair</a>
+            <button type="button" class="hwo-btn hwo-btn-chat" data-open-chat hidden>💬 Chat with us</button>
+        </div>
     </section>
 
     <!--#include virtual="/partials/footer.html" -->
 
     <script src="script.js"></script>
-    <script src="how-we-operate.js?v=20261024" defer></script>
+    <script src="how-we-operate.js?v=20261024c" defer></script>
 </body>
 </html>

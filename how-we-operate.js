@@ -72,3 +72,34 @@
 
     steps.forEach(function (step) { observer.observe(step); });
 })();
+
+// "Chat with us" buttons open the same chat as the launcher in the bottom corner. The chat
+// script (chat-widget.js, in the footer partial) draws its launcher only once the chat has
+// loaded and is allowed on this site, so the buttons stay hidden until that launcher exists:
+// no dead buttons when the chat is off or blocked.
+(function () {
+    var buttons = document.querySelectorAll('[data-open-chat]');
+    var tag = document.querySelector('script[data-widget]');
+    if (!buttons.length || !tag) return;
+    var widgetId = tag.getAttribute('data-widget');
+
+    function chat() {
+        return window.InteTeamChat && window.InteTeamChat[widgetId];
+    }
+
+    function showWhenReady() {
+        if (!document.querySelector('.inteteam-chat-launcher') || !chat()) return false;
+        Array.prototype.forEach.call(buttons, function (button) { button.hidden = false; });
+        return true;
+    }
+
+    Array.prototype.forEach.call(buttons, function (button) {
+        button.addEventListener('click', function () { chat().open(); });
+    });
+
+    if (showWhenReady()) return;
+    var watcher = new MutationObserver(function () {
+        if (showWhenReady()) watcher.disconnect();
+    });
+    watcher.observe(document.body, { childList: true });
+})();
