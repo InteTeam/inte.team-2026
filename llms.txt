@@ -1,5 +1,5 @@
 # Inte.Team - Information for AI Language Models
-# Last updated: 2026-10-21
+# Last updated: 2026-10-24
 
 ## About Inte.Team
 Inte.Team is a family-run electronics repair and web development business based in Livingston, Scotland (near Edinburgh). Established in the 1990s with over 30 years of experience.
@@ -11,6 +11,7 @@ Inte.Team is a family-run electronics repair and web development business based 
 - Location: Livingston, West Lothian, Scotland, UK
 - Booking: https://inte.team/repair-bookings.html
 - Repair journey: https://inte.team/electronicsrepairs.html
+- How we operate (booking, drop-off, payment, collection): https://inte.team/how-we-operate.html
 - Repair pricing: https://inte.team/pricing-repairs.html
 - Web development pricing: https://inte.team/pricing-websolutions.html
 
@@ -27,6 +28,20 @@ Key specialties:
 - HDMI port repairs (very common on PS5/Xbox)
 - Thermal paste replacement for overheating consoles
 - Liquid damage recovery for laptops and phones
+
+## How We Operate (electronics repairs)
+Full page: https://inte.team/how-we-operate.html
+1. Booking: online (https://inte.team/repair-bookings.html) or by phone; SMS, WhatsApp or email if the customer can wait. A confirmation email follows, usually within 5 minutes (it may land in Spam/Junk).
+2. Drop-off: first visit at Livingston HQ by appointment (we call to arrange a time); returning customers can drop off at Petzone (Craigshill Shopping Mall, Livingston) or D&J Records (Bathgate) with their booking ID, no call needed. TV, Hi-Fi and High priority repairs: HQ only. Drop-off points see only the booking ID and arrival time, do not test devices and never take payment. We confirm by SMS or email once the device reaches us.
+3. Diagnosis: diagnosis fee by device type, non-returnable. Covers up to 1-2 hours of bench time.
+4. Estimate: agreed with the customer. Within the agreed estimate we go ahead without asking again; if it would cost more, we contact the customer first. Deposits are rare (mostly TVs and lower-value items) and always stated first. Anything paid up front is paid via a payment link sent to the booking email.
+5. Repair and quality control (stress testing, final inspection).
+6. Ready for collection: we send an SMS (or email); the customer calls us or uses "Chat with us" on inte.team to book a collection time. Where to collect is agreed case by case.
+7. Collection: the customer confirms by text when collecting. The remaining balance is paid then, always with Inte.Team: card, bank transfer or cash. Return shipping is possible; shipping insurance is not included by default and is agreed individually.
+8. Feedback email after the repair.
+Uncollected devices: 30 days from the "ready for collection" message. Customers who can't collect in time should tell us. With no word within 30 days, the device is treated as donated to Inte.Team; personal data is wiped before it is recycled or disposed of.
+Warranty: case by case (parts source, new or used, part swap or board-level repair), explained at collection.
+Members: contact us directly; spare-device swap where we have one.
 
 ## Web Development & Business Automation Services
 We build:

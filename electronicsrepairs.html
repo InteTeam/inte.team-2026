@@ -19,7 +19,7 @@
     <meta name="twitter:image" content="https://inte.team/og-image.png">
     <link rel="stylesheet" href="styles.css?v=20261021c">
     <link rel="stylesheet" href="section-dock.css?v=20261021d">
-    <link rel="stylesheet" href="tailwind.css?v=20261021b">
+    <link rel="stylesheet" href="tailwind.css?v=20261024">
     <style>
         :root { 
             --text-main: #0f172a; 
@@ -147,23 +147,8 @@
             .modal-box { border-radius: 28px 28px 0 0; padding: 2rem 1.5rem; max-width: 100%; }
         }
 
-        /* 8-step process carousel */
-        .process-carousel { overflow: hidden; }
-        .carousel-track {
-            display: flex;
-            width: max-content;
-            animation: processScroll 52s linear infinite;
-            gap: 1.25rem;
-            padding: 0.5rem 0 1rem;
-        }
-        .carousel-track:hover { animation-play-state: paused; }
-        @keyframes processScroll {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-50%); }
-        }
+        /* 8-step process summary */
         .step-item {
-            flex-shrink: 0;
-            width: 220px;
             background: rgba(255,255,255,0.03);
             border: 1px solid rgba(255,255,255,0.08);
             border-radius: 20px;
@@ -179,10 +164,8 @@
             font-weight: 700; font-size: 0.9rem;
             margin: 0 auto 0.75rem;
         }
-        @media (max-width: 768px) {
-            .process-carousel { overflow-x: auto; overflow-y: hidden; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
-            .process-carousel::-webkit-scrollbar { display: none; }
-            .carousel-track { animation: none; width: auto; }
+        @media (max-width: 640px) {
+            .step-item { padding: 1rem; }
         }
     </style>
 </head>
@@ -207,6 +190,10 @@
             <p class="text-lg text-slate-400 max-w-2xl mx-auto">
                 We don't just swap parts. We diagnose circuits, restore vintage soul, and keep tech out of landfills.
             </p>
+            <a href="how-we-operate.html" class="inline-flex flex-col items-center mt-8 px-8 py-4 rounded-2xl bg-orange-500/10 border border-orange-400/40 hover:bg-orange-500/20 transition-colors">
+                <span class="text-lg font-black text-orange-300">How we operate →</span>
+                <span class="text-sm text-slate-400 mt-1">Click here to learn what to expect from us</span>
+            </a>
         </header>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-20">
@@ -279,7 +266,7 @@
         </section>
 
         <!-- Engineering Workflow -->
-        <section id="how-we-work" data-dock="How We Work" data-dock-icon="🔧" class="mb-20">
+        <section id="engineering-workflow" data-dock="Engineering Workflow" data-dock-icon="🔧" class="mb-20">
             <div class="text-center mb-10">
                 <div class="inline-block bg-blue-500/10 text-blue-400 px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest mb-4">Engineering Workflow</div>
                 <h2 class="text-3xl font-black text-white mb-3">Built to Minimise Human Error</h2>
@@ -403,11 +390,11 @@
                     <div class="text-sm text-slate-400">Pick a date &amp; time for us to call you.</div>
                 </button>
 
-                <button onclick="scrollToProcess()" class="journey-tile">
+                <a href="how-we-operate.html" class="journey-tile">
                     <div class="text-2xl mb-3">🔍</div>
                     <div class="text-sky-400 font-bold text-base mb-1">How does this work?</div>
-                    <div class="text-sm text-slate-400">See our 8-step mastery process.</div>
-                </button>
+                    <div class="text-sm text-slate-400">Booking, drop-off, payment and collection, step by step.</div>
+                </a>
 
                 <a href="https://lab-free.inte.team" target="_blank" rel="noreferrer" class="journey-tile">
                     <div class="text-2xl mb-3">🔬</div>
@@ -418,97 +405,58 @@
             </div>
         </section>
 
-        <!-- 8-Step Mastery Process -->
-        <section id="process" data-dock="8-Step Process" data-dock-icon="🔄" class="mb-20">
+        <!-- 8-Step Process (summary; the full journey lives on how-we-operate.html) -->
+        <section id="process" data-dock="Our Process" data-dock-icon="🔄" class="mb-20">
             <div class="text-center mb-10">
                 <div class="inline-block bg-blue-500/10 text-blue-400 px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest mb-4">The Process</div>
-                <h2 class="text-3xl font-black text-white mb-3">Our 8-Step Mastery Process</h2>
-                <p class="text-slate-400 text-sm max-w-xl mx-auto">Every repair follows this framework — from your first call to the final handover. Hover to pause.</p>
+                <h2 class="text-3xl font-black text-white mb-3">Our 8-Step Process</h2>
+                <p class="text-slate-400 text-sm max-w-xl mx-auto">Every repair follows this framework, from your first call to the final handover.</p>
             </div>
-            <div class="process-carousel" aria-label="Our 8-step repair process" role="region">
-                <div class="carousel-track">
-                    <div class="step-item">
-                        <div class="step-num bg-blue-500/20 text-blue-400">1</div>
-                        <h4 class="font-bold text-white">Enquiry</h4>
-                        <p>We capture the specific symptoms of your device.</p>
-                    </div>
-                    <div class="step-item step-member">
-                        <div class="step-num bg-indigo-500/20 text-indigo-300">1.1</div>
-                        <h4 class="font-bold text-indigo-200">Member Priority</h4>
-                        <p>If we have a spare, we'll swap your device for a working one instantly.</p>
-                    </div>
-                    <div class="step-item">
-                        <div class="step-num bg-blue-500/20 text-blue-400">2</div>
-                        <h4 class="font-bold text-white">Diagnosis</h4>
-                        <p>Professional testing and precision circuit tracing.</p>
-                    </div>
-                    <div class="step-item">
-                        <div class="step-num bg-blue-500/20 text-blue-400">3</div>
-                        <h4 class="font-bold text-white">Estimate</h4>
-                        <p>Transparent pricing provided via our BRO portal.</p>
-                    </div>
-                    <div class="step-item">
-                        <div class="step-num bg-blue-500/20 text-blue-400">4</div>
-                        <h4 class="font-bold text-white">Repair</h4>
-                        <p>Precision fixing, soldering and restorative mastery.</p>
-                    </div>
-                    <div class="step-item">
-                        <div class="step-num bg-blue-500/20 text-blue-400">5</div>
-                        <h4 class="font-bold text-white">Quality Control</h4>
-                        <p>Stress testing and rigorous final inspection.</p>
-                    </div>
-                    <div class="step-item">
-                        <div class="step-num bg-blue-500/20 text-blue-400">6</div>
-                        <h4 class="font-bold text-white">Return</h4>
-                        <p>Ready for local collection or insured shipping.</p>
-                    </div>
-                    <div class="step-item step-done">
-                        <div class="step-num bg-emerald-500/20 text-emerald-400">7</div>
-                        <h4 class="font-bold text-emerald-200">Feedback</h4>
-                        <p>A post-repair email ensures we met your expectations.</p>
-                    </div>
-                    <!-- Duplicate set for seamless loop (hidden from assistive tech) -->
-                    <div class="step-item" aria-hidden="true">
-                        <div class="step-num bg-blue-500/20 text-blue-400">1</div>
-                        <h4 class="font-bold text-white">Enquiry</h4>
-                        <p>We capture the specific symptoms of your device.</p>
-                    </div>
-                    <div class="step-item step-member">
-                        <div class="step-num bg-indigo-500/20 text-indigo-300">1.1</div>
-                        <h4 class="font-bold text-indigo-200">Member Priority</h4>
-                        <p>If we have a spare, we'll swap your device for a working one instantly.</p>
-                    </div>
-                    <div class="step-item">
-                        <div class="step-num bg-blue-500/20 text-blue-400">2</div>
-                        <h4 class="font-bold text-white">Diagnosis</h4>
-                        <p>Professional testing and precision circuit tracing.</p>
-                    </div>
-                    <div class="step-item">
-                        <div class="step-num bg-blue-500/20 text-blue-400">3</div>
-                        <h4 class="font-bold text-white">Estimate</h4>
-                        <p>Transparent pricing provided via our BRO portal.</p>
-                    </div>
-                    <div class="step-item">
-                        <div class="step-num bg-blue-500/20 text-blue-400">4</div>
-                        <h4 class="font-bold text-white">Repair</h4>
-                        <p>Precision fixing, soldering and restorative mastery.</p>
-                    </div>
-                    <div class="step-item">
-                        <div class="step-num bg-blue-500/20 text-blue-400">5</div>
-                        <h4 class="font-bold text-white">Quality Control</h4>
-                        <p>Stress testing and rigorous final inspection.</p>
-                    </div>
-                    <div class="step-item">
-                        <div class="step-num bg-blue-500/20 text-blue-400">6</div>
-                        <h4 class="font-bold text-white">Return</h4>
-                        <p>Ready for local collection or insured shipping.</p>
-                    </div>
-                    <div class="step-item step-done">
-                        <div class="step-num bg-emerald-500/20 text-emerald-400">7</div>
-                        <h4 class="font-bold text-emerald-200">Feedback</h4>
-                        <p>A post-repair email ensures we met your expectations.</p>
-                    </div>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="step-item">
+                    <div class="step-num bg-blue-500/20 text-blue-400">1</div>
+                    <h4 class="font-bold text-white">Booking</h4>
+                    <p>Book online or call us. A confirmation email follows.</p>
                 </div>
+                <div class="step-item">
+                    <div class="step-num bg-blue-500/20 text-blue-400">2</div>
+                    <h4 class="font-bold text-white">Drop-off</h4>
+                    <p>Livingston HQ by appointment, or Petzone and D&amp;J Records for returning customers.</p>
+                </div>
+                <div class="step-item">
+                    <div class="step-num bg-blue-500/20 text-blue-400">3</div>
+                    <h4 class="font-bold text-white">Diagnosis</h4>
+                    <p>Professional testing and precision circuit tracing.</p>
+                </div>
+                <div class="step-item">
+                    <div class="step-num bg-blue-500/20 text-blue-400">4</div>
+                    <h4 class="font-bold text-white">Estimate</h4>
+                    <p>Agreed with you before we start the repair.</p>
+                </div>
+                <div class="step-item">
+                    <div class="step-num bg-blue-500/20 text-blue-400">5</div>
+                    <h4 class="font-bold text-white">Repair</h4>
+                    <p>Precision fixing, soldering and restorative mastery.</p>
+                </div>
+                <div class="step-item">
+                    <div class="step-num bg-blue-500/20 text-blue-400">6</div>
+                    <h4 class="font-bold text-white">Quality Control</h4>
+                    <p>Stress testing and rigorous final inspection.</p>
+                </div>
+                <div class="step-item">
+                    <div class="step-num bg-blue-500/20 text-blue-400">7</div>
+                    <h4 class="font-bold text-white">Collection</h4>
+                    <p>We text you when it's ready. Pay what's left with us and collect.</p>
+                </div>
+                <div class="step-item step-done">
+                    <div class="step-num bg-emerald-500/20 text-emerald-400">8</div>
+                    <h4 class="font-bold text-emerald-200">Feedback</h4>
+                    <p>A post-repair email ensures we met your expectations.</p>
+                </div>
+            </div>
+            <p class="text-center text-sm text-indigo-200 mt-6"><strong>Members:</strong> contact us directly. If we have a spare, we'll swap your device for a working one while we repair yours.</p>
+            <div class="text-center mt-6">
+                <a href="how-we-operate.html" class="inline-block text-sm font-bold text-orange-300 hover:text-orange-200 uppercase tracking-wider">Full details: How we operate →</a>
             </div>
         </section>
 
@@ -712,10 +660,6 @@
                     btn.classList.remove('text-slate-400');
                 }
             });
-        }
-
-        function scrollToProcess() {
-            document.getElementById('process').scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
     </script>
     <script src="section-dock.js?v=20261021b" defer></script>
