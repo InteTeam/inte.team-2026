@@ -365,3 +365,6 @@ body.no-motion .trace *::after { transition: none !important; }
 }
 
 .nowrap { white-space: nowrap; }
+
+.more-options { margin: 0.9rem 0 0; color: #94a3b8; font-size: 0.82rem; line-height: 1.5; }
+.card a.btn-review { color: #0f172a; margin: 0 0 0.9rem; }
