@@ -53,10 +53,10 @@ Acceptance Criteria once all categories are captured.
 
 ## Game Consoles
 
-### PS5 HDMI Port Repair
+### PS5 / Xbox Series S/X HDMI Port Repair
 | Scenario | Price |
 |---|---|
-| Medium, HQ drop-off | £60 |
+| Medium, HQ drop-off | £60–£65 |
 | Medium, partner drop-off point | £65 |
 | High priority, either location | £90 |
 | £120 tier | Only if: (a) customer wants it done same-visit/while they wait, **or** (b) trace damage — port can no longer connect to the mainboard because the traces themselves are gone (harder repair) |
