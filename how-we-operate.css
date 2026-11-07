@@ -248,16 +248,17 @@
     padding: 0.8rem 1.3rem;
     border-radius: 10px;
     background: var(--repair-accent);
-    color: #fff;
+    color: #0f172a; /* white on this sky blue is 2.8:1, dark is 6.4:1 */
     font-weight: 800;
     font-size: 0.85rem;
     letter-spacing: 0.04em;
     text-decoration: none;
     box-shadow: 0 4px 15px rgba(14, 165, 233, 0.3);
 }
-.card a.hwo-btn { color: #fff; }
+.card a.hwo-btn { color: #0f172a; }
 .hwo-btn:hover, .hwo-btn:focus-visible { background: #38bdf8; }
 .hwo-btn-ghost { background: transparent; border: 1px solid var(--glass-border); box-shadow: none; }
+.hwo-btn-ghost, .card a.hwo-btn-ghost { color: #fff; }
 .hwo-btn-ghost:hover, .hwo-btn-ghost:focus-visible { background: var(--glass); }
 
 /* Good to know */
@@ -374,10 +375,11 @@ body.no-motion .trace *::after { transition: none !important; }
     border: 0;
     cursor: pointer;
     font-family: inherit;
+    color: #fff;
     background: #2563eb;
     box-shadow: 0 4px 15px rgba(37, 99, 235, 0.35);
 }
-.hwo-btn-chat:hover, .hwo-btn-chat:focus-visible { background: #3b82f6; }
+.hwo-btn-chat:hover, .hwo-btn-chat:focus-visible { background: #1d4ed8; } /* darker, so white text stays readable */
 .hwo-btn-chat[hidden] { display: none; }
 .card-chat { margin-top: 0.9rem; }
 .cta-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.75rem; }
