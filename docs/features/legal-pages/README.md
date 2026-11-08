@@ -69,8 +69,30 @@ any of them (even as a fallback) needs this policy changed first.
   (customer records in the CRM). Membership, the e-wallet, oorhq.inte.team and the other products
   keep their own policies or get one later. Ruled out: one policy covering every Inte.Team product,
   because each product would then have to be checked before any change to it (future-proof lens).
-- Web development clients (Inte.Team as processor for a client's site) are out of scope here. Their
-  contracts cover that.
+- ~~Web development clients are out of scope here. Their contracts cover that.~~ Revised 2026-11-08,
+  see "Web solutions scope" below.
+
+## Web solutions scope (2026-11-08)
+
+The policy now covers web solutions customers, split by role:
+
+- **Controller (in this policy):** the web customer's own contacts, business details, quotes,
+  agreements, invoices, payments, support requests and their accounts.inte.team portal account.
+- **Processor (not in this policy):** personal data inside the websites, mailboxes and systems Inte.Team
+  hosts or runs for a customer. The customer is the controller; section 3 says so in one paragraph.
+  The customer DPA (concept doc "Legal and Compliance Readiness", L4) will cover Inte.Team's side.
+  When the DPA exists, add "under our written agreement with you" back to that paragraph.
+
+Answers from Piotr, 2026-11-08:
+
+| # | Answer | Policy section |
+|---|---|---|
+| W1 | Web solutions enquiries use the same CRM forms as the rest of the site | 3, Web solutions customers |
+| W2 | Web customers pay by standing order and/or cash. WorldPay exists and can be enabled on demand; it is not listed until it is used ("we will update this policy first") | 5, Payments |
+| W3 | accounts.inte.team is part of inte.team; this policy applies to it | 1, scope; 3, customer account |
+
+**Proposed, pending confirmation:** web customer records kept 6 years after the last service ends,
+matching the repair rule from Q11 (section 6).
 
 ## Facts checked (2026-10-21)
 
