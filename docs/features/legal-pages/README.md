@@ -19,8 +19,9 @@ grep -c 'class="gap"' privacy.html
   the footer ("Private Home, By Appointment Only").
 - ICO data protection fee **paid 2026-10-21** (Piotr). Application number C2065527.
   **Decided (Piotr, 2026-10-21):** publish now with "fee paid, registration number shown once issued"
-  (Q2). **Follow-up after merge:** when the ICO issues the number (usually "Z" + digits), replace
-  that sentence in `privacy.html` section 1. The application number is not published.
+  (Q2). **Done 2026-11-08:** ICO registration number **ZC280829**, organisation name "Mr Piotr
+  Ficner" (Piotr). `privacy.html` section 1 now shows it, linked to the ICO public register entry
+  (checked: the entry resolves and names Ficner). The application number is not published.
 - **Decided (Piotr, 2026-10-21):** not VAT registered (Q3). The VAT line is removed.
 
 ## Answers from Piotr, 2026-10-21 (Q4-Q10)
@@ -51,7 +52,7 @@ Publication date set to 21 October 2026. If the merge goes live on a later day, 
 
 **Merge gate passed 2026-10-21:** `grep -c 'class="gap"' privacy.html` prints 0.
 
-**Follow-ups after merge:** ICO registration number (Q2); chat slice B wording when live (Q13); call
+**Follow-ups after merge:** ICO registration number (Q2, done 2026-11-08); chat slice B wording when live (Q13); call
 voice AI calling (planned): before it goes live, update section 3 + the processor list (provider,
 where audio/transcripts go, retention), add the call-start announcement, and do a DPIA (new tech on
 customer voices). A hosted provider like Vapi also breaks the "own hardware only" stance from Q4,
